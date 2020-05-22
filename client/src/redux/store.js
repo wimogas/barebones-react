@@ -20,7 +20,6 @@ import rootReducer from "./reducers/rootReducer";
 
 const middlewares = [
   thunk,
-  logger,
   loadUserMiddleware,
   signInMiddleware,
   signUpMiddleware,
@@ -28,5 +27,9 @@ const middlewares = [
   toggleDarkModeLocalStorageMiddleware,
   setActiveNavMiddleware
 ];
+
+if (process.env.NODE_ENV !== 'production') {
+  middlewares.push(logger);
+}
 
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
