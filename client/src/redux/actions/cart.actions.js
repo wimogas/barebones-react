@@ -17,7 +17,6 @@ export const addToCart = (user, item) => async dispatch => {
       item
     }
     const res = await axios.post(`/api/cart/add`, cartItem);
-    console.log(res)
     const newItem = {
       cartId: res.data.cart._id,
       quantity: res.data.cart.quantity,
