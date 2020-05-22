@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const auth = require("../../middlewares/auth");
 
-const Cart = require('../../models/cart');
+const Cart = require('../../models/Cart');
 
 router.post(
   '/add',
