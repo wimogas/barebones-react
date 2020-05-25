@@ -19,7 +19,7 @@ const HomePage = ({ user, history }) => {
     <Block full>
       {redirectTo ? <Redirect to="/main-screen" /> : null}
       <Block center middle flex={"2"}>
-      <AnimatedText h1 style={animatedTextProps}>baseline-react</AnimatedText>
+      <AnimatedText h1 style={animatedTextProps}>barebones-react</AnimatedText>
       </Block>
       <Block center middle flex={"1"}>
         <Button full primary onClick={() => history.push("/sign-up")}>

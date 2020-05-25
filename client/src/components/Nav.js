@@ -96,7 +96,7 @@ const Nav = ({
                   setActiveNav("")
                   history.push("/main-screen")
               }}>
-                Baseline
+                Barebones
               </Button>
             </Block>
             <Block
