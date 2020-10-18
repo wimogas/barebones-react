@@ -43,6 +43,16 @@ const CustomButton = styled.button`
       }
     `}
     ${props =>
+      props.white &&
+      css`
+        background-color: white;
+        color: ${props => props.theme.colors.primary};
+        :hover {
+          background-color: #efefef;
+          color: ${props => darken(0.2, props.theme.colors.primary)};
+        }
+      `}
+    ${props =>
       props.outline &&
       css`
         border: 1px solid ${props => props.theme.colors.primary};
@@ -66,6 +76,17 @@ const CustomButton = styled.button`
       }
     `}
   ${props =>
+    props.iconWhite &&
+    css`
+      border: none;
+      color: white;
+      background-color: transparent;
+      :hover {
+        background-color: transparent;
+        color: #efefef;
+      }
+  `}
+  ${props =>
     props.circle &&
     css`
       border-radius: 50%;
@@ -83,6 +104,12 @@ const CustomButton = styled.button`
     css`
       width: 100%;
     `}
+  ${props =>
+      props.column &&
+      css`
+        flex-direction: column;
+        align-items: flex-start;
+  `}
   ${props =>
     props.nav &&
     css`

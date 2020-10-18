@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import {useTransition, animated} from 'react-spring'
-import {FaRegBell} from 'react-icons/fa'
-import {Text, Block, Button, NotificationIcon,PostSkeleton} from '../components'
+import {Text, Block,PostSkeleton} from '../components'
 
 import PostItem from './PostItem';
 import PostForm from './PostForm';
+import {ReactComponent as Avatar} from '../assets/avataaars.svg'
 
 import { getPosts } from '../redux/actions/data.actions';
 import { toggleShowRightSideNav } from '../redux/actions/ui.actions';
 
-const Posts = ({ getPosts, data: { posts }, showRightSideNav, toggleShowRightSideNav, newNotification}) => {
+const Posts = ({ getPosts, data: { posts }, user}) => {
 
   useEffect(() => {
     if (posts.length === 0) {
@@ -26,16 +26,16 @@ const Posts = ({ getPosts, data: { posts }, showRightSideNav, toggleShowRightSid
 
   return(
     <>
-        <Block row middle space={"between"} margin={"0px 0px 16px 0px"}>
-        <Text h1>Add a Comment</Text>
-        <Block row justify={"flex-end"} flex={"0.2"} hide={"desktop"}>
-          <Button icon onClick={() => toggleShowRightSideNav(showRightSideNav)}>
-            {newNotification && (<NotificationIcon/>)}
-            <FaRegBell />
-          </Button>
+      <Block row middle card>
+        <Block row middle flex={"0.5"}>
+          <Avatar style={{maxWidth:"54px", maxHeight: "54px"}}/>
+          <Text h1 style={{marginRight: "16px"}}>{user && `${user.name}`}</Text>
         </Block>
+        <Block flex={"2"}>
+          <PostForm />
+        </Block>
+
       </Block>
-      <PostForm />
       <Text h2 style={{marginTop:"32px"}}>Comments</Text>
       <Block margin={"16px 0px"}>
       {posts && posts.length > 0 ? transitions.map(({item,props,key}) => (
@@ -54,7 +54,8 @@ const Posts = ({ getPosts, data: { posts }, showRightSideNav, toggleShowRightSid
 const mapStateToProps = state => ({
   data: state.data,
   showRightSideNav: state.ui.showRightSideNav,
-  newNotification: state.ui.newNotification
+  newNotification: state.ui.newNotification,
+  user: state.auth.user,
 });
 
 export default connect(

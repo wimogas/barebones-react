@@ -39,7 +39,6 @@ const RightSideNav = () => {
 
 const mapStateToProps = state => ({
   user: state.auth.user,
-  data: state.data.items
 });
 
 export default connect(mapStateToProps)(RightSideNav);

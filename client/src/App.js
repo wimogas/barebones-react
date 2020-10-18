@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
-import { PrivateRoute, Spinner, Alert, Cart, AddItem } from "./components";
+import { PrivateRoute, Spinner, Alert } from "./components";
 import ScrollToTop from "./utils/ScrollToTop";
 
 import HomePage from "./pages/HomePage";
@@ -48,12 +48,10 @@ const App = ({ loadUser, loading }) => {
           <Route path="/" component={HomePage} exact />
           <PrivateRoute path="/main-screen" component={MainScreen} />
           <PrivateRoute path="/user" component={UserPage} />
-          <Route path="/sign-in" component={SignInPage} exact />
-          <Route path="/sign-up" component={SignupPage} exact />
           <PrivateRoute exact path="/posts" component={Posts} />
           <PrivateRoute exact path="/posts/:id" component={Post} />
-          <PrivateRoute exact path="/cart" component={Cart} />
-          <PrivateRoute exact path="/add-item" component={AddItem} />
+          <Route path="/sign-in" component={SignInPage} exact />
+          <Route path="/sign-up" component={SignupPage} exact />
         </Switch>
       </Router>
     </CustomWrapper>

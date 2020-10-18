@@ -21,7 +21,7 @@ const PostForm = ({ addPost }) => {
           name="text"
           cols="30"
           rows="5"
-          placeholder="Add a comment"
+          placeholder="Write something..."
           value={text}
           handleChange={e => setText(e.target.value)}
         />

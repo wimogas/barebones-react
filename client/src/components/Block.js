@@ -95,7 +95,12 @@ const CustomBlock = styled.div`
       background-color: ${props => !props.theme.isDark ? "white" : darken(0.2,props.theme.colors.light)};
       border-radius: ${props => props.theme.sizes.radius}px;
       padding: ${props => props.theme.sizes.base}px;
-    `}
+  `}
+  ${props =>
+    props.primary &&
+    css`
+      background-color: ${props => props.theme.colors.primary};
+  `}
 `;
 
 const Block = ({ children, ...props }) => {

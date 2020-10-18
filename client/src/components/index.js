@@ -11,12 +11,8 @@ import BackButton from "./BackButton";
 import Main from "./Main";
 import Single from "./Single";
 import Nav from "./Nav";
-import RightSideNav from './RightSideNav'
-import ItemSkeleton from './ItemSkeleton'
+import RightSideNav from "./RightSideNav";
 import PostSkeleton from './PostSkeleton'
-import NotificationIcon from './NotificationIcon'
-import Cart from './Cart'
-import AddItem from './AddItem'
 
 export {
   PrivateRoute,
@@ -33,9 +29,5 @@ export {
   Single,
   Nav,
   RightSideNav,
-  ItemSkeleton,
-  PostSkeleton,
-  NotificationIcon,
-  Cart,
-  AddItem,
+  PostSkeleton
 };

@@ -1,10 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Button, Block, RightSideNav, NotificationIcon} from "../components";
+import { Button, Block, RightSideNav } from "../components";
 import styled from "styled-components";
 import {darken} from 'polished'
-import { FaUser, FaSun, FaMoon, FaHome, FaRegBell, FaTimes, FaShoppingBasket,FaComment} from "react-icons/fa";
 import { toggleDarkMode, toggleShowRightSideNav, setActiveNav} from "../redux/actions/ui.actions";
+import { FaUser, FaSun, FaMoon, FaHome, FaRegBell, FaTimes, FaShoppingBasket,FaComment} from "react-icons/fa";
+
 
 const CustomNav = styled.div`
   position: fixed;
@@ -45,7 +46,6 @@ const CustomSideNavWrapper = styled.div`
 
 const Nav = ({
   user,
-  cart,
   children,
   history,
   isDarkMode,
@@ -61,24 +61,11 @@ const Nav = ({
     <>
         <CustomNav {...props}>
           <Block row space={"evenly"} hide={"desktop"}>
-            <Button nav active={activeNav === "main-screen"} onClick={() => {
-              setActiveNav("main-screen")
-              history.push("/main-screen")
-            }}>
-              <FaHome />
-            </Button>
             <Button nav active={activeNav === "posts"} onClick={() => {
               setActiveNav("posts")
               history.push("/posts")
             }}>
-               <FaComment />
-            </Button>
-            <Button nav active={activeNav === "cart"} onClick={() => {
-              setActiveNav("cart")
-              history.push("/cart")
-            }}>
-                {cart && cart.length > 0 && (<NotificationIcon/>)}
-               <FaShoppingBasket />
+              <FaHome />
             </Button>
             <Button nav active={activeNav === "user"} onClick={() => {
               setActiveNav("user")
@@ -89,12 +76,15 @@ const Nav = ({
             <Button nav onClick={() => toggleDarkMode(isDarkMode)}>
               {isDarkMode ? <FaSun /> : <FaMoon />}
             </Button>
+            <Button nav onClick={() => toggleShowRightSideNav(showRightSideNav)}>
+                <FaRegBell />
+            </Button>
           </Block>
           <Block row hide={"mobile"}>
             <Block flex={"0.2"} justify={"flex-start"}>
               <Button nav onClick={() => {
                   setActiveNav("")
-                  history.push("/main-screen")
+                  history.push("/posts")
               }}>
                 Barebones
               </Button>
@@ -105,35 +95,22 @@ const Nav = ({
               flex={"2"}
               margin={"0px 16px 0px 0px"}
             >
-              <Button nav active={activeNav === "posts"} onClick={() => {
-              setActiveNav("posts")
-              history.push("/posts")
-            }}>
-                <FaComment />
-              </Button>
-              <Button nav active={activeNav === "cart"} onClick={() => {
-              setActiveNav("cart")
-              history.push("/cart")
-            }}>
-                {cart && cart.length > 0 && (<NotificationIcon/>)}
-                <FaShoppingBasket />
-              </Button>
               <Button nav active={activeNav === "user"} onClick={() => {
               setActiveNav("user")
               history.push("/user")
             }}>
                 <FaUser />
               </Button>
-              <Button nav onClick={() => toggleDarkMode(isDarkMode)}>
-                {isDarkMode ? <FaSun /> : <FaMoon />}
-              </Button>
-              <Button nav onClick={() => toggleShowRightSideNav(showRightSideNav)}>
+            <Button nav onClick={() => toggleDarkMode(isDarkMode)}>
+              {isDarkMode ? <FaSun /> : <FaMoon />}
+            </Button>
+            <Button nav onClick={() => toggleShowRightSideNav(showRightSideNav)}>
                 <FaRegBell />
-              </Button>
-            </Block>
+            </Button>
+          </Block>
           </Block>
         </CustomNav>
-      {showRightSideNav && (
+        {showRightSideNav && (
         <>
           <CustomSideNavWrapper onClick={() => toggleShowRightSideNav(showRightSideNav)} />
           <CustomCloseButton>
@@ -150,10 +127,10 @@ const Nav = ({
 
 const mapStateToProps = state => ({
   user: state.auth.user,
+  activeNav: state.ui.activeNav,
   isDarkMode: state.ui.isDarkMode,
   showRightSideNav: state.ui.showRightSideNav,
   activeNav: state.ui.activeNav,
-  cart: state.cart.items
 });
 
 export default connect(mapStateToProps, { toggleDarkMode, toggleShowRightSideNav, setActiveNav })(Nav);

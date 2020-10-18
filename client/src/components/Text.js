@@ -69,6 +69,11 @@ const CustomText = styled.span`
 const CustomH1 = styled.h1`
   color: ${props => props.theme.isDark ? "white" : props.theme.colors.header};
   font-size: ${props => props.theme.sizes.h1}px;
+  ${props =>
+    props.white &&
+    css`
+      color: white;
+    `}
 `;
 const CustomH2 = styled.h1`
   color: ${props => props.theme.isDark ? "white" : props.theme.colors.header};
