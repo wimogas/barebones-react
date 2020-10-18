@@ -26,7 +26,7 @@ const Posts = ({ getPosts, data: { posts }, user}) => {
 
   return(
     <>
-      <Block row middle card>
+      <Block row middle card wrap="true">
         <Block row middle flex={"0.5"}>
           <Avatar style={{maxWidth:"54px", maxHeight: "54px"}}/>
           <Text h1 style={{marginRight: "16px"}}>{user && `${user.name}`}</Text>
