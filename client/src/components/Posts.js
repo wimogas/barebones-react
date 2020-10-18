@@ -31,7 +31,7 @@ const Posts = ({ getPosts, data: { posts }, user}) => {
           <Avatar style={{maxWidth:"54px", maxHeight: "54px"}}/>
           <Text h1 style={{marginRight: "16px"}}>{user && `${user.name}`}</Text>
         </Block>
-        <Block flex={"2"}>
+        <Block flex={"2"} margin={"0px"}>
           <PostForm />
         </Block>
 

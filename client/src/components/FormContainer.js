@@ -6,7 +6,7 @@ const CustomForm = styled.form`
   ${props =>
     props.marginBottom &&
     css`
-      margin-bottom: ${props => props.theme.sizes.base}px;
+      margin: 0px;
     `}
 `;
 

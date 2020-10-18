@@ -4,7 +4,6 @@ import Moment from "react-moment";
 import { connect } from "react-redux";
 import { FaHeart, FaTrashAlt } from "react-icons/fa";
 import {ReactComponent as Avatar} from '../assets/avataaars.svg'
-import {ReactComponent as Avatar2} from '../assets/avataaars2.svg'
 import { Button, Block, Text } from "../components";
 
 import { addLike, deletePost } from "../redux/actions/data.actions";
@@ -18,10 +17,8 @@ const PostItem = ({
   <Block card padding={"16px"} margin={"0px 0px 16px 0px"}>
     <Link to={`/posts/${_id}`}>
       <Block row middle>
-        {user === auth.user._id ? (
+        {user === auth.user._id && (
           <Avatar style={{maxWidth:"32px", maxHeight: "32px"}}/>
-        ) : (
-          <Avatar2 style={{maxWidth:"32px", maxHeight: "32px"}}/>
         )
         }
         <Text h4>{name}</Text>

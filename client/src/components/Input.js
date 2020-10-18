@@ -9,6 +9,7 @@ const CustomInput = styled.input`
   color: ${props => props.theme.colors.text};
   border-radius: ${props => props.theme.sizes.radius}px;
   border: none;
+  margin: 0px;
   background-color: ${props => props.theme.isDark ? props.theme.colors.light : "#efefef"};
   font-size: ${props => props.theme.sizes.base}px;
   :focus {
