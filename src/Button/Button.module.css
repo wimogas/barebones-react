@@ -1,0 +1,79 @@
+.button {
+    background-color: #ccc;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 8px 10px;
+    border-radius: 4px;
+    transition: all .3s;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.button:hover {
+    background-color: rgb(184, 184, 184);
+    transition: all .3s;
+}
+
+.primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.primary:hover {
+    background-color: var(--color-primary-lighter);
+}
+
+.secondary {
+    background-color: var(--color-secondary-light);
+    color: var(--color-secondary);
+}
+
+.secondary:hover {
+    background-color: var(--color-secondary-lighter);
+}
+
+.inverse {
+    background-color: transparent;
+    color: white;
+}
+
+.inverse:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-secondary-light);
+}
+
+.button[disabled] {
+    background-color: var(--color-secondary-lightest);
+    color: var(--color-secondary-light);
+    cursor: default;
+}
+
+.danger {
+    background-color: var(--color-error);
+    color: white;
+}
+
+.danger:hover {
+    background-color: var(--color-error-light);
+}
+.success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.success:hover {
+    background-color: var(--color-success-light);
+}
+
+.icon-only {
+    background-color: transparent;
+}
+
+.icon-only:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-secondary-light);
+}
