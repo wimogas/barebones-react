@@ -69,13 +69,6 @@ Inverse.args = {
     action: () => {console.log(`Button Secondary was clicked`)},
 };
 
-export const Success = Template.bind({});
-Success.args = {
-    variant: 'success',
-    children: 'Success',
-    action: () => {console.log(`Button Success was clicked`)},
-    icon: undefined,
-};
 
 export const Danger = Template.bind({});
 Danger.args = {

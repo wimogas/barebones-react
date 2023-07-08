@@ -15,7 +15,7 @@ export type ButtonProps = {
     iconColor?: string | undefined,
     iconSize?: number | undefined,
     style?: object | undefined,
-    variant?: 'primary' | 'secondary' | 'inverse' | 'danger' | 'success',
+    variant?: 'primary' | 'secondary' | 'inverse' | 'danger',
     type?: "submit" | undefined
 }
 
@@ -39,7 +39,7 @@ const Button: React.FC<ButtonProps> = ({
         <button
             className={classNames(
                 styles.button,
-                variant && styles[variant],
+                variant && styles[`button-${variant}`],
                 classes)}
             onClick={() => action && action()}
             style={style}
