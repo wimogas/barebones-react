@@ -1,0 +1,125 @@
+@use '../variables/globals' as *;
+@use '../variables/breakpoints' as *;
+@use '../variables/spacing' as *;
+@use '../mixins/layout' as *;
+
+.#{$namespace}block {
+	display: flex;
+	@include layout-utility();
+}
+
+.#{$namespace}row {
+	flex-direction: row;
+}
+
+.#{$namespace}column {
+	flex-direction: column;
+}
+
+.#{$namespace}justify-start {
+	justify-content: flex-start;
+}
+
+.#{$namespace}justify-end {
+	justify-content: flex-end;
+}
+
+.#{$namespace}justify-center {
+	justify-content: center;
+}
+
+.#{$namespace}justify-between {
+	justify-content: space-between;
+}
+
+.#{$namespace}justify-evenly {
+	justify-content: space-evenly;
+}
+
+.#{$namespace}justify-around {
+	justify-content: space-around;
+}
+
+.#{$namespace}align-start {
+	align-items: flex-start;
+}
+
+.#{$namespace}align-end {
+	align-items: flex-end;
+}
+
+.#{$namespace}align-center {
+	align-items: center;
+}
+
+.#{$namespace}wrap {
+	flex-wrap: wrap;
+}
+
+.#{$namespace}w-100 {
+	width: 100%;
+}
+
+.#{$namespace}w-75 {
+	width: 75%;
+}
+
+.#{$namespace}w-50 {
+	width: 50%;
+}
+
+.#{$namespace}w-33 {
+	width: 33%;
+}
+
+.#{$namespace}w-25 {
+	width: 25%;
+}
+
+.#{$namespace}h-100 {
+	height: 100%;
+}
+
+.#{$namespace}hide {
+	display: none;
+}
+
+@for $size from 1 through 12 {
+	.#{$namespace}flex-#{$size} {
+		flex: $size;
+	}
+}
+
+// Grid columns 
+// col-1 through col-12 (plus media queries, ex. col-xl-5)
+@each $key, $val in ($breakpoints-map) {
+	@if ($key == "xs") {
+		@for $col from 1 through 12 {
+			.#{$namespace}col-#{$col} {
+				display: grid;
+				grid-template-columns: repeat($col, 1fr);
+			}
+		}
+	} @else {
+		@media (min-width: $val) {
+			@for $col from 1 through 12 {
+				.#{$namespace}col-#{$key}-#{$col} {
+					display: grid;
+					grid-template-columns: repeat($col, 1fr);
+				}
+			}
+		}
+	}
+}
+
+$gap-map: (
+    "100": $spacing100,
+    "200": $spacing200,
+    "300": $spacing300
+);
+
+@each $key, $val in $gap-map {
+	.#{$namespace}gap-#{$key} {
+		gap: $val;
+	}
+}

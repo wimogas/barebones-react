@@ -1,0 +1,195 @@
+@use '../variables/globals' as *;
+@use "../variables/typography" as *;
+@use "../variables/colors" as *;
+@use "../mixins/typography" as *;
+
+.#{$namespace}font-capitalize {
+	text-transform: capitalize;
+}
+
+// TYPOGRAPHY
+// https://sally.zeroheight.com/styleguide/s/61501/p/533535-typography/b/862be5
+
+// GENERIC
+
+// Font Size classes
+$size-map: (
+	"100": $fontSize100,
+	"200": $fontSize200,
+	"300": $fontSize300,
+	"400": $fontSize400,
+	"500": $fontSize500,
+	"600": $fontSize600,
+	"700": $fontSize700,
+	"800": $fontSize800,
+	"900": $fontSize900,
+);
+
+@each $key, $val in ($size-map) {
+	.#{$namespace}font-size-#{$key} {
+		font-size: $val;
+	}
+}
+
+// Line Height classes
+
+$line-height-map: (
+	"100": $lineHeight100,
+	"300": $lineHeight300,
+	"500": $lineHeight500,
+	"700": $lineHeight700,
+	"900": $lineHeight900,
+	"950": $lineHeight950,
+);
+
+@each $key, $val in ($line-height-map) {
+	.#{$namespace}line-height-#{$key} {
+		line-height: $val;
+	}
+}
+
+//  Font Weight classes
+
+$weight-map: (
+	"regular": $fontRegular,
+	"semibold": $fontSemiBold,
+	"bold": $fontBold,
+);
+
+@each $key, $val in ($weight-map) {
+	.#{$namespace}font-#{$key} {
+		font-weight: $val;
+	}
+}
+
+// TOKENS
+
+// Headings
+
+// Example Output:
+// .h1-semibold {
+//     font-size: 42px;
+//     line-height: 48px;
+//     font-weight: 600;
+// }
+
+$heading-map: "h1", "h2", "h3", "h4", "h5";
+
+@each $key in ($heading-map) {
+	.#{$namespace}#{$key} {
+		color: $neutral900;
+		@include generate-type($key);
+		&-semibold {
+			@extend .#{$namespace}#{$key};
+			font-weight: $fontSemiBold;
+		}
+		&-bold {
+			@extend .#{$namespace}#{$key};
+			font-weight: $fontBold;
+		}
+	}
+}
+
+// Body
+
+// Example Output:
+// .body-large-semibold {
+//     font-size: 16px;
+//     line-height: 24px;
+//     font-weight: 600;
+//     font-family: "Open Sans SemiBold";
+// }
+
+$body-map: "large" , "medium", "small";
+
+@each $key in ($body-map) {
+	.#{$namespace}body-#{$key} {
+		color: $neutral800;
+		@include generate-type($key);
+		&-regular {
+			@extend .#{$namespace}body-#{$key};
+			font-weight: $fontRegular;
+		}
+		&-semibold {
+			@extend .#{$namespace}body-#{$key};
+			font-weight: $fontSemiBold;
+		}
+		&-bold {
+			@extend .#{$namespace}body-#{$key};
+			font-weight: $fontBold;
+		}
+	}
+}
+
+// Action Button
+
+$action-button-map: "large", "medium", "small";
+
+
+@each $key in ($action-button-map) {
+	.#{$namespace}button-#{$key} {
+		@include generate-type($key);
+		&-regular {
+			@extend .#{$namespace}button-#{$key};
+			font-weight: $fontRegular;
+		}
+		&-semibold {
+			@extend .#{$namespace}button-#{$key};
+			font-weight: $fontSemiBold;
+		}
+		&-bold {
+			@extend .#{$namespace}button-#{$key};
+			font-weight: $fontBold;
+		}
+	}
+}
+
+// Label
+
+$label-map: "medium", "small";
+
+@each $key in ($label-map) {
+	.#{$namespace}label-#{$key} {
+		@include generate-type($key);
+		&-regular {
+			@extend .#{$namespace}label-#{$key};
+			font-weight: $fontRegular;
+		}
+		&-semibold {
+			@extend .#{$namespace}label-#{$key};
+			font-weight: $fontSemiBold;
+		}
+	}
+}
+
+// Caption
+
+.#{$namespace}caption {
+	@include generate-type("tiny");
+	&-regular {
+		@extend .#{$namespace}caption;
+		font-weight: $fontRegular;
+	}
+	&-semibold {
+		@extend .#{$namespace}caption;
+		font-weight: $fontSemiBold;
+	}
+	&-bold {
+		@extend .#{$namespace}caption;
+		font-weight: $fontBold;
+	}
+}
+
+// Link
+
+.#{$namespace}link-medium {
+	@include generate-type("medium");
+	&-regular {
+		@extend .#{$namespace}link-medium;
+		font-weight: $fontRegular;
+	}
+	&-semibold {
+		@extend .#{$namespace}link-medium;
+		font-weight: $fontSemiBold;
+	}
+}

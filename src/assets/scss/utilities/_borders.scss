@@ -1,0 +1,18 @@
+@use '../variables/globals' as *;
+@use '../variables/borders' as *;
+// GENERIC
+
+$border-map: (
+	"01": $border01,
+	"02": $border02,
+	"03": $border03,
+	"04": $border04,
+	"05": $border05,
+	"06": $border06,
+);
+
+@each $key, $val in ($border-map) {
+	.#{$namespace}border-#{$key} {
+		border: 1px solid $val;
+	}
+}

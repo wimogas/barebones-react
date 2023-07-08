@@ -1,0 +1,106 @@
+@use '../variables/globals' as *;
+@use '../variables/border-radius' as *;
+@use '../variables/transitions' as *;
+@use '../variables/backgrounds' as *;
+@use '../variables/actions' as *;
+@use '../variables/typography' as *;
+@use '../variables/borders' as *;
+@use '../variables/spacing' as *;
+@use '../variables/colors' as *;
+@use '../variables/fonts' as *;
+@use "../mixins/typography" as *;
+
+$button-variant-map: (
+    "primary": (
+        "background-color": $background10,
+		"color": $white,
+        "hover" : $actionPrimaryHover,
+        "active" : $actionPrimaryActive,
+        "focus": $background10
+    ),
+    "secondary": (
+        "background-color": $actionSecondaryDefault,
+		"color": $neutral800,
+        "hover" : $actionSecondaryHover,
+        "active" : $neutral300,
+        "focus": $actionSecondaryDefault
+    ),
+    "tertiary": (
+        "background-color": transparent,
+		"color": $neutral900,
+        "hover" : $actionSecondaryHover,
+        "active" : $actionSecondaryDefault,
+        "focus": transparent
+    ),
+    "danger": (
+        "background-color": $error600,
+		"color": $white,
+        "hover" : $error500,
+        "active" : $error700,
+        "focus": $error600
+    )
+);
+
+$button-sizes-map: (
+    "large": (
+        "padding": $spacing300 $spacing600,
+        "height": 48px,
+    ),
+    "medium": (
+        "padding": $spacing200 $spacing500,
+        "height": 40px,
+    ),
+    "small": (
+        "padding": $spacing200 $spacing400,
+        "height": 32px,
+    ),
+    "tiny": (
+        "padding": $spacing100 $spacing250,
+        "height": 24px,
+    ),
+);
+
+@mixin button-variant($variant) {
+    @extend .#{$namespace}button;
+    background-color: #{map-get($button-variant-map, $variant, "background-color")};
+    color: #{map-get($button-variant-map, $variant, "color")};
+}
+
+@mixin generate-button-sizes($variant) {
+    @each $key, $val in ($button-sizes-map) {
+        &-#{$key} {
+            @extend .#{$namespace}button-#{$variant};
+            @if (#{$key} == "tiny") {
+                @include generate-type("small");
+            } @else {
+                @include generate-type(#{$key});
+            }
+            padding: #{map-get($button-sizes-map, $key, "padding")};
+            height: #{map-get($button-sizes-map, $key, "height")};
+            &:hover {
+                background-color: #{map-get($button-variant-map, $variant, "hover")};
+                color: #{map-get($button-variant-map, $variant, "color")};
+                border-color: transparent;
+            }
+            &:active {
+                background-color: #{map-get($button-variant-map, $variant, "active")};
+            }
+            &:disabled {
+                @if (#{$variant} == "tertiary") {
+                    background-color: transparent;
+                } @else {
+                    background-color: $actionSecondaryHover;
+                }
+
+                color: $neutral400;
+                cursor: default;
+            }
+            &:focus {
+                background-color: #{map-get($button-variant-map, $variant, "focus")};
+                border: 1px solid $primary600;
+                color: #{map-get($button-variant-map, $variant, "color")};
+            }
+        }
+    }
+}
+

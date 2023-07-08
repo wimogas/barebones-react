@@ -1,0 +1,97 @@
+@use '../variables/globals' as *;
+@use '../variables/spacing' as *;
+@use '../variables/breakpoints' as *;
+
+$spacing-map: (
+	"50": $spacing50,
+	"100": $spacing100,
+	"150": $spacing150,
+	"200": $spacing200,
+	"250": $spacing250,
+	"300": $spacing300,
+	"350": $spacing350,
+	"400": $spacing400,
+	"450": $spacing450,
+	"500": $spacing500,
+	"550": $spacing550,
+	"600": $spacing600,
+	"650": $spacing650,
+	"700": $spacing700,
+	"750": $spacing750,
+	"800": $spacing800,
+	"850": $spacing850,
+	"900": $spacing900,
+	"950": $spacing950,
+);
+
+// m - for classes that set margin
+// p - for classes that set padding
+// t - for classes that set margin-top or padding-top
+// b - for classes that set margin-bottom or padding-bottom
+// l - for classes that set margin-left or padding-left
+// r - for classes that set margin-right or padding-right
+// x - for classes that set both *-left and *-right
+// y - for classes that set both *-top and *-bottom
+
+// Example Output: .mt-50 { margin-top: $spacing50 0 0 0};
+@each $name, $bp in ($breakpoints-map) {
+	@if ($name == "xs") {
+		@each $prop, $abbrev in (margin: m, padding: p) {
+			@each $key, $val in ($spacing-map) {
+				.#{$namespace}#{$abbrev}-#{$key} {
+					#{$prop}: $val;
+				}
+				.#{$namespace}#{$abbrev}y-#{$key} {
+					#{$prop}-top: $val;
+					#{$prop}-bottom: $val;
+				}
+				.#{$namespace}#{$abbrev}x-#{$key} {
+					#{$prop}-left: $val ;
+					#{$prop}-right: $val;
+				}
+				.#{$namespace}#{$abbrev}t-#{$key} {
+					#{$prop}-top: $val;
+				}
+				.#{$namespace}#{$abbrev}b-#{$key} {
+					#{$prop}-bottom: $val;
+				}
+				.#{$namespace}#{$abbrev}l-#{$key} {
+					#{$prop}-left: $val;
+				}
+				.#{$namespace}#{$abbrev}r-#{$key} {
+					#{$prop}-right: $val;
+				}
+			}
+		}
+} @else {
+	@media (min-width: $bp) {
+		@each $prop, $abbrev in (margin: m, padding: p) {
+				@each $key, $val in ($spacing-map) {
+					.#{$namespace}#{$abbrev}-#{$name}-#{$key} {
+						#{$prop}: $val;
+					}
+					.#{$namespace}#{$abbrev}y-#{$name}-#{$key} {
+						#{$prop}-top: $val;
+						#{$prop}-bottom: $val;
+					}
+					.#{$namespace}#{$abbrev}x-#{$name}-#{$key} {
+						#{$prop}-left: $val ;
+						#{$prop}-right: $val;
+					}
+					.#{$namespace}#{$abbrev}t-#{$name}-#{$key} {
+						#{$prop}-top: $val;
+					}
+					.#{$namespace}#{$abbrev}b-#{$name}-#{$key} {
+						#{$prop}-bottom: $val;
+					}
+					.#{$namespace}#{$abbrev}l-#{$name}-#{$key} {
+						#{$prop}-left: $val;
+					}
+					.#{$namespace}#{$abbrev}r-#{$name}-#{$key} {
+						#{$prop}-right: $val;
+					}
+				}
+			}
+		}
+	}
+}

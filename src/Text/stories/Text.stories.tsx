@@ -1,5 +1,3 @@
-import '../../style.css'
-
 import Text, {TextProps} from '../index';
 
 export default {

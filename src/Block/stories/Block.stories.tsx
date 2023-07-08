@@ -1,5 +1,3 @@
-import '../../style.css'
-
 import Block, {BlockProps} from '../../Block';
 
 export default {
@@ -8,18 +6,25 @@ export default {
     argTypes: {
         variant: {type: {required: true}, control: 'select',
             options: [
-                'card'
+                'card', undefined
             ]},
         classes: {control: 'text'},
-        justify: {control: 'text'},
-        align: {control: 'text'},
-        flex: {control: 'text'},
+        align: {type: {required: true}, control: 'select',
+            options: [
+                'center', 'flex-start',  'flex-end',
+            ]},
+        justify: {type: {required: true}, control: 'select',
+            options: [
+                'center', 'flex-start',  'flex-end',
+                'space-between', 'space-around',  'space-evenly',
+            ]},
         column: {control: 'boolean'},
         size: {type: {required: true}, control: 'select',
             options: [
                 's', 'm',  'l', 'xl',
             ]},
         style: {control: 'object'},
+        stretch: {control: 'boolean'}
     }
 };
 
@@ -32,27 +37,31 @@ const TemplateRow: React.FC<BlockProps> = (args) => <Block
     align={args.align}
     justify={args.justify}
     flex={args.flex}
+    stretch={args.stretch}
 >
     <Block
-        flex={'1'}
+        justify={'center'}
         style={{
             "backgroundColor":"var(--color-primary-darker)",
             "padding" : "12px",
             "borderRadius" : "6px",
+            "color": "white"
         }}>1</Block>
     <Block
-        flex={'1'}
+        justify={'center'}
         style={{
             "backgroundColor":"var(--color-primary-darker)",
             "padding" : "12px",
-            "borderRadius" : "6px"
+            "borderRadius" : "6px",
+            "color": "white"
         }}>2</Block>
 </Block>;
 
 
 export const Row = TemplateRow.bind({});
 Row.args = {
-    size: 's',
+    size: '500',
     align: 'center',
-    justify: 'space-between'
+    justify: 'space-between',
+    stretch: false
 };

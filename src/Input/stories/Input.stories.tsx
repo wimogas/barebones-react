@@ -1,5 +1,3 @@
-import '../../style.css'
-
 import Input, {InputProps} from '../index';
 
 export default {

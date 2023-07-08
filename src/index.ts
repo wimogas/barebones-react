@@ -1,5 +1,6 @@
 require("remixicon/fonts/remixicon.css");
 import './style.css'
+import './assets/scss/styles.scss'
 
 export { default as Icon} from './Icon';
 export { default as Button} from './Button';

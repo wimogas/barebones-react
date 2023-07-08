@@ -1,0 +1,52 @@
+@use "../variables/typography" as *;
+
+/*
+	## Generate Typography Types ##
+	Generates font-size and line-height equal to respective tokens in design system.
+	Implementation example:
+	@include generate-type("large");
+*/
+
+$type-token-map: (
+	"h1": (
+		"font-size": $fontSize900,
+		"line-height": $lineHeight950
+	),
+    "h2": (
+		"font-size": $fontSize800,
+		"line-height": $lineHeight900
+	), 
+    "h3": (
+		"font-size": $fontSize700,
+		"line-height": $lineHeight700
+	), 
+    "h4": (
+		"font-size": $fontSize600,
+		"line-height": $lineHeight500
+	), 
+    "h5": (
+		"font-size": $fontSize500,
+		"line-height": $lineHeight300
+	), 
+    "large": (
+		"font-size": $fontSize400, 
+		"line-height": $lineHeight300,
+	), 
+    "medium": (
+		"font-size": $fontSize300,
+		"line-height": $lineHeight300,
+	), 
+    "small": (
+		"font-size": $fontSize200,
+		"line-height": $lineHeight100,
+	), 
+    "tiny": (
+		"font-size": $fontSize100,
+		"line-height": $lineHeight100,
+	)
+);
+
+@mixin generate-type($fontToken) {
+    font-size: #{map-get($type-token-map, $fontToken, "font-size")};
+    line-height: #{map-get($type-token-map, $fontToken, "line-height")};
+}

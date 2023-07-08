@@ -1,0 +1,10 @@
+@use './colors' as *;
+
+$actionPrimaryDefault: $primary800;
+$actionPrimaryHover: $primary700;
+$actionPrimaryActive: $primary900;
+$actionSecondaryDefault: $neutral200;
+$actionSecondaryHover: $neutral100;
+$actionSecondaryActive: $neutral300;
+$actionTertiaryHover: $neutral100;
+$actionTertiaryActive: $neutral200;

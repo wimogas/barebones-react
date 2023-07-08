@@ -1,0 +1,19 @@
+@use '../variables/globals' as *;
+@use '../variables/border-radius' as *;
+
+// GENERIC
+
+$border-radius-map: (
+	"50": $borderRadius50,
+	"100": $borderRadius100,
+	"300": $borderRadius300,
+	"500": $borderRadius500,
+	"700": $borderRadius700,
+	"900": $borderRadius900,
+);
+
+@each $key, $val in ($border-radius-map) {
+	.#{$namespace}border-radius-#{$key} {
+		border-radius: $val;
+	}
+}

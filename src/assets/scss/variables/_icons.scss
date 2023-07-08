@@ -1,0 +1,15 @@
+@use './colors' as *;
+
+$iconInverse: $white;
+$iconDefault: $neutral900;
+$iconDisable: $neutral400;
+$iconSecondary: $neutral800;
+$iconTertiary: $secondary900;
+$iconLight: $neutral300;
+$iconHighlight: $primary700;
+
+$icon50: 12px;
+$icon100: 16px;
+$icon200: 20px;
+$icon300: 24px;
+$icon400: 32px;

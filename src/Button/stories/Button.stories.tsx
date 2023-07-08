@@ -1,5 +1,3 @@
-import '../../style.css'
-
 import Block, {BlockProps} from '../../Block';
 
 import Button, {ButtonProps} from '../index';

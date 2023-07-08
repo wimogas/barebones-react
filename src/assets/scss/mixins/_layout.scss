@@ -1,0 +1,42 @@
+@use '../variables/globals' as *;
+
+$direction-map: (
+    "row": "row",
+    "column": "column"
+);
+
+$justify-map: (
+    "start": "flex-start",
+    "end": "flex-end",
+    "center": "center",
+    "between": "space-between",
+    "around": "space-around",
+    "evenly": "space-evenly"
+);
+
+$align-map: (
+    "start": "flex-start",
+    "end": "flex-end",
+    "center": "center"
+);
+
+@mixin layout-utility() {
+    @each $dirKey, $dirVal in ($direction-map) {
+        &-#{$dirKey} {
+            @extend .#{$namespace}block;
+            flex-direction: #{$dirVal};
+            @each $justKey, $justVal in ($justify-map) {
+                &-#{$justKey} {
+                    @extend .#{$namespace}block-#{$dirKey};
+                    justify-content: #{$justVal};
+                    @each $alKey, $alVal in ($align-map) {
+                        &-#{$alKey} {
+                            @extend .#{$namespace}block-#{$dirKey}-#{$justKey};
+                            align-items: #{$alVal};
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

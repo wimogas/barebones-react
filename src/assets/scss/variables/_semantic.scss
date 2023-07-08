@@ -1,0 +1,22 @@
+@use './colors' as *;
+
+$error01: $error600;
+$error02: $error500;
+$error03: $error700;
+$error04: $error100;
+$error05: $error900;
+$error06: $error50;
+$success01: $success600;
+$success02: $success100;
+$success03: $success900;
+$success04: $success50;
+$success05: $success200;
+$success06: $success700;
+$warning01: $warning600;
+$warning02: $warning100;
+$warning03: $warning900;
+$warning04: $warning50;
+$info01: $info500;
+$info02: $info100;
+$info03: $info900;
+$info04: $info50;

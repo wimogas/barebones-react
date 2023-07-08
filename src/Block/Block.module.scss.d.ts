@@ -1,0 +1,36 @@
+declare const styles: {
+  readonly "block": string;
+  readonly "gap-50": string;
+  readonly "gap-100": string;
+  readonly "gap-200": string;
+  readonly "gap-300": string;
+  readonly "gap-400": string;
+  readonly "gap-500": string;
+  readonly "gap-600": string;
+  readonly "gap-700": string;
+  readonly "gap-800": string;
+  readonly "gap-900": string;
+  readonly "column": string;
+  readonly "card": string;
+  readonly "align-center": string;
+  readonly "align-flex-start": string;
+  readonly "align-flex-end": string;
+  readonly "justify-center": string;
+  readonly "justify-flex-start": string;
+  readonly "justify-flex-end": string;
+  readonly "justify-space-around": string;
+  readonly "justify-space-evenly": string;
+  readonly "justify-space-between": string;
+  readonly "flex-1": string;
+  readonly "flex-2": string;
+  readonly "flex-3": string;
+  readonly "flex-4": string;
+  readonly "flex-5": string;
+  readonly "flex-6": string;
+  readonly "flex-7": string;
+  readonly "flex-8": string;
+  readonly "flex-9": string;
+  readonly "stretch": string;
+};
+export = styles;
+

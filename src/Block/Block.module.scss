@@ -1,0 +1,74 @@
+@use '../assets/scss/variables/spacing' as *;
+
+$spacing-map: (
+        "50": $spacing50,
+        "100": $spacing100,
+        "200": $spacing200,
+        "300": $spacing300,
+        "400": $spacing400,
+        "500": $spacing500,
+        "600": $spacing600,
+        "700": $spacing700,
+        "800": $spacing800,
+        "900": $spacing900,
+);
+
+$justify-map: (
+        "justify-flex-start": "flex-start",
+        "justify-flex-end": "flex-end",
+        "justify-center": "center",
+        "justify-space-between": "space-between",
+        "justify-space-around": "space-around",
+        "justify-space-evenly": "space-evenly"
+);
+
+$align-map: (
+        "align-flex-start": "flex-start",
+        "align-flex-end": "flex-end",
+        "align-center": "center"
+);
+
+.block {
+  display: flex;
+  gap: 0;
+}
+
+.stretch {
+  > * {
+    flex: 1;
+  }
+}
+
+@each $key, $val in ($spacing-map) {
+  .gap-#{$key} {
+    gap: $val;
+  }
+}
+
+@for $size from 1 through 12 {
+  .flex-#{$size} {
+    flex: $size;
+  }
+}
+
+@each $justKey, $justVal in ($justify-map) {
+  .#{$justKey} {
+    justify-content: #{$justVal};
+  }
+}
+
+@each $alKey, $alVal in ($align-map) {
+  .#{$alKey} {
+    align-items: #{$alVal};
+  }
+}
+
+.card {
+  background: white;
+  color: var(--color-secondary-dark);
+  border-radius: 6px;
+}
+
+.column {
+  flex-direction: column;
+}

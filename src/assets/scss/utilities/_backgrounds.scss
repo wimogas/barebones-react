@@ -1,0 +1,27 @@
+@use '../variables/globals' as *;
+@use '../variables/backgrounds' as *;
+@use '../variables/semantic' as *;
+@use '../variables/actions' as *;
+
+$background-map: (
+	"01": $background01,
+	"02": $background02,
+	"03": $background03,
+	"04": $background04,
+	"05": $background05,
+	"06": $background06,
+	"07": $background07,
+	"08": $background08,
+	"09": $background09,
+	"10": $background10,
+	"11": $background11,
+	"12": $background12,
+	"13": $background13,
+	"14": $background14,
+);
+
+@each $key, $val in ($background-map) {
+	.#{$namespace}background-#{$key} {
+		background: $val;
+	}
+}
