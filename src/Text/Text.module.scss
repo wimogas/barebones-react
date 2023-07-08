@@ -1,3 +1,5 @@
+@use '../assets/scss/variables/colors' as *;
+
 .text {
   display: flex;
   align-items: center;
@@ -5,27 +7,27 @@
 }
 
 .error {
-  color: var(--color-error)
+  color: $error500;
 }
 
 .success {
-  color: var(--color-success)
+  color: $success500;
 }
 
 .disabled {
-  color: var(--color-secondary-light)
+  color: $secondary100;
 }
 
 .primary {
-  color: var(--color-primary)
+  color: $primary100;
 }
 
 .secondary {
-  color: var(--color-secondary)
+  color: $secondary700;
 }
 
 .default {
-  color: var(--color-secondary)
+  color: $secondary400;
 }
 
 .bold {

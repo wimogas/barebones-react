@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import {convertToTitle} from "../helpers";
 
-import styles from './Input.module.css'
+import styles from './Input.module.scss'
 
 import Text, {TextColorProps} from "../Text";
 

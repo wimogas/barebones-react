@@ -1,0 +1,24 @@
+@use '../assets/scss/variables/colors' as *;
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: $secondary500;
+  font-size: 14px;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid $secondary300;
+  border-radius: 4px;
+}
+
+.error {
+  border-color: $error500;
+}
+
+input[disabled] {
+  background-color: $secondary100;
+  cursor: not-allowed;
+}

@@ -1,9 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import {Sizes} from "../Block";
-
-import styles from './Text.module.css'
+import styles from './Text.module.scss'
 
 export type TextColorProps =
   "default" | "error" | "success" | "disabled" | "primary" | "secondary" | "" | undefined
@@ -14,7 +12,7 @@ export type TextProps = {
   style?: object,
   color?: TextColorProps,
   bold?: boolean,
-  size?: Sizes
+  size?: 's' | 'm' | 'l' | 'xl' | undefined
 }
 const Text = ({
                 text,
