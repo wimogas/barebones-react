@@ -5,41 +5,42 @@ import {convertToTitle} from "../helpers";
 
 import styles from './Input.module.css'
 
-import Text from "../Text";
+import Text, {TextColorProps} from "../Text";
 
-type Props = {
+export type InputProps = {
     name: string,
-    label?: string,
-    value?: string,
-    error?: boolean,
+    label?: string | undefined,
+    value?: string | undefined,
+    error?: boolean | undefined,
     onChange: any,
-    parent?: any
+    type?: "password" | "email" | "text" | undefined,
+    disabled?: boolean | undefined
 }
 
-const FIELD_TYPES = [
-    'email',
-    'password',
-]
+const Input = ({
+                   name,
+                   label,
+                   value,
+                   error,
+                   onChange,
+                   type = "text",
+                   disabled
+               }: InputProps) => {
 
-const Input = ({name, label, value, error, onChange}: Props) => {
-
-    const handleOptions = (field: string) => {
-        const foundType = FIELD_TYPES.filter(f => field.includes(f))[0]
-        if (foundType) {
-            return foundType
-        } else {
-            return 'text'
-        }
-    }
+    const labelColor: TextColorProps = error ? 'error' : disabled ? 'disabled' : ''
 
     return (
         <label>
-            {label && <Text text={convertToTitle(label)}/>}
+            {label && <Text
+                text={convertToTitle(label)}
+                color={labelColor}
+            />}
             <input className={classNames(error && styles.error)}
                    name={name}
                    value={value}
-                   type={handleOptions(name)}
+                   type={type}
                    onChange={onChange}
+                   disabled={disabled}
             />
         </label>
     )

@@ -3,13 +3,13 @@ import classNames from "classnames";
 
 import styles from "./Block.module.css";
 
-type sizes = "s" | "m" | "l" | "xl"
+export type Sizes = "s" | "m" | "l" | "xl" | undefined
 
 export interface BlockProps {
     children: any,
     classes?: string | undefined,
     column?: boolean,
-    size?: sizes | undefined,
+    size?: Sizes,
     style?: object,
     variant?: "card" | undefined,
     align?: "center" | undefined,

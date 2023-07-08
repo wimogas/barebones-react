@@ -3,3 +3,47 @@
   align-items: center;
   gap: 8px;
 }
+
+.error {
+  color: var(--color-error)
+}
+
+.success {
+  color: var(--color-success)
+}
+
+.disabled {
+  color: var(--color-secondary-light)
+}
+
+.primary {
+  color: var(--color-primary)
+}
+
+.secondary {
+  color: var(--color-secondary)
+}
+
+.default {
+  color: var(--color-secondary)
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.s {
+  font-size: var(--size-s);
+}
+
+.m {
+  font-size: var(--size-m);
+}
+
+.l {
+  font-size: var(--size-l);
+}
+
+.xl {
+  font-size: var(--size-xl);
+}

@@ -1,19 +1,40 @@
 import React from "react";
+import classNames from "classnames";
+
+import {Sizes} from "../Block";
 
 import styles from './Text.module.css'
 
-type Props = {
-  text: string,
-  type?: 'p' | 'h1' | undefined,
-  style?: object,
-}
-const Text = ({text, type, style}: Props) => {
+export type TextColorProps =
+  "default" | "error" | "success" | "disabled" | "primary" | "secondary" | "" | undefined
 
-  const Type = type || 'span'
+export type TextProps = {
+  text: string,
+  type?: 'span' |'p' | 'h1' | 'h2' | 'h3' | undefined,
+  style?: object,
+  color?: TextColorProps,
+  bold?: boolean,
+  size?: Sizes
+}
+const Text = ({
+                text,
+                type = 'span',
+                style,
+                color= 'default',
+                bold,
+                size
+  }: TextProps) => {
+
+  const Type = type
 
   return (
     <Type
-        className={styles.text}
+        className={classNames(
+            styles.text,
+            color && styles[color],
+            bold && styles.bold,
+            size && styles[size]
+        )}
         style={style}
     >
       {text}

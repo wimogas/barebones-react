@@ -1,10 +1,14 @@
 require("remixicon/fonts/remixicon.css");
 import './style.css'
 
-export { default as Icon} from './Icon/';
-export { default as Button} from './Button/';
-export { default as Block} from './Block/';
+export { default as Icon} from './Icon';
+export { default as Button} from './Button';
+export { default as Block} from './Block';
+export { default as Text} from './Text';
+export { default as Input} from './Input';
 
-export * from './Button'
 export * from './Icon'
+export * from './Button'
 export * from './Block'
+export * from './Text'
+export * from './Input'

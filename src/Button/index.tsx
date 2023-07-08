@@ -3,6 +3,7 @@ import React from "react";
 import Icon from '../Icon'
 
 import styles from "./Button.module.css";
+import classNames from "classnames";
 
 export type ButtonProps = {
     action: () => void,
@@ -21,6 +22,7 @@ export type ButtonProps = {
 const Button: React.FC<ButtonProps> = ({
                                            action,
                                            children,
+                                           classes,
                                            disabled,
                                            dropdown,
                                            icon,
@@ -31,11 +33,14 @@ const Button: React.FC<ButtonProps> = ({
                                            type
                                        }) => {
 
-    const iconColorDefault = variant === 'primary' ? 'white' : 'var(--color-secondary)'
+    const iconColorDefault = (variant === 'primary' || variant === 'inverse') ? 'white' : 'var(--color-secondary)'
 
     return (
         <button
-            className={`${styles.button} ${variant && styles[variant]}`}
+            className={classNames(
+                styles.button,
+                variant && styles[variant],
+                classes)}
             onClick={() => action && action()}
             style={style}
             disabled={disabled}
