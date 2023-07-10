@@ -84,7 +84,7 @@ WithIcon.args = {
 
 export const IconOnly = Template.bind({});
 IconOnly.args = {
-    variant: 'primary',
+    variant: 'icon-only',
     action: () => {console.log(`Button Icon was clicked`)},
     icon: 'admin-fill',
 };

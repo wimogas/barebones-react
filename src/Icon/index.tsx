@@ -1,12 +1,14 @@
 import React from "react";
 import 'remixicon/fonts/remixicon.css'
+import classNames from "classnames";
 
 type IconProps = {
     size?: number | undefined,
+    classes?: string | undefined,
     color?: string | undefined,
     icon: string
 }
-const Icon = ({size = 20, color='black', icon = 'ghost-line'}: IconProps) => {
+const Icon = ({size = 20, classes, color, icon = 'ghost-line'}: IconProps) => {
 
     return (
         <div style={{
@@ -15,7 +17,10 @@ const Icon = ({size = 20, color='black', icon = 'ghost-line'}: IconProps) => {
             alignItems: 'center',
             width: `${size}px`,
             height: `${size}px`}}>
-            <i className={`ri-${icon}`} style={{ fontSize: `${size}px`, color }}></i>
+            <i className={classNames(
+                `ri-${icon}`,
+                classes
+            )} style={{ fontSize: `${size}px`, color }}></i>
         </div>
     );
 };

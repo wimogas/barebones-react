@@ -18,6 +18,14 @@ $button-variant-map: (
     $button-secondary-focus,
   ),
   (
+    "icon-only",
+    $button-icon-only-bg-color,
+    $button-icon-only-color,
+    $button-icon-only-hover,
+    $button-icon-only-active,
+    $button-icon-only-focus,
+  ),
+  (
     "inverse",
     $button-inverse-bg-color,
     $button-inverse-color,
@@ -54,6 +62,9 @@ $button-variant-map: (
   .button-#{$name} {
     background-color: #{$bgColor};
     color: #{$color};
+    @if (#{$name} == "icon-only") {
+      padding: 2px 4px;
+    }
     &:hover {
       color: #{$color};
       @if (#{$name} == "inverse") {

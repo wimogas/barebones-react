@@ -56,6 +56,13 @@ $button-secondary-hover : $secondary300;
 $button-secondary-active: $secondary300;
 $button-secondary-focus: $secondary300;
 
+// Button Icon Only
+$button-icon-only-bg-color: transparent;
+$button-icon-only-color: $neutral900;
+$button-icon-only-hover : $neutral100;
+$button-icon-only-active: $neutral300;
+$button-icon-only-focus: transparent;
+
 // Button Inverse
 $button-inverse-bg-color: transparent;
 $button-inverse-color: $neutral100;
@@ -76,3 +83,12 @@ $input-label-color: $secondary500;
 $input-border: $secondary300;
 $input-error-border-color: $error500;
 $input-disabled-bg-color: $secondary100;
+
+
+// Alert
+$alert-success-color: $success500;
+$alert-success-bg-color: white;
+$alert-success-border-color: $success500;
+$alert-error-color: $error700;
+$alert-error-bg-color: white;
+$alert-error-border-color: $error700;

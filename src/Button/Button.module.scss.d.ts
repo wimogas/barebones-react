@@ -4,6 +4,7 @@ declare const styles: {
   readonly "button-secondary": string;
   readonly "button-inverse": string;
   readonly "button-danger": string;
+  readonly "button-icon-only": string;
 
 };
 export = styles;

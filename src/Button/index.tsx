@@ -15,7 +15,7 @@ export type ButtonProps = {
     iconColor?: string | undefined,
     iconSize?: number | undefined,
     style?: object | undefined,
-    variant?: 'primary' | 'secondary' | 'inverse' | 'danger',
+    variant?: 'primary' | 'secondary' | 'icon-only' | 'inverse' | 'danger',
     type?: "submit" | undefined
 }
 
