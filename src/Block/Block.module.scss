@@ -1,17 +1,4 @@
-@use '../assets/scss/variables/spacing' as *;
-
-$spacing-map: (
-        "50": $spacing50,
-        "100": $spacing100,
-        "200": $spacing200,
-        "300": $spacing300,
-        "400": $spacing400,
-        "500": $spacing500,
-        "600": $spacing600,
-        "700": $spacing700,
-        "800": $spacing800,
-        "900": $spacing900,
-);
+@use '../assets/scss/variables/theme' as *;
 
 $justify-map: (
         "justify-flex-start": "flex-start",

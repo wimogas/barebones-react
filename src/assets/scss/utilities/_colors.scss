@@ -25,3 +25,7 @@ $primary-map: (
 		color: $val;
 	}
 }
+
+.#{$namespace}white {
+	color: white;
+}

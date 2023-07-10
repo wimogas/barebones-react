@@ -18,6 +18,7 @@ $background-map: (
 	"12": $background12,
 	"13": $background13,
 	"14": $background14,
+	"15": $background15,
 );
 
 @each $key, $val in ($background-map) {

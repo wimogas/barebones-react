@@ -41,20 +41,12 @@ const TemplateRow: React.FC<BlockProps> = (args) => <Block
 >
     <Block
         justify={'center'}
-        style={{
-            "backgroundColor":"var(--color-primary-darker)",
-            "padding" : "12px",
-            "borderRadius" : "6px",
-            "color": "white"
-        }}>1</Block>
+        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+        >1</Block>
     <Block
         justify={'center'}
-        style={{
-            "backgroundColor":"var(--color-primary-darker)",
-            "padding" : "12px",
-            "borderRadius" : "6px",
-            "color": "white"
-        }}>2</Block>
+        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+        >2</Block>
 </Block>;
 
 

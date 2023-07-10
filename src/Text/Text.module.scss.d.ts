@@ -1,16 +1,16 @@
 declare const styles: {
   readonly "text": string;
-  readonly "error": string;
-  readonly "success": string;
-  readonly "disabled": string;
-  readonly "primary": string;
-  readonly "secondary": string;
-  readonly "default": string;
+  readonly "color-error": string;
+  readonly "color-success": string;
+  readonly "color-disabled": string;
+  readonly "color-primary": string;
+  readonly "color-secondary": string;
+  readonly "color-default": string;
   readonly "bold": string;
-  readonly "s": string;
-  readonly "m": string;
-  readonly "l": string;
-  readonly "xl": string;
+  readonly "size-s": string;
+  readonly "size-m": string;
+  readonly "size-l": string;
+  readonly "size-xl": string;
 };
 export = styles;
 

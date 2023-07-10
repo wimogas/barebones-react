@@ -29,9 +29,9 @@ const Text = ({
     <Type
         className={classNames(
             styles.text,
-            color && styles[color],
+            color && styles[`color-${color}`],
             bold && styles.bold,
-            size && styles[size]
+            size && styles[`size-${size}`]
         )}
         style={style}
     >

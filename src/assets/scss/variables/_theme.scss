@@ -1,0 +1,78 @@
+@use './colors' as *;
+@use './border-radius' as *;
+@use './spacing' as *;
+@use './typography' as *;
+@use './spacing' as *;
+
+// Color map
+$color-map: (
+  "primary": $primary100,
+  "secondary": $secondary700,
+  "error": $error500,
+  "success": $success500,
+  "default": $secondary400,
+  "disabled": $secondary100,
+);
+
+// Spacing map
+$spacing-map: (
+  "50": $spacing50,
+  "100": $spacing100,
+  "200": $spacing200,
+  "300": $spacing300,
+  "400": $spacing400,
+  "500": $spacing500,
+  "600": $spacing600,
+  "700": $spacing700,
+  "800": $spacing800,
+  "900": $spacing900,
+);
+
+
+// Button tokens
+$button-bg-color: $neutral700;
+$button-border-size: 1px;
+$button-padding: $spacing200 $spacing300;
+$button-border-radius: $borderRadius300;
+$button-gap: $spacing100;
+$button-font-size: $fontSize300;
+$button-line-height: $lineHeight100;
+
+$button-disabled-bg-color: $neutral600;
+$button-disabled-color: $neutral400;
+$button-focus-color: $primary600;
+
+// Button Primary
+$button-primary-bg-color: $primary300;
+$button-primary-color: $white;
+$button-primary-hover : $primary700;
+$button-primary-active: $primary700;
+$button-primary-focus: $primary700;
+
+// Button Secondary
+$button-secondary-bg-color: $secondary100;
+$button-secondary-color: $secondary500;
+$button-secondary-hover : $secondary300;
+$button-secondary-active: $secondary300;
+$button-secondary-focus: $secondary300;
+
+// Button Inverse
+$button-inverse-bg-color: transparent;
+$button-inverse-color: $neutral100;
+$button-inverse-hover : $neutral100;
+$button-inverse-active: $neutral900;
+$button-inverse-focus: transparent;
+
+// Button Danger
+$button-danger-bg-color: $error500;
+$button-danger-color: $white;
+$button-danger-hover : $error700;
+$button-danger-active: $error700;
+$button-danger-focus: $error600;
+
+
+// Input
+$input-label-color: $secondary500;
+$input-border: $secondary300;
+$input-error-border-color: $error500;
+$input-disabled-bg-color: $secondary100;

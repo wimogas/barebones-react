@@ -1,4 +1,4 @@
-@use '../assets/scss/variables/colors' as *;
+@use '../assets/scss/variables/theme' as *;
 
 .text {
   display: flex;
@@ -6,46 +6,18 @@
   gap: 8px;
 }
 
-.error {
-  color: $error500;
+@each $key, $val in ($spacing-map) {
+  .size-#{$key} {
+    font-size: $val;
+  }
 }
 
-.success {
-  color: $success500;
-}
-
-.disabled {
-  color: $secondary100;
-}
-
-.primary {
-  color: $primary100;
-}
-
-.secondary {
-  color: $secondary700;
-}
-
-.default {
-  color: $secondary400;
+@each $key, $val in ($color-map) {
+  .color-#{$key} {
+    color: $val;
+  }
 }
 
 .bold {
   font-weight: bold;
-}
-
-.s {
-  font-size: var(--size-s);
-}
-
-.m {
-  font-size: var(--size-m);
-}
-
-.l {
-  font-size: var(--size-l);
-}
-
-.xl {
-  font-size: var(--size-xl);
 }

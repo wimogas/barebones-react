@@ -31,11 +31,7 @@ const Template: React.FC<ButtonProps> = (args) => <Button
 
 const DarkTemplate: React.FC<ButtonProps> = (args) =>
     <Block
-        style={{
-            "backgroundColor":"var(--color-primary-darker)",
-            "padding" : "12px",
-            "borderRadius" : "6px"
-    }}>
+        classes={'bb-background-15 bb-p-400 bb-border-radius-400'}>
         <Button
             variant={args.variant}
             action={args.action}

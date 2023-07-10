@@ -1,76 +1,59 @@
-@use '../assets/scss/variables/border-radius' as *;
-@use '../assets/scss/variables/transitions' as *;
-@use '../assets/scss/variables/actions' as *;
-@use '../assets/scss/variables/typography' as *;
-@use '../assets/scss/variables/borders' as *;
-@use '../assets/scss/variables/spacing' as *;
-@use '../assets/scss/variables/colors' as *;
-@use '../assets/scss/variables/fonts' as *;
-
-/* tokens
-  button-primary-bg-color
-  button-primary-color
-  button-primary-hover
-  button-primary-active
-  button-primary-focus
-*/
+@use '../assets/scss/variables/theme' as *;
 
 $button-variant-map: (
   (
     "primary",
-    $primary300,
-    $white,
-    $primary700,
-    $primary700,
-    $primary700,
+    $button-primary-bg-color,
+    $button-primary-color,
+    $button-primary-hover,
+    $button-primary-active,
+    $button-primary-focus,
   ),
   (
     "secondary",
-    $secondary100,
-    $secondary500,
-    $secondary300,
-    $secondary300,
-    $secondary300,
+    $button-secondary-bg-color,
+    $button-secondary-color,
+    $button-secondary-hover,
+    $button-secondary-active,
+    $button-secondary-focus,
   ),
   (
     "inverse",
-    transparent,
-    $neutral400,
-    $neutral400,
-    $neutral900,
-    transparent,
+    $button-inverse-bg-color,
+    $button-inverse-color,
+    $button-inverse-hover,
+    $button-inverse-active,
+    $button-inverse-focus,
   ),
   (
     "danger",
-    $error500,
-    $white,
-    $error700,
-    $error700,
-    $error600,
+    $button-danger-bg-color,
+    $button-danger-color,
+    $button-danger-hover,
+    $button-danger-active,
+    $button-danger-focus,
   )
 );
 
 .button {
-  background-color: #ccc;
-  border: 1px solid transparent;
+  background-color: $button-bg-color;
+  border: $button-border-size solid transparent;
   cursor: pointer;
-  padding: 8px 10px;
-  border-radius: 4px;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
   transition: all .3s;
   display: flex;
   flex-direction: row;
-  gap: 4px;
+  gap: $button-gap;
   align-items: center;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
 }
-
 
 @each $name, $bgColor, $color, $hover, $active, $focus in ($button-variant-map) {
   .button-#{$name} {
     background-color: #{$bgColor};
     color: #{$color};
-    border: 1px solid transparent;
     &:hover {
       color: #{$color};
       @if (#{$name} == "inverse") {
@@ -86,15 +69,17 @@ $button-variant-map: (
       @if (#{$name} == "inverse") {
         background-color: transparent;
       } @else {
-        background-color: $actionSecondaryHover;
+        background-color: $button-disabled-bg-color;
       }
-      color: $neutral400;
+      color: $button-disabled-color;
       cursor: default;
     }
     &:focus {
       background-color: #{$focus};
-      border: 1px solid $primary600;
+      border-color: $button-focus-color;
       color: #{$color};
     }
   }
 }
+
+
