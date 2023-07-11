@@ -12,6 +12,7 @@ $color-map: (
   "success": $success500,
   "default": $secondary400,
   "disabled": $secondary100,
+  "inverse" : $neutral100
 );
 
 // Spacing map
@@ -92,3 +93,7 @@ $alert-success-border-color: $success500;
 $alert-error-color: $error700;
 $alert-error-bg-color: white;
 $alert-error-border-color: $error700;
+
+
+// Badge
+$badge-bg-color: $neutral500;

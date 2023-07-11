@@ -1,0 +1,24 @@
+@use '../assets/scss/variables/theme' as *;
+
+.badge {
+  font-size: 9px;
+  background: $badge-bg-color;
+  color: white;
+  padding: 0 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 16px;
+  width: fit-content;
+}
+
+@each $key, $val in ($color-map) {
+  .badge-#{$key} {
+    @if (#{$key} == "inverse") {
+      background-color: transparent;
+      border: 1px solid white;
+    } @else {
+      background-color: $val;
+    }
+  }
+}
