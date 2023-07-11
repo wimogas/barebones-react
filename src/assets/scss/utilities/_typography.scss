@@ -7,11 +7,6 @@
 	text-transform: capitalize;
 }
 
-// TYPOGRAPHY
-// https://sally.zeroheight.com/styleguide/s/61501/p/533535-typography/b/862be5
-
-// GENERIC
-
 // Font Size classes
 $size-map: (
 	"100": $fontSize100,
@@ -31,8 +26,6 @@ $size-map: (
 	}
 }
 
-// Line Height classes
-
 $line-height-map: (
 	"100": $lineHeight100,
 	"300": $lineHeight300,
@@ -48,8 +41,6 @@ $line-height-map: (
 	}
 }
 
-//  Font Weight classes
-
 $weight-map: (
 	"regular": $fontRegular,
 	"semibold": $fontSemiBold,
@@ -61,17 +52,6 @@ $weight-map: (
 		font-weight: $val;
 	}
 }
-
-// TOKENS
-
-// Headings
-
-// Example Output:
-// .h1-semibold {
-//     font-size: 42px;
-//     line-height: 48px;
-//     font-weight: 600;
-// }
 
 $heading-map: "h1", "h2", "h3", "h4", "h5";
 
@@ -89,16 +69,6 @@ $heading-map: "h1", "h2", "h3", "h4", "h5";
 		}
 	}
 }
-
-// Body
-
-// Example Output:
-// .body-large-semibold {
-//     font-size: 16px;
-//     line-height: 24px;
-//     font-weight: 600;
-//     font-family: "Open Sans SemiBold";
-// }
 
 $body-map: "large" , "medium", "small";
 
@@ -118,65 +88,6 @@ $body-map: "large" , "medium", "small";
 			@extend .#{$namespace}body-#{$key};
 			font-weight: $fontBold;
 		}
-	}
-}
-
-// Action Button
-
-$action-button-map: "large", "medium", "small";
-
-
-@each $key in ($action-button-map) {
-	.#{$namespace}button-#{$key} {
-		@include generate-type($key);
-		&-regular {
-			@extend .#{$namespace}button-#{$key};
-			font-weight: $fontRegular;
-		}
-		&-semibold {
-			@extend .#{$namespace}button-#{$key};
-			font-weight: $fontSemiBold;
-		}
-		&-bold {
-			@extend .#{$namespace}button-#{$key};
-			font-weight: $fontBold;
-		}
-	}
-}
-
-// Label
-
-$label-map: "medium", "small";
-
-@each $key in ($label-map) {
-	.#{$namespace}label-#{$key} {
-		@include generate-type($key);
-		&-regular {
-			@extend .#{$namespace}label-#{$key};
-			font-weight: $fontRegular;
-		}
-		&-semibold {
-			@extend .#{$namespace}label-#{$key};
-			font-weight: $fontSemiBold;
-		}
-	}
-}
-
-// Caption
-
-.#{$namespace}caption {
-	@include generate-type("tiny");
-	&-regular {
-		@extend .#{$namespace}caption;
-		font-weight: $fontRegular;
-	}
-	&-semibold {
-		@extend .#{$namespace}caption;
-		font-weight: $fontSemiBold;
-	}
-	&-bold {
-		@extend .#{$namespace}caption;
-		font-weight: $fontBold;
 	}
 }
 

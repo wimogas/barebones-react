@@ -1,7 +1,5 @@
 @use '../variables/globals' as *;
 @use '../variables/backgrounds' as *;
-@use '../variables/semantic' as *;
-@use '../variables/actions' as *;
 
 $background-map: (
 	"01": $background01,

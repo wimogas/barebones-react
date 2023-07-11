@@ -1,8 +1,5 @@
 @use '../variables/globals' as *;
 @use '../variables/colors' as *;
-@use '../variables/icons' as *;
-@use '../variables/content' as *;
-@use '../variables/semantic' as *;
 
 .#{$namespace}white {color: $white}
 
