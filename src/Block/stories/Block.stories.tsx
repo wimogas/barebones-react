@@ -49,11 +49,39 @@ const TemplateRow: React.FC<BlockProps> = (args) => <Block
         >2</Block>
 </Block>;
 
+const Template: React.FC<BlockProps> = (args) => <Block
+    variant={args.variant}
+    style={args.style}
+    classes={args.classes}
+    size={args.size}
+    column={args.column}
+    align={args.align}
+    justify={args.justify}
+    flex={args.flex}
+    stretch={args.stretch}
+>
+    <Block
+        justify={'center'}
+        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+    >1</Block>
+    <Block
+        justify={'center'}
+        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+    >2</Block>
+</Block>;
 
-export const Row = TemplateRow.bind({});
+
+export const Row = Template.bind({});
 Row.args = {
     size: '500',
     align: 'center',
     justify: 'space-between',
     stretch: false
+};
+
+export const Column = Template.bind({});
+Column.args = {
+    size: '500',
+    align: 'stretch',
+    column: true
 };
