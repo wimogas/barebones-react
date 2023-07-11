@@ -64,6 +64,13 @@ $button-icon-only-hover : $neutral100;
 $button-icon-only-active: $neutral300;
 $button-icon-only-focus: transparent;
 
+// Button Tertiary
+$button-tertiary-bg-color: transparent;
+$button-tertiary-color: $neutral900;
+$button-tertiary-hover : $neutral100;
+$button-tertiary-active: $neutral300;
+$button-tertiary-focus: transparent;
+
 // Button Inverse
 $button-inverse-bg-color: transparent;
 $button-inverse-color: $neutral100;
@@ -97,3 +104,8 @@ $alert-error-border-color: $error700;
 
 // Badge
 $badge-bg-color: $neutral500;
+
+
+// Dropdown
+$dropdown-item-color: $secondary500;
+$dropdown-item-hover-bg-color: $secondary300;

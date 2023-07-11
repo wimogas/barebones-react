@@ -18,6 +18,14 @@ $button-variant-map: (
     $button-secondary-focus,
   ),
   (
+    "tertiary",
+    $button-tertiary-bg-color,
+    $button-tertiary-color,
+    $button-tertiary-hover,
+    $button-tertiary-active,
+    $button-tertiary-focus,
+  ),
+  (
     "icon-only",
     $button-icon-only-bg-color,
     $button-icon-only-color,
