@@ -27,7 +27,7 @@ const TemplateRight: React.FC<DropdownProps> = (args) => {
     }];
 
     return (
-        <Block stretch justify={'flex-start'}>
+        <Block stretch justify={'flex-start'} style={{"min-height" : "120px"}}>
             <Dropdown
                 variant={args.variant}
                 items={ITEMS}
@@ -48,7 +48,7 @@ const TemplateLeft: React.FC<DropdownProps> = (args) => {
     }];
 
     return (
-        <Block stretch justify={'flex-end'}>
+        <Block stretch justify={'flex-end'} style={{"min-height" : "120px"}}>
             <Dropdown
                 variant={args.variant}
                 items={ITEMS}

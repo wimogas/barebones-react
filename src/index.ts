@@ -10,6 +10,7 @@ export { default as Input} from './Input';
 export { default as Alert} from './Alert';
 export { default as Badge} from './Badge';
 export { default as Dropdown} from './Dropdown';
+export { default as Modal} from './Modal';
 
 export * from './Icon'
 export * from './Button'
@@ -19,3 +20,4 @@ export * from './Input'
 export * from './Alert'
 export * from './Badge'
 export * from './Dropdown'
+export * from './Modal'
