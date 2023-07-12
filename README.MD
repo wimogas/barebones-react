@@ -1,8 +1,3 @@
-import { Meta } from '@storybook/blocks';
-
-<Meta title="BAREBONES UI/Introduction" />
-
-
 # Barebones UI 1.0.0
 
 Barebones UI is a collection of React Components to build user interfaces, prototypes and fully functional apps for the web.
