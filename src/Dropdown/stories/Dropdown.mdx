@@ -6,6 +6,88 @@ import * as DropdownStories from './Dropdown.stories';
 
 # Dropdown
 
+A dropdown component is used to select an item from a list of options.
+
+## Usage
+
+```jsx
+
+import { Dropdown } from 'react-barebones-ts';
+
+<Dropdown
+    variant="secondary"
+    text="Dropdown"
+    items={['Option 1', 'Option 2', 'Option 3']}
+/>
+
+````
+
+## Props
+
+### variant
+
+The variant prop determines the color of the dropdown. It can be one of the following values:
+
+types: `primary` | `secondary` | `inverse`
+
+```jsx
+
+<Dropdown variant="primary" />
+```
+
+### text
+
+The text prop determines the text that is displayed on the dropdown button.
+
+types: string
+
+```jsx
+
+<Dropdown text="Primary Dropdown" />
+```
+
+### items
+
+The items prop determines the list of items that are displayed in the dropdown menu.
+
+types: any[]
+
+```jsx
+
+<Dropdown items={['Option 1', 'Option 2', 'Option 3']} />
+```
+
+### icon
+
+The icon prop determines the icon that is displayed on the left side of dropdown button.
+
+types: any remixicon icon
+
+```jsx
+
+<Dropdown icon="admin-fill" />
+```
+
+### direction
+
+The direction prop determines the direction that the dropdown menu is displayed. It can be one of the following values:
+
+types: `right` | `left`
+
+```jsx
+
+<Dropdown direction="left" />
+```
+
+
+## Examples
+
+### Direction Right
+
 <Canvas of={DropdownStories.Right} />
 
+### Direction Left
+
 <Canvas of={DropdownStories.Left} />
+
+

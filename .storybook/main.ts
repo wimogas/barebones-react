@@ -3,7 +3,10 @@ const path = require("path");
 import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: [
+    "../src/Intro.mdx",
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
@@ -47,6 +50,14 @@ const config: StorybookConfig = {
                 }
               ],
               include: path.resolve(__dirname, "../")
+            },
+            {
+              test: /\.png$/,
+              use: [
+                {
+                  loader: "file-loader"
+                },
+              ],
             }
           ]
         }

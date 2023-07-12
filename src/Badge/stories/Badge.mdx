@@ -6,11 +6,70 @@ import * as BadgeStories from './Badge.stories';
 
 # Badge
 
+Badges are used to inform the user of an item's status or value.
+
+## Usage
+
+```jsx
+import { Badge } from '@storybook/blocks';
+
+<Badge>Badge</Badge>
+```
+
+## Variants
+
+### Primary
+
+Usage: The primary badge is used to indicate the main action or status of an item.
+
+```jsx
+<Badge variant="primary">Badge</Badge>
+```
+
 <Canvas of={BadgeStories.Primary} />
+
+### Secondary
+
+Usage: The secondary badge is used to indicate a less important action or status of an item.
+
+```jsx
+<Badge variant="secondary">Badge</Badge>
+```
+
 <Canvas of={BadgeStories.Secondary} />
+
+### Inverse
+
+Usage: The inverse badge is used to indicate a less important action or status of an item on a dark background.
+
+```jsx
+<Badge variant="inverse">Badge</Badge>
+```
 
 <Canvas of={BadgeStories.Inverse} />
 
+### Error
+
+Usage: The error badge is used to indicate an error or problem with an item.
+
+```jsx
+
+import { Badge } from '@storybook/blocks';
+
+<Badge variant="error">Badge</Badge>
+```
+
 <Canvas of={BadgeStories.Error} />
+
+### Success
+
+Usage: The success badge is used to indicate a successful action or status of an item.
+
+```jsx
+
+import { Badge } from '@storybook/blocks';
+
+<Badge variant="success">Badge</Badge>
+```
 
 <Canvas of={BadgeStories.Success} />

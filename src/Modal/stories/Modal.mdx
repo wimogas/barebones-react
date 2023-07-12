@@ -4,7 +4,65 @@ import * as ModalStories from './Modal.stories';
 
 <Meta of={ModalStories} />
 
-# Input
+# Modal
+
+The modal component is used to display content in a layer above the app.
+
+## Usage
+
+```jsx
+import { Modal } from '../index.tsx';
+
+<Modal title="Modal title" close={handleSetShowModal}>
+  ...
+</Modal>
+```
 
 <Canvas of={ModalStories.Launch} />
+
+## Props
+
+### title
+
+The title of the modal.
+
+```jsx
+<Modal title="Modal title">
+  ...
+
+</Modal>
+
+```
+
+### close
+
+The function to close the modal.
+
+```jsx
+
+const [showModal, setShowModal] = useState(false);
+
+const handleSetShowModal = () => {
+  setShowModal(false);
+};
+
+{showModal &&
+    <Modal close={handleSetShowModal}>
+      ...
+    </Modal>
+}
+```
+
+### children
+
+The content of the modal.
+
+```jsx
+
+<Modal>
+  <p>Modal content</p>
+</Modal>
+
+```
+
 

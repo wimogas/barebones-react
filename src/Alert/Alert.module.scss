@@ -46,6 +46,7 @@
   height: 50px;
   animation: animateInBanner .3s forwards;
   border-radius: 0;
+  z-index: 99999;
 }
 
 .toast {
@@ -56,6 +57,7 @@
   width: fit-content;
   border-radius: 6px;
   animation: animateInToast .3s forwards;
+  z-index: 9999;
 }
 
 @keyframes animateInAlert {

@@ -6,10 +6,102 @@ import * as InputStories from './Input.stories';
 
 # Input
 
+The input component is used to capture text-based user input.
+
+## Usage
+
+```jsx
+
+import { Input } from '@storybook/blocks';
+
+<Input placeholder="Placeholder text" />
+
+```
+
 <Canvas of={InputStories.Simple} />
 
+## Props
+
+### name
+
+The name of the input.
+
+```jsx
+<Input name="name" />
+```
+
+### value
+
+The value of the input.
+
+```jsx
+
+<Input value="Value" />
+
+```
+
+### onChange
+
+The function to call when the input value changes.
+
+```jsx
+
+const [fieldName, setFieldName] = useState('')
+
+handleSetFieldName = (e) => {
+    setFieldName(e.target.value)
+}
+
+<Input value={fieldName} onChange={handleSetFieldName} />
+
+```
+
+### type
+
+The type of input to render.
+
+```jsx
+
+<Input type="password" />
+
+```
+
+### label
+
+The label to display above the input.
+
+```jsx
+
+<Input label="Email" />
+
+```
 <Canvas of={InputStories.WithLabel} />
 
+### error
+
+Whether the input has an error.
+
+types: `boolean`
+
+```jsx
+
+<Input error />
+
+```
+
 <Canvas of={InputStories.WithError} />
+
+
+### disabled
+
+Whether the input is disabled.
+
+types: `boolean`
+
+```jsx
+
+<Input disabled />
+
+```
 
 <Canvas of={InputStories.Disabled} />

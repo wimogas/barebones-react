@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import Button from "../../Button";
 
 export default {
-    title: 'UI/Modal',
+    title: 'COMPONENTS/Modal',
     component: Modal,
     argTypes: {
         close: {type: {required: true}, control: 'Event'},

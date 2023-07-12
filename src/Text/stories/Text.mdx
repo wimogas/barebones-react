@@ -6,14 +6,90 @@ import * as TextStories from './Text.stories';
 
 # Text
 
+The Text component is used to render text in the UI.
+
+## Usage
+
+```jsx
+
+import { Text } from 'react-barebones-ts';
+
+<Text text="Text to display"/>
+
+```
+
+## Props
+
+
+### text
+
+The text to render.
+
+```jsx
+<Text text="Text to display"/>
+
+```
+
+### type
+
+The type of text to render.
+
+```jsx
+<Text type="span">Text</Text>
+
+```
+
+### size
+
+The size of the text.
+
+types: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+
+```jsx
+<Text size={500}>Text</Text>
+
+```
+
+### bold
+
+Whether the text should be bold.
+
+```jsx
+<Text bold>Text</Text>
+
+```
+
+### color
+
+The color of the text.
+
+```jsx
+<Text color="primary">Text</Text>
+
+```
+
+## Examples
+
+### Span
+
 <Canvas of={TextStories.Span} />
+
+### Paragraph
 
 <Canvas of={TextStories.Paragraph} />
 
+### Heading1
+
 <Canvas of={TextStories.Heading1} />
+
+### Heading2
 
 <Canvas of={TextStories.Heading2} />
 
+### Heading3
+
 <Canvas of={TextStories.Heading3} />
+
+### CustomSpan
 
 <Canvas of={TextStories.CustomSpan} />

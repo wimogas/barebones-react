@@ -13,7 +13,7 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "typeRoots": [
-      "index.d.ts",
+      "global.d.ts",
       "node_modules/@types"
     ],
     "noEmit": true,

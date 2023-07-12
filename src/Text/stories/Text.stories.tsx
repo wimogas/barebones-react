@@ -1,7 +1,7 @@
 import Text, {TextProps} from '../index';
 
 export default {
-    title: 'UI/Text',
+    title: 'COMPONENTS/Text',
     component: Text,
     argTypes: {
         type: {control: 'select',

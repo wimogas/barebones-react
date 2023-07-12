@@ -6,27 +6,82 @@ import * as AlertStories from './Alert.stories';
 
 # Alert
 
-## Success
+The alert component is used to display a message to the user. It can be used to display a success message, an error message, in banner or toast format.
 
+## Usage
+
+```jsx
+import { Alert } from 'react-barebones-ts';
+
+<Alert type="success">Success message</Alert>
+
+```
+
+## Variants
+
+### Success
+
+Usage: The alert of type success is used to display a success message to the user.
+
+```jsx
+<Alert type="success">Success message</Alert>
+
+```
 <Canvas of={AlertStories.Success} />
 
-## Error
+### Error
+
+Usage: The alert of type error is used to display an error message to the user.
+
+```jsx
+<Alert type="error">Error message</Alert>
+
+```
 
 <Canvas of={AlertStories.Error} />
 
-## Banner
+## Types
+
+### Banner
+
+Usage: The alert of type banner is used to display a message to the user which has higher priority than the other alert messages.
+
+```jsx
+<Alert type="banner">Banner message</Alert>
+
+```
 
 <Canvas of={AlertStories.Banner} />
 
-### Banner Dismissable
+### Toast
 
-<Canvas of={AlertStories.BannerDismissable} />
+Usage: The alert of type toast is used to display a message to the user which has lower priority than the other alert messages.
 
-## Toast
+```jsx
+<Alert type="toast">Toast message</Alert>
+
+```
 
 <Canvas of={AlertStories.Toast} />
 
+## Dismissable
+
+Usage: The alert can be dismissed by the user.
+
+### Banner Dismissable
+
+```jsx
+<Alert type="banner" dismissable={true}>Banner message</Alert>
+
+```
+
+<Canvas of={AlertStories.BannerDismissable} />
+
 ### Toast Dismissable
 
-<Canvas of={AlertStories.ToastDismissable} />
+```jsx
+<Alert type="toast" dismissable={true}>Toast message</Alert>
 
+```
+
+<Canvas of={AlertStories.ToastDismissable} />

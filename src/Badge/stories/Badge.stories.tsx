@@ -3,7 +3,7 @@ import Block, {BlockProps} from '../../Block';
 import Badge, {BadgeProps} from '../index';
 
 export default {
-    title: 'UI/Badge',
+    title: 'COMPONENTS/Badge',
     component: Badge,
     argTypes: {
         variant: {type: {required: true}, control: 'select',

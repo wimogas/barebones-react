@@ -4,18 +4,171 @@ import * as ButtonStories from './Button.stories';
 
 <Meta of={ButtonStories} />
 
-# Button
+# Button component
 
+The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.
+
+## Usage
+
+```jsx
+import { Button } from 'react-barebones-ts';
+
+<Button variant="primary">Button Primary</Button>
+
+```
+
+## Variants
+
+### Primary
+
+Usage: The primary button is used for the principle call to action on a page.
+
+```jsx
+
+<Button variant="primary">Click me</Button>
+```
 <Canvas of={ButtonStories.Primary} />
+
+### Secondary
+
+Usage: The secondary button is used for secondary actions on each page.
+
+```jsx
+
+<Button variant="secondary">Click me</Button>
+```
 
 <Canvas of={ButtonStories.Secondary} />
 
+
+### Inverse
+
+Usage: The inverse button is used for actions on each dark background page.
+
+```jsx
+
+<Button variant="inverse">Click me</Button>
+```
 <Canvas of={ButtonStories.Inverse} />
+
+
+### Danger
+
+Usage: The danger button is used for actions that are destructive.
+
+```jsx
+
+<Button variant="danger">Click me</Button>
+```
 
 <Canvas of={ButtonStories.Danger} />
 
+### With icon
+
+Usage: The icon button is used for actions which need an icon for clarity.
+
+```jsx
+
+<Button variant="primary" icon="check">Click me</Button>
+```
+
 <Canvas of={ButtonStories.WithIcon} />
+
+### Icon only
+
+Usage: The icon only button is used for actions where an icon is sufficient to convey the action.
+
+```jsx
+
+<Button variant="primary" icon="check" iconOnly>Click me</Button>
+```
 
 <Canvas of={ButtonStories.IconOnly} />
 
+### Dropdown
+
+Usage: The dropdown button is used for actions which need a dropdown.
+
+```jsx
+
+<Button variant="primary" dropdown>Click me</Button>
+```
+
 <Canvas of={ButtonStories.Dropdown} />
+
+## Properties
+
+### variant
+
+The variant of the button.
+
+types: primary, secondary, inverse, danger
+
+```jsx
+
+<Button variant="primary">Click me</Button>
+```
+
+### icon
+
+The icon of the button (any remixicon icon).
+
+```jsx
+
+<Button variant="primary" icon="check">Click me</Button>
+```
+
+### iconOnly
+
+The icon only variant of the button.
+
+types: true, false
+
+```jsx
+
+<Button variant="primary" icon="check" iconOnly>Click me</Button>
+```
+
+### dropdown
+
+The dropdown variant of the button.
+
+types: true, false
+
+```jsx
+
+<Button variant="primary" dropdown>Click me</Button>
+```
+
+### disabled
+
+The disabled state of the button.
+
+types: true, false
+
+```jsx
+
+<Button variant="primary" disabled>Click me</Button>
+```
+
+### action
+
+The click handler of the button.
+
+types: function
+
+```jsx
+
+<Button variant="primary" action={() => alert('Clicked!')}>Click me</Button>
+```
+
+### children
+
+The content of the button.
+
+types: string
+
+```jsx
+
+<Button variant="primary">Click me</Button>
+```

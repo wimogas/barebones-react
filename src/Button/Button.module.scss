@@ -95,8 +95,12 @@ $button-variant-map: (
     }
     &:focus {
       background-color: #{$focus};
-      border-color: $button-focus-color;
       color: #{$color};
+      @if (#{$name} == "inverse") {
+        border-color: white;
+      } @else {
+        border-color: $button-focus-color;
+      }
     }
   }
 }

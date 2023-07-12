@@ -2,7 +2,7 @@ import Dropdown, {DropdownProps} from "../index";
 import Block, {BlockProps} from "../../Block";
 
 export default {
-    title: 'UI/Dropdown',
+    title: 'COMPONENTS/Dropdown',
     component: Dropdown,
     argTypes: {
         direction: {type: {required: true}, control: 'select',

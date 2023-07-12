@@ -2,7 +2,7 @@ import Block, {BlockProps} from '../../Block';
 import Grid, {GridProps} from '../../Grid';
 
 export default {
-    title: 'UI/Grid',
+    title: 'COMPONENTS/Grid',
     component: Grid
 };
 

@@ -6,6 +6,134 @@ import * as BlockStories from './Block.stories';
 
 # Block
 
+The Block component is used to create a flex container.
+
+## Usage
+
+```jsx
+
+import { Block } from '@storybook/blocks';
+
+<Block>...</Block>
+
+```
+
+## Props
+
+
+### children
+
+The `children` prop is used to render the children of the Block.
+
+types: `React.ReactNode`
+
+```jsx
+<Block>
+    <Button>...</Button>
+</Block>
+
+```
+
+### column
+
+The `column` prop is used to create a column flex container.
+
+types: `true`, `false`
+
+```jsx
+<Block column>...</Block>
+
+```
+
+### flex
+
+The `flex` prop is used to set the flex value of the Block.
+
+types: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `none`
+
+```jsx
+<Block flex="1">...</Block>
+
+```
+
+### stretch
+
+The `stretch` prop is used to stretch the children of the Block.
+
+types: `true`, `false`
+
+```jsx
+<Block stretch>...</Block>
+
+```
+
+### classes
+
+The `classes` prop is used to add classes to the Block.
+
+types: `string`
+
+```jsx
+<Block classes="my-class">...</Block>
+
+```
+
+### align
+
+The `align` prop is used to align items on the cross axis.
+
+types: `start`, `center`, `end`, `baseline`, `stretch`
+
+```jsx
+<Block align="center">...</Block>
+
+```
+
+### justify
+
+The `justify` prop is used to align items on the main axis.
+
+types: `flex-start`, `center`, `flex-end`, `space-between`, `space-around`, `space-evenly`
+
+```jsx
+<Block justify="center">...</Block>
+
+```
+
+### size
+
+The `size` prop is used to set the gap between the Block items.
+
+types: `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | `undefined`
+
+```jsx
+<Block size="500">...</Block>
+
+```
+
+
+### variant
+
+The `variant` prop is used to set the variant of the Block.
+
+types: `card`, `undefined`
+
+```jsx
+<Block variant="primary">...</Block>
+
+```
+
+## Examples
+
+### Row
+
+A row is a horizontal flex container.
+
 <Canvas of={BlockStories.Row} />
+
+
+### Column
+
+A column is a vertical flex container.
 
 <Canvas of={BlockStories.Column} />

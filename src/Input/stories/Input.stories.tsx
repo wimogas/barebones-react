@@ -1,7 +1,7 @@
 import Input, {InputProps} from '../index';
 
 export default {
-    title: 'UI/Input',
+    title: 'COMPONENTS/Input',
     component: Input,
     argTypes: {
         onChange: {type: {required: true}, control: 'Event'},

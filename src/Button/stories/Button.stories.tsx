@@ -3,7 +3,7 @@ import Block, {BlockProps} from '../../Block';
 import Button, {ButtonProps} from '../index';
 
 export default {
-    title: 'UI/Button',
+    title: 'COMPONENTS/Button',
     component: Button,
     argTypes: {
         variant: {type: {required: true}, control: 'select',

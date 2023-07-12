@@ -1,10 +1,9 @@
 import Alert, {AlertProps} from '../../Alert';
 import Button from "../../Button";
-import * as events from "events";
 import {useEffect, useState} from "react";
 
 export default {
-    title: 'UI/Alert',
+    title: 'COMPONENTS/Alert',
     component: Alert,
     argTypes: {
         variant: {type: {required: true}, control: 'select',

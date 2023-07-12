@@ -1,7 +1,7 @@
 import Block, {BlockProps} from '../../Block';
 
 export default {
-    title: 'UI/Block',
+    title: 'COMPONENTS/Block',
     component: Block,
     argTypes: {
         variant: {type: {required: true}, control: 'select',
