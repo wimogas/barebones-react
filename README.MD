@@ -4,7 +4,7 @@ Barebones UI is a collection of React Components to build user interfaces, proto
 
 Check out the Storybook Docs:
 
-[![Group 1 (1).png](..%2F..%2F..%2F..%2F..%2FDownloads%2FGroup%201%20%281%29.png)](https://react-barebones-ts.vercel.app/)
+[![storybook-logo.png](src%2Fassets%2Fstorybook-logo.png)](https://react-barebones-ts.vercel.app/)
 
 ## Features
 
