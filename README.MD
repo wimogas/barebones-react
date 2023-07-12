@@ -2,6 +2,10 @@
 
 Barebones UI is a collection of React Components to build user interfaces, prototypes and fully functional apps for the web.
 
+Check out the Storybook Docs:
+
+[![Group 1 (1).png](..%2F..%2F..%2F..%2F..%2FDownloads%2FGroup%201%20%281%29.png)](https://react-barebones-ts.vercel.app/)
+
 ## Features
 
 - User-friendly and easy to implement UI for web applications.
