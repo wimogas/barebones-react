@@ -1,3 +1,4 @@
+import React from 'react';
 import Input, {InputProps} from '../index';
 
 export default {
@@ -13,15 +14,25 @@ export default {
     }
 };
 
-const Template: React.FC<InputProps> = (args) =>
-    <Input
-        value={args.value}
-        name={args.name}
-        onChange={args.onChange}
-        label={args.label}
-        error={args.error}
-        type={args.type}
-        disabled={args.disabled}/>;
+const Template: React.FC<InputProps> = (args) => {
+
+    const [value, setValue] = React.useState<string>('');
+
+    const handleChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setValue(e.target.value);
+    }
+    return (
+        <Input
+            value={value}
+            name={args.name}
+            onChange={handleChangeValue}
+            label={args.label}
+            error={args.error}
+            type={args.type}
+            disabled={args.disabled}/>
+    )
+}
+
 
 export const Simple = Template.bind({});
 Simple.args = {
