@@ -14,7 +14,7 @@ export type AlertProps = {
     close?: any,
     style?: {}
 }
-const Index = ({message, variant, type, close, style}: AlertProps) => {
+const Alert = ({message, variant, type, close, style}: AlertProps) => {
 
     return (
         <div className={classNames(styles.alert,
@@ -37,4 +37,4 @@ const Index = ({message, variant, type, close, style}: AlertProps) => {
     );
 };
 
-export default Index;
+export default Alert;

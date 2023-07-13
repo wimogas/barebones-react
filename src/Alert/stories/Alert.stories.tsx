@@ -1,6 +1,7 @@
-import Alert, {AlertProps} from '../../Alert';
+import React, {useEffect, useState} from "react";
+
+import Alert, {AlertProps} from '../index';
 import Button from "../../Button";
-import {useEffect, useState} from "react";
 
 export default {
     title: 'COMPONENTS/Alert',
@@ -56,14 +57,12 @@ export const Success = Template.bind({});
 Success.args = {
     variant: 'success',
     message: 'Successful alert',
-    type: null
 };
 
 export const Error = Template.bind({});
 Error.args = {
     variant: 'error',
     message: 'Error alert',
-    type: null
 };
 
 export const Banner = ThrowAlert.bind({});

@@ -1,5 +1,6 @@
-import Block, {BlockProps} from '../../Block';
+import React from 'react';
 
+import Block from '../../Block';
 import Badge, {BadgeProps} from '../index';
 
 export default {
@@ -10,11 +11,6 @@ export default {
             options: [
                 'primary', 'secondary', 'inverse', 'success', 'error'
             ]},
-        action: {type: {required: true}, control: 'Event'},
-        disabled: {control: 'boolean'},
-        dropdown: {control: 'boolean'},
-        icon: {control: 'text'},
-        iconColor: {control: 'text'}
     }
 };
 

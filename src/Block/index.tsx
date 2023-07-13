@@ -28,7 +28,7 @@ export interface BlockProps {
     stretch?: boolean | undefined
 }
 
-const Index = ({
+const Block = ({
                    children,
                    classes,
                    column,
@@ -63,4 +63,4 @@ const Index = ({
     );
 };
 
-export default Index;
+export default Block;
