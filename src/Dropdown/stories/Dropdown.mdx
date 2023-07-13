@@ -8,10 +8,11 @@ import * as DropdownStories from './Dropdown.stories';
 
 A dropdown component is used to select an item from a list of options.
 
+<Canvas of={DropdownStories.Right} />
+
 ## Usage
 
 ```jsx
-
 import { Dropdown } from 'react-barebones-ts';
 
 <Dropdown
@@ -31,7 +32,6 @@ The variant prop determines the color of the dropdown. It can be one of the foll
 types: `primary` | `secondary` | `inverse`
 
 ```jsx
-
 <Dropdown variant="primary" />
 ```
 
@@ -42,7 +42,6 @@ The text prop determines the text that is displayed on the dropdown button.
 types: string
 
 ```jsx
-
 <Dropdown text="Primary Dropdown" />
 ```
 
@@ -53,7 +52,6 @@ The items prop determines the list of items that are displayed in the dropdown m
 types: any[]
 
 ```jsx
-
 <Dropdown items={['Option 1', 'Option 2', 'Option 3']} />
 ```
 
@@ -64,7 +62,6 @@ The icon prop determines the icon that is displayed on the left side of dropdown
 types: any remixicon icon
 
 ```jsx
-
 <Dropdown icon="admin-fill" />
 ```
 
@@ -75,7 +72,6 @@ The direction prop determines the direction that the dropdown menu is displayed.
 types: `right` | `left`
 
 ```jsx
-
 <Dropdown direction="left" />
 ```
 
