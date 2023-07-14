@@ -70,6 +70,23 @@ const Template: React.FC<BlockProps> = (args) => <Block
     >2</Block>
 </Block>;
 
+const TemplateCard: React.FC<BlockProps> = (args) => <Block
+    variant={args.variant}
+    style={args.style}
+    classes={args.classes}
+    size={args.size}
+    column={args.column}
+    align={args.align}
+    justify={args.justify}
+    flex={args.flex}
+    stretch={args.stretch}
+>
+    <Block
+        justify={'center'}
+        classes={'bb-background-03 bb-py-300'}
+    >1</Block>
+</Block>;
+
 
 export const Row = Template.bind({});
 Row.args = {
@@ -84,4 +101,12 @@ Column.args = {
     size: '500',
     align: 'stretch',
     column: true
+};
+
+export const Card = TemplateCard.bind({});
+Card.args = {
+    size: '500',
+    align: 'stretch',
+    column: true,
+    variant: 'card'
 };

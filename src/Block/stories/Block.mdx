@@ -8,6 +8,8 @@ import * as BlockStories from './Block.stories';
 
 The Block component is used to create a flex container.
 
+<Canvas of={BlockStories.Column} />
+
 ## Usage
 
 ```jsx
@@ -119,9 +121,10 @@ The `variant` prop is used to set the variant of the Block.
 types: `card`, `undefined`
 
 ```jsx
-<Block variant="primary">...</Block>
+<Block variant="card">...</Block>
 
 ```
+<Canvas of={BlockStories.Card} />
 
 ## Examples
 
