@@ -15,28 +15,28 @@ The alert component is used to display a message to the user. It can be used to 
 ```jsx
 import { Alert } from 'react-barebones-ts';
 
-<Alert type="success">Success message</Alert>
+<Alert variant="success">Success message</Alert>
 
 ```
 
 ## Variants
 
-### Success
+### success
 
 Usage: The alert of type success is used to display a success message to the user.
 
 ```jsx
-<Alert type="success">Success message</Alert>
+<Alert variant="success">Success message</Alert>
 
 ```
 <Canvas of={AlertStories.Success} />
 
-### Error
+### error
 
 Usage: The alert of type error is used to display an error message to the user.
 
 ```jsx
-<Alert type="error">Error message</Alert>
+<Alert variant="error">Error message</Alert>
 
 ```
 
@@ -44,7 +44,7 @@ Usage: The alert of type error is used to display an error message to the user.
 
 ## Types
 
-### Banner
+### banner
 
 Usage: The alert of type banner is used to display a message to the user which has higher priority than the other alert messages.
 
@@ -55,7 +55,7 @@ Usage: The alert of type banner is used to display a message to the user which h
 
 <Canvas of={AlertStories.Banner} />
 
-### Toast
+### toast
 
 Usage: The alert of type toast is used to display a message to the user which has lower priority than the other alert messages.
 
@@ -68,12 +68,20 @@ Usage: The alert of type toast is used to display a message to the user which ha
 
 ## Dismissable
 
-Usage: The alert can be dismissed by the user.
+Usage: The alert can be dismissed by the user using the close prop.
 
 ### Banner Dismissable
 
 ```jsx
-<Alert type="banner" dismissable={true}>Banner message</Alert>
+
+const [showAlert, setShowAlert] = useState(true);
+
+const handleCloseAlert = () => {
+    setShowAlert(false);
+}
+{showAlert &&
+    <Alert type="banner" close={handleCloseAlert}>Banner message</Alert>
+}
 
 ```
 
@@ -82,8 +90,14 @@ Usage: The alert can be dismissed by the user.
 ### Toast Dismissable
 
 ```jsx
-<Alert type="toast" dismissable={true}>Toast message</Alert>
+const [showAlert, setShowAlert] = useState(true);
 
+const handleCloseAlert = () => {
+    setShowAlert(false);
+}
+{showAlert &&
+    <Alert type="toast" close={handleCloseAlert}>Toast message</Alert>
+}
 ```
 
 <Canvas of={AlertStories.ToastDismissable} />
