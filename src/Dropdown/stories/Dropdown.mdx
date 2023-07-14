@@ -49,15 +49,42 @@ types: string
 
 The items prop determines the list of items that are displayed in the dropdown menu.
 
-types: any[]
+Each item is an object with Button component properties:
+
+- `text` - the text that is displayed on the button
+- `variant` - the color of the button
+- `action` - the function that is called when the button is clicked
+- `icon` - the icon that is displayed on the left side of the button
+- ...
+
+
+types: `object[]`
 
 ```jsx
-<Dropdown items={['Option 1', 'Option 2', 'Option 3']} />
+const dropdownMenuItems = [
+    {
+        text: 'Option 1',
+        variant: 'primary',
+        action: () => console.log('Option 1 clicked'),
+    },
+    {
+        text: 'Option 2',
+        variant: 'secondary',
+        action: () => console.log('Option 2 clicked'),
+    },
+    {
+        text: 'Option 3',
+        variant: 'inverse',
+        action: () => console.log('Option 3 clicked')
+    }
+];
+
+<Dropdown items={dropdownMenuItems} />
 ```
 
 ### icon
 
-The icon prop determines the icon that is displayed on the left side of dropdown button.
+The icon prop determines the icon that is displayed on the left side of Dropdown button.
 
 types: any remixicon icon
 

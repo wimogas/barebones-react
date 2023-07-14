@@ -21,7 +21,7 @@ import { Button } from 'react-barebones-ts';
 
 ## Variants
 
-### Primary
+### primary
 
 Usage: The primary button is used for the principle call to action on a page.
 
@@ -31,7 +31,7 @@ Usage: The primary button is used for the principle call to action on a page.
 ```
 <Canvas of={ButtonStories.Primary} />
 
-### Secondary
+### secondary
 
 Usage: The secondary button is used for secondary actions on each page.
 
@@ -43,7 +43,7 @@ Usage: The secondary button is used for secondary actions on each page.
 <Canvas of={ButtonStories.Secondary} />
 
 
-### Inverse
+### inverse
 
 Usage: The inverse button is used for actions on each dark background page.
 
@@ -54,7 +54,7 @@ Usage: The inverse button is used for actions on each dark background page.
 <Canvas of={ButtonStories.Inverse} />
 
 
-### Danger
+### danger
 
 Usage: The danger button is used for actions that are destructive.
 
@@ -65,9 +65,24 @@ Usage: The danger button is used for actions that are destructive.
 
 <Canvas of={ButtonStories.Danger} />
 
-### With icon
+## Dropdown
 
-Usage: The icon button is used for actions which need an icon for clarity.
+Usage: The dropdown button is used for actions which need a dropdown.
+
+Note: This is not a Dropdown component, it is a Button with a dropdown icon.
+
+```jsx
+
+<Button variant="primary" dropdown>Click me</Button>
+```
+
+<Canvas of={ButtonStories.Dropdown} />
+
+## Icon
+
+### With Icon
+
+Usage: The Button with Icon is used for actions which need an icon for clarity.
 
 ```jsx
 
@@ -76,7 +91,7 @@ Usage: The icon button is used for actions which need an icon for clarity.
 
 <Canvas of={ButtonStories.WithIcon} />
 
-### Icon only
+### Icon Only
 
 Usage: The icon only button is used for actions where an icon is sufficient to convey the action.
 
@@ -87,17 +102,6 @@ Usage: The icon only button is used for actions where an icon is sufficient to c
 
 <Canvas of={ButtonStories.IconOnly} />
 
-### Dropdown
-
-Usage: The dropdown button is used for actions which need a dropdown.
-
-```jsx
-
-<Button variant="primary" dropdown>Click me</Button>
-```
-
-<Canvas of={ButtonStories.Dropdown} />
-
 ## Properties
 
 ### variant
@@ -107,7 +111,6 @@ The variant of the button.
 types: primary, secondary, inverse, danger
 
 ```jsx
-
 <Button variant="primary">Click me</Button>
 ```
 
@@ -116,8 +119,7 @@ types: primary, secondary, inverse, danger
 The icon of the button (any remixicon icon).
 
 ```jsx
-
-<Button variant="primary" icon="check">Click me</Button>
+<Button icon="check">Click me</Button>
 ```
 
 ### iconOnly
@@ -127,8 +129,7 @@ The icon only variant of the button.
 types: true, false
 
 ```jsx
-
-<Button variant="primary" icon="check" iconOnly>Click me</Button>
+<Button iconOnly>Click me</Button>
 ```
 
 ### dropdown
@@ -138,8 +139,7 @@ The dropdown variant of the button.
 types: true, false
 
 ```jsx
-
-<Button variant="primary" dropdown>Click me</Button>
+<Button dropdown>Click me</Button>
 ```
 
 ### disabled
@@ -149,8 +149,7 @@ The disabled state of the button.
 types: true, false
 
 ```jsx
-
-<Button variant="primary" disabled>Click me</Button>
+<Button disabled>Click me</Button>
 ```
 
 ### action
@@ -160,8 +159,7 @@ The click handler of the button.
 types: function
 
 ```jsx
-
-<Button variant="primary" action={() => alert('Clicked!')}>Click me</Button>
+<Button action={() => alert('Clicked!')}>Click me</Button>
 ```
 
 ### children
@@ -171,6 +169,5 @@ The content of the button.
 types: string
 
 ```jsx
-
-<Button variant="primary">Click me</Button>
+<Button>{children}</Button>
 ```
