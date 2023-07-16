@@ -72,6 +72,7 @@ $button-variant-map: (
     color: #{$color};
     @if (#{$name} == "icon-only") {
       padding: 2px 4px;
+      fill: #{$color};
     }
     &:hover {
       color: #{$color};

@@ -1,5 +1,3 @@
-require("remixicon/fonts/remixicon.css");
-
 import './assets/scss/styles.scss'
 
 export { default as Icon} from './Icon';

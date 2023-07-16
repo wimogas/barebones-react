@@ -3,6 +3,10 @@ import React, {useEffect, useState} from "react";
 import Alert, {AlertProps} from '../index';
 import Button from "../../Button";
 
+import CircleCheck from "../../assets/icons/checkbox-circle-line.svg";
+import CloseCircle from "../../assets/icons/close-circle-line.svg";
+import Icon from "../../Icon";
+
 export default {
     title: 'COMPONENTS/Alert',
     component: Alert,
@@ -25,7 +29,9 @@ const Template: React.FC<AlertProps> = (args) =>
         variant={args.variant}
         message={args.message}
         type={args.type}
-        close={args.close}/>
+        close={args.close}
+        icon={args.icon}
+        iconColor={args.iconColor}/>
 
 const ThrowAlert: React.FC<AlertProps> = (args) => {
     const [showAlert, setShowAlert] = useState(false)
@@ -47,7 +53,9 @@ const ThrowAlert: React.FC<AlertProps> = (args) => {
                 variant={args.variant}
                 message={args.message}
                 type={args.type}
-                close={args.close && handleShowAlert}/>}
+                close={args.close && handleShowAlert}
+                icon={args.icon}
+                iconColor={args.iconColor}/>}
         </>
     )
 }
@@ -69,7 +77,7 @@ export const Banner = ThrowAlert.bind({});
 Banner.args = {
     variant: 'error',
     message: 'Error alert',
-    type: 'banner'
+    type: 'banner',
 };
 
 export const BannerDismissable = ThrowAlert.bind({});
@@ -77,14 +85,14 @@ BannerDismissable.args = {
     variant: 'error',
     message: 'Error alert',
     type: 'banner',
-    close: true
+    close: true,
 };
 
 export const Toast = ThrowAlert.bind({});
 Toast.args = {
     variant: 'success',
     message: 'Successful alert',
-    type: 'toast'
+    type: 'toast',
 };
 
 export const ToastDismissable = ThrowAlert.bind({});
@@ -92,6 +100,6 @@ ToastDismissable.args = {
     variant: 'success',
     message: 'Successful alert',
     type: 'toast',
-    close: true
+    close: true,
 };
 

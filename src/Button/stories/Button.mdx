@@ -86,7 +86,7 @@ Usage: The Button with Icon is used for actions which need an icon for clarity.
 
 ```jsx
 
-<Button variant="primary" icon="check">Click me</Button>
+<Button variant="primary" icon="<CheckIcon/>">Click me</Button>
 ```
 
 <Canvas of={ButtonStories.WithIcon} />
@@ -97,7 +97,7 @@ Usage: The icon only button is used for actions where an icon is sufficient to c
 
 ```jsx
 
-<Button variant="primary" icon="check" iconOnly>Click me</Button>
+<Button variant="primary" icon="<CheckIcon/>" iconOnly>Click me</Button>
 ```
 
 <Canvas of={ButtonStories.IconOnly} />
@@ -116,10 +116,10 @@ types: primary, secondary, inverse, danger
 
 ### icon
 
-The icon of the button (any remixicon icon).
+The icon of the button. Pass an SVG or \<i\> as a React Component.
 
 ```jsx
-<Button icon="check">Click me</Button>
+<Button icon="<CheckIcon/>">Click me</Button>
 ```
 
 ### iconOnly

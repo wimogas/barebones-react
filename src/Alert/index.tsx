@@ -1,5 +1,9 @@
-import React from "react";
+import React, {ReactElement} from "react";
 import classNames from "classnames";
+
+import CheckLine from '../assets/icons/check-line.svg';
+import AlertFill from '../assets/icons/alert-fill.svg';
+import CloseFill from '../assets/icons/close-fill.svg';
 
 import styles from "./Alert.module.scss";
 import Block from "../Block";
@@ -12,9 +16,11 @@ export type AlertProps = {
     variant: "success" | "error",
     type?: "toast" | "banner",
     close?: any,
-    style?: {}
+    style?: {},
+    icon?: ReactElement,
+    iconColor?: string
 }
-const Alert = ({message, variant, type, close, style}: AlertProps) => {
+const Alert = ({message, variant, type, close, icon, iconColor, style}: AlertProps) => {
 
     return (
         <div className={classNames(styles.alert,
@@ -24,14 +30,16 @@ const Alert = ({message, variant, type, close, style}: AlertProps) => {
              style={style}
         >
             <Block size={300} style={{"alignItems" : "center"}}>
-                {variant === 'success' ? <Icon icon={'checkbox-circle-line'} classes={'icon-success'}/> :
-                    <Icon icon={'close-circle-line'} classes={'icon-error'}/>}
+                {icon ? <Icon icon={icon} color={iconColor}/> :
+                    variant === 'success' ? <Icon icon={<CheckLine/>} color={'#168B42'} size={24}/> :
+                    variant === 'error' ? <Icon icon={<AlertFill/>} color={'#982B1D'} size={24}/> :
+                null }
                 {message}
             </Block>
             {close && <Block classes={'bb-pl-500'}><Button
                 variant={'icon-only'}
                 action={close}
-                icon={'close-fill'}
+                icon={<CloseFill/>}
             /></Block>}
         </div>
     );

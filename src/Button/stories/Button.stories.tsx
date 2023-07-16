@@ -1,5 +1,7 @@
 import Block, {BlockProps} from '../../Block';
 
+import CloseFill from '../../assets/icons/close-fill.svg';
+
 import Button, {ButtonProps} from '../index';
 
 export default {
@@ -79,14 +81,14 @@ WithIcon.args = {
     variant: 'primary',
     children: 'With Icon',
     action: () => {console.log(`Button With Icon was clicked`)},
-    icon: 'admin-fill',
+    icon: <CloseFill/>,
 };
 
 export const IconOnly = Template.bind({});
 IconOnly.args = {
     variant: 'icon-only',
     action: () => {console.log(`Button Icon was clicked`)},
-    icon: 'admin-fill',
+    icon: <CloseFill/>,
 };
 
 export const Dropdown = Template.bind({});

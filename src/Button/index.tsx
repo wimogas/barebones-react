@@ -1,6 +1,8 @@
 import React from "react";
 import classNames from "classnames";
 
+import ArrowDownSLine from '../assets/icons/arrow-down-s-line.svg';
+
 import Icon from '../Icon'
 
 import styles from "./Button.module.scss";
@@ -33,7 +35,7 @@ const Button: React.FC<ButtonProps> = ({
                                            type
                                        }) => {
 
-    const iconColorDefault = (variant === 'primary' || variant === 'inverse') ? 'white' : 'var(--color-secondary)'
+    const iconColorDefault = (variant === 'primary' || variant === 'inverse') ? 'white' : '#555555'
 
     return (
         <button
@@ -48,7 +50,7 @@ const Button: React.FC<ButtonProps> = ({
         >
             {icon && <Icon icon={icon} color={iconColor ? iconColor : iconColorDefault} size={iconSize}/>}
             {children}
-            {dropdown && <Icon icon={'arrow-down-s-line'} color={iconColorDefault}/>}
+            {dropdown && <Icon icon={<ArrowDownSLine/>} color={iconColorDefault}/>}
         </button>
     );
 };
