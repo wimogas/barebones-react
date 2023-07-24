@@ -11,7 +11,8 @@ declare const styles: {
   readonly "gap-800": string;
   readonly "gap-900": string;
   readonly "column": string;
-  readonly "card": string;
+  readonly "block-card": string;
+  readonly "block-dark-card": string;
   readonly "align-center": string;
   readonly "align-flex-start": string;
   readonly "align-flex-end": string;

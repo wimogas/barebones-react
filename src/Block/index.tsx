@@ -25,7 +25,8 @@ export interface BlockProps {
     align?: AlignType,
     justify?: JustifyType,
     flex?: FlexType | undefined,
-    stretch?: boolean | undefined
+    stretch?: boolean | undefined,
+    dark?: boolean | undefined
 }
 
 const Block = ({
@@ -38,7 +39,8 @@ const Block = ({
                    align,
                    justify,
                    flex,
-                   stretch
+                   stretch,
+                    dark
                }: BlockProps) => {
 
     return (
@@ -47,7 +49,7 @@ const Block = ({
                 classNames(
                     styles.block,
                     size && [styles[`gap-${size}`]],
-                    variant && [styles[variant]],
+                    variant && [styles[`block-${dark ? 'dark-' : ''}${variant}`]],
                     column && [styles.column],
                     align && [styles[`align-${align}`]],
                     justify && [styles[`justify-${justify}`]],

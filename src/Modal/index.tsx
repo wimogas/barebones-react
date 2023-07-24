@@ -6,27 +6,30 @@ import CloseFill from '../assets/icons/close-fill.svg';
 import styles from './Modal.module.scss'
 
 import Block from "../Block";
+import Text from "../Text";
 import Button from "../Button";
 
 export type ModalProps = {
   children: ReactNode,
   close: any,
-  title?: string
+  title?: string,
+  dark?: boolean
 }
-const Modal = ({children, close, title}: ModalProps) => {
+const Modal = ({children, close, title, dark}: ModalProps) => {
 
   return (
     <div className={classNames(styles['modal-overlay'])}>
       <div>
         <Block
-          variant={'card'} 
+          variant={'card'}
+          dark={dark}
           column
           style={{'minWidth':'50vw'}}
           size={400}
         >
           <div className={styles['modal-header']}>
-            {title && <h1 className={styles.title}>{title}</h1>}
-            <Button icon={<CloseFill/>} variant={'icon-only'} action={close}/>
+            {title && <Text dark={dark} type={'h3'} color={'secondary'} text={title}/>}
+            <Button icon={<CloseFill/>} variant={'icon-only'} dark={dark} action={close}/>
           </div>
           <div className={styles['modal-body']}>
             {children}

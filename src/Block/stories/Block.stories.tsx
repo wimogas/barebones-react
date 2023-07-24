@@ -24,7 +24,8 @@ export default {
                 's', 'm',  'l', 'xl',
             ]},
         style: {control: 'object'},
-        stretch: {control: 'boolean'}
+        stretch: {control: 'boolean'},
+        dark: {control: 'boolean'},
     }
 };
 
@@ -80,10 +81,9 @@ const TemplateCard: React.FC<BlockProps> = (args) => <Block
     justify={args.justify}
     flex={args.flex}
     stretch={args.stretch}
+    dark={args.dark}
 >
     <Block
-        justify={'center'}
-        classes={'bb-background-03 bb-py-300'}
     >1</Block>
 </Block>;
 
@@ -108,5 +108,6 @@ Card.args = {
     size: '500',
     align: 'stretch',
     column: true,
-    variant: 'card'
+    variant: 'card',
+    dark: true
 };

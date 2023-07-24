@@ -50,9 +50,16 @@ $align-map: (
   }
 }
 
-.card {
+.block-card {
   background: white;
   color: $block-card-color;
+  border-radius: 6px;
+  border: 1px solid $block-card-border-color;
+}
+
+.block-dark-card {
+  background: $block-card-dark-background;
+  color: $block-card-dark-color;
   border-radius: 6px;
   border: 1px solid $block-card-border-color;
 }
