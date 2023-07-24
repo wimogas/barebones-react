@@ -141,7 +141,7 @@ $button-dark-variant-map: (
       @if ($name == "tertiary") {
         border-color: $hover;
         color: $hover;
-      } @elseif ($name == "icon-only") {
+      } @else if ($name == "icon-only") {
         border-color: $hover;
         color: $hover;
       } @else {
@@ -167,7 +167,7 @@ $button-dark-variant-map: (
       @if ($name == "tertiary") {
         border-color: $hover;
         color: $hover;
-      } @elseif ($name == "icon-only") {
+      } @else if ($name == "icon-only") {
         border-color: $hover;
         color: $hover;
       } @else {
