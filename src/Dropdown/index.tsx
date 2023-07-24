@@ -6,7 +6,7 @@ import Button from "../Button";
 import {useOutsideClick} from "../hooks/useOutsideClick";
 
 export type DropdownProps = {
-    variant: 'primary' | 'secondary' | 'inverse'
+    variant: 'primary' | 'secondary' | 'tertiary'
     items: any[],
     direction: 'left' | 'right',
     icon?: any,

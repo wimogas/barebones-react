@@ -8,11 +8,20 @@
 $color-map: (
   "primary": $primary100,
   "secondary": $secondary700,
+  "tertiary": $secondary100,
   "error": $error500,
   "success": $success500,
   "default": $secondary400,
   "disabled": $secondary100,
-  "inverse" : $neutral100
+);
+
+$color-dark-map: (
+  "primary": $primary50,
+  "secondary": $secondary400,
+  "error": $error300,
+  "success": $success200,
+  "default": $secondary100,
+  "disabled": $secondary500,
 );
 
 // Spacing map
@@ -39,8 +48,8 @@ $button-gap: $spacing100;
 $button-font-size: $fontSize300;
 $button-line-height: $lineHeight100;
 
-$button-disabled-bg-color: $neutral600;
-$button-disabled-color: $neutral400;
+$button-disabled-bg-color: $neutral400;
+$button-disabled-color: $neutral700;
 $button-focus-color: $primary600;
 
 // Button Primary
@@ -57,26 +66,12 @@ $button-secondary-hover : $secondary300;
 $button-secondary-active: $secondary300;
 $button-secondary-focus: $secondary300;
 
-// Button Icon Only
-$button-icon-only-bg-color: transparent;
-$button-icon-only-color: $neutral900;
-$button-icon-only-hover : $neutral100;
-$button-icon-only-active: $neutral300;
-$button-icon-only-focus: transparent;
-
 // Button Tertiary
 $button-tertiary-bg-color: transparent;
-$button-tertiary-color: $neutral900;
-$button-tertiary-hover : $neutral100;
-$button-tertiary-active: $neutral300;
+$button-tertiary-color: $secondary400;
+$button-tertiary-hover : $secondary900;
+$button-tertiary-active: $secondary900;
 $button-tertiary-focus: transparent;
-
-// Button Inverse
-$button-inverse-bg-color: transparent;
-$button-inverse-color: $neutral100;
-$button-inverse-hover : $neutral100;
-$button-inverse-active: $neutral900;
-$button-inverse-focus: transparent;
 
 // Button Danger
 $button-danger-bg-color: $error500;
@@ -84,6 +79,64 @@ $button-danger-color: $white;
 $button-danger-hover : $error700;
 $button-danger-active: $error700;
 $button-danger-focus: $error600;
+
+// Button Success
+$button-success-bg-color: $success500;
+$button-success-color: $white;
+$button-success-hover : $success700;
+$button-success-active: $success700;
+$button-success-focus: $success600;
+
+// Button Icon Only
+$button-icon-only-bg-color: transparent;
+$button-icon-only-color: $secondary400;
+$button-icon-only-hover : $secondary900;
+$button-icon-only-active: $secondary900;
+$button-icon-only-focus: transparent;
+
+// Button Primary Dark
+$button-primary-dark-bg-color: $primary200;
+$button-primary-dark-color: $white;
+$button-primary-dark-hover : $primary100;
+$button-primary-dark-active: $primary100;
+$button-primary-dark-focus: $primary100;
+
+// Button Secondary Dark
+$button-secondary-dark-bg-color: $secondary200;
+$button-secondary-dark-color: $secondary700;
+$button-secondary-dark-hover : $secondary100;
+$button-secondary-dark-active: $secondary100;
+$button-secondary-dark-focus: $secondary100;
+
+// Button Tertiary Dark
+$button-tertiary-dark-bg-color: transparent;
+$button-tertiary-dark-color: $secondary300;
+$button-tertiary-dark-hover : $secondary100;
+$button-tertiary-dark-active: $secondary100;
+$button-tertiary-dark-focus: transparent;
+
+// Button Danger Dark
+$button-danger-dark-bg-color: $error500;
+$button-danger-dark-color: $white;
+$button-danger-dark-hover : $error300;
+$button-danger-dark-active: $error300;
+$button-danger-dark-focus: $error300;
+
+// Button Success Dark
+$button-success-dark-bg-color: $success500;
+$button-success-dark-color: $white;
+$button-success-dark-hover : $success200;
+$button-success-dark-active: $success200;
+$button-success-dark-focus: $success200;
+
+// Button Icon Only
+$button-icon-only-dark-bg-color: transparent;
+$button-icon-only-dark-color: $secondary300;
+$button-icon-only-dark-hover : $secondary100;
+$button-icon-only-dark-active: $secondary100;
+$button-icon-only-dark-focus: transparent;
+
+
 
 
 // Input

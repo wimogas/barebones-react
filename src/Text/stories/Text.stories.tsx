@@ -1,4 +1,6 @@
 import Text, {TextProps} from '../index';
+import React from "react";
+import Block from "../../Block";
 
 export default {
     title: 'COMPONENTS/Text',
@@ -19,6 +21,7 @@ export default {
             options: [
                 'default', 'primary', 'secondary', 'error', 'success', 'disabled', undefined
             ]},
+        dark: {control: 'boolean'}
     }
 };
 
@@ -29,7 +32,65 @@ const Template: React.FC<TextProps> = (args) =>
         color={args.color}
         style={args.style}
         bold={args.bold}
-        size={args.size}/>;
+        size={args.size}
+    dark={args.dark}/>;
+
+const DarkTemplate: React.FC<TextProps> = (args) =>
+    <Block
+        classes={'bb-p-400 bb-border-radius-400'}
+        size={400}
+        style={{
+            "backgroundColor": "#151515",
+        }}>
+        <Text
+        type={args.type}
+        text={args.text}
+        color={'primary'}
+        style={args.style}
+        bold={args.bold}
+        size={args.size}
+        dark={args.dark}/>
+        <Text
+        type={args.type}
+        text={args.text}
+        color={'secondary'}
+        style={args.style}
+        bold={args.bold}
+        size={args.size}
+        dark={args.dark}/>
+        <Text
+        type={args.type}
+        text={args.text}
+        color={'error'}
+        style={args.style}
+        bold={args.bold}
+        size={args.size}
+        dark={args.dark}/>
+        <Text
+        type={args.type}
+        text={args.text}
+        color={'success'}
+        style={args.style}
+        bold={args.bold}
+        size={args.size}
+        dark={args.dark}/>
+        <Text
+        type={args.type}
+        text={args.text}
+        color={'default'}
+        style={args.style}
+        bold={args.bold}
+        size={args.size}
+        dark={args.dark}/>
+        <Text
+        type={args.type}
+        text={args.text}
+        color={'disabled'}
+        style={args.style}
+        bold={args.bold}
+        size={args.size}
+        dark={args.dark}/>
+    </Block>;
 
 export const Span = Template.bind({});
 Span.args = {
@@ -65,4 +126,12 @@ CustomSpan.args = {
     color: 'primary',
     bold: true,
     text: 'Hello world',
+};
+
+export const DarkMode = DarkTemplate.bind({});
+DarkMode.args = {
+    size: 's',
+    color: 'primary',
+    text: 'Hello world',
+    dark: true
 };

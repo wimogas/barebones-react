@@ -9,7 +9,7 @@ export default {
     argTypes: {
         variant: {type: {required: true}, control: 'select',
             options: [
-                'primary', 'secondary', 'inverse', 'success', 'error'
+                'primary', 'secondary', 'tertiary', 'success', 'error'
             ]},
     }
 };
@@ -23,7 +23,8 @@ const Template: React.FC<BadgeProps> = (args) =>
 
 const DarkTemplate: React.FC<BadgeProps> = (args) =>
     <Block
-        classes={'bb-background-15 bb-p-400 bb-border-radius-400'}>
+        classes={'bb-p-400 bb-border-radius-400'}
+    style={{"backgroundColor" : "black"}}>
         <Badge variant={args.variant}>{args.children}</Badge>
     </Block>;
 
@@ -39,10 +40,10 @@ Secondary.args = {
     children: 'Secondary',
 };
 
-export const Inverse = DarkTemplate.bind({});
-Inverse.args = {
-    variant: 'inverse',
-    children: 'Inverse',
+export const Tertiary = DarkTemplate.bind({});
+Tertiary.args = {
+    variant: 'tertiary',
+    children: 'Tertiary',
 };
 
 

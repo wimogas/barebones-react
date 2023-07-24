@@ -26,28 +26,79 @@ $button-variant-map: (
     $button-tertiary-focus,
   ),
   (
-    "icon-only",
-    $button-icon-only-bg-color,
-    $button-icon-only-color,
-    $button-icon-only-hover,
-    $button-icon-only-active,
-    $button-icon-only-focus,
-  ),
-  (
-    "inverse",
-    $button-inverse-bg-color,
-    $button-inverse-color,
-    $button-inverse-hover,
-    $button-inverse-active,
-    $button-inverse-focus,
-  ),
-  (
     "danger",
     $button-danger-bg-color,
     $button-danger-color,
     $button-danger-hover,
     $button-danger-active,
     $button-danger-focus,
+  ),
+  (
+    "success",
+    $button-success-bg-color,
+    $button-success-color,
+    $button-success-hover,
+    $button-success-active,
+    $button-success-focus,
+  ),
+  (
+    "icon-only",
+    $button-icon-only-bg-color,
+    $button-icon-only-color,
+    $button-icon-only-hover,
+    $button-icon-only-active,
+    $button-icon-only-focus,
+  )
+);
+
+$button-dark-variant-map: (
+  (
+    "primary",
+    $button-primary-dark-bg-color,
+    $button-primary-dark-color,
+    $button-primary-dark-hover,
+    $button-primary-dark-active,
+    $button-primary-dark-focus,
+  ),
+  (
+    "secondary",
+    $button-secondary-dark-bg-color,
+    $button-secondary-dark-color,
+    $button-secondary-dark-hover,
+    $button-secondary-dark-active,
+    $button-secondary-dark-focus,
+  ),
+  (
+    "tertiary",
+    $button-tertiary-dark-bg-color,
+    $button-tertiary-dark-color,
+    $button-tertiary-dark-hover,
+    $button-tertiary-dark-active,
+    $button-tertiary-dark-focus,
+  ),
+  (
+    "danger",
+    $button-danger-dark-bg-color,
+    $button-danger-dark-color,
+    $button-danger-dark-hover,
+    $button-danger-dark-active,
+    $button-danger-dark-focus,
+  ),
+  (
+    "success",
+    $button-success-dark-bg-color,
+    $button-success-dark-color,
+    $button-success-dark-hover,
+    $button-success-dark-active,
+    $button-success-dark-focus,
+  ),
+  (
+    "icon-only",
+    $button-icon-only-dark-bg-color,
+    $button-icon-only-dark-color,
+    $button-icon-only-dark-hover,
+    $button-icon-only-dark-active,
+    $button-icon-only-dark-focus,
   )
 );
 
@@ -66,28 +117,44 @@ $button-variant-map: (
   line-height: $button-line-height;
 }
 
-@each $name, $bgColor, $color, $hover, $active, $focus in ($button-variant-map) {
-  .button-#{$name} {
-    background-color: #{$bgColor};
-    color: #{$color};
-    @if (#{$name} == "icon-only") {
-      padding: 2px 4px;
-      fill: #{$color};
+
+@mixin generateButtonVariants ($name, $bgColor, $color, $hover, $active, $focus, $dark) {
+  .button#{$dark}-#{$name} {
+    background-color: $bgColor;
+    color: $color;
+    @if ($name == "icon-only") {
+      padding: 4px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    div svg {
+      fill: $color;
+    }
+    div i {
+      color: $color;
+    }
+    @if ($name == "tertiary") {
+      border-color: $color;
     }
     &:hover {
-      color: #{$color};
-      @if (#{$name} == "inverse") {
+      color: $color;
+      @if ($name == "tertiary") {
         border-color: $hover;
+        color: $hover;
+      } @elseif ($name == "icon-only") {
+        border-color: $hover;
+        color: $hover;
       } @else {
-        background-color: #{$hover};
+        background-color: $hover;
       }
     }
     &:active {
-      background-color: #{$active};
+      background-color: $active;
     }
     &:disabled {
-      @if (#{$name} == "inverse") {
+      @if ($name == "tertiary") {
         background-color: transparent;
+        border-color: $button-disabled-color;
       } @else {
         background-color: $button-disabled-bg-color;
       }
@@ -95,10 +162,14 @@ $button-variant-map: (
       cursor: default;
     }
     &:focus {
-      background-color: #{$focus};
-      color: #{$color};
-      @if (#{$name} == "inverse") {
-        border-color: white;
+      background-color: $focus;
+      color: $color;
+      @if ($name == "tertiary") {
+        border-color: $hover;
+        color: $hover;
+      } @elseif ($name == "icon-only") {
+        border-color: $hover;
+        color: $hover;
       } @else {
         border-color: $button-focus-color;
       }
@@ -106,4 +177,11 @@ $button-variant-map: (
   }
 }
 
+@each $name, $bgColor, $color, $hover, $active, $focus in ($button-variant-map) {
+    @include generateButtonVariants($name, $bgColor, $color, $hover, $active, $focus, "");
+}
+
+@each $name, $bgColor, $color, $hover, $active, $focus in ($button-dark-variant-map) {
+  @include generateButtonVariants($name, $bgColor, $color, $hover, $active, $focus, "-dark");
+}
 

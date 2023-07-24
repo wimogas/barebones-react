@@ -5,7 +5,7 @@ import classNames from "classnames";
 
 export type BadgeProps = {
   children: string,
-  variant?: "primary" | "secondary" | "inverse" | "error" | "success" | undefined
+  variant?: "primary" | "secondary" | "tertiary" | "error" | "success" | undefined
 }
 
 const Badge: FC<BadgeProps> = ({children, variant}) => {

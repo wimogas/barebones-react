@@ -6,6 +6,12 @@ declare const styles: {
   readonly "color-primary": string;
   readonly "color-secondary": string;
   readonly "color-default": string;
+  readonly "color-dark-error": string;
+  readonly "color-dark-success": string;
+  readonly "color-dark-disabled": string;
+  readonly "color-dark-primary": string;
+  readonly "color-dark-secondary": string;
+  readonly "color-dark-default": string;
   readonly "bold": string;
   readonly "size-s": string;
   readonly "size-m": string;

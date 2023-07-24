@@ -18,6 +18,12 @@
   }
 }
 
+@each $key, $val in ($color-dark-map) {
+  .color-dark-#{$key} {
+    color: $val;
+  }
+}
+
 .bold {
   font-weight: bold;
 }

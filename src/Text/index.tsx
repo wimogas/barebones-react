@@ -12,7 +12,8 @@ export type TextProps = {
   style?: object,
   color?: TextColorProps,
   bold?: boolean,
-  size?: 's' | 'm' | 'l' | 'xl' | undefined
+  size?: 's' | 'm' | 'l' | 'xl' | undefined,
+    dark?: boolean
 }
 const Text = ({
                 text,
@@ -20,7 +21,8 @@ const Text = ({
                 style,
                 color= 'default',
                 bold,
-                size
+                size,
+                dark
   }: TextProps) => {
 
   const Type = type
@@ -29,7 +31,7 @@ const Text = ({
     <Type
         className={classNames(
             styles.text,
-            color && styles[`color-${color}`],
+            color && styles[`color${dark ? '-dark' : ''}-${color}`],
             bold && styles.bold,
             size && styles[`size-${size}`]
         )}

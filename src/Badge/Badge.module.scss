@@ -14,7 +14,7 @@
 
 @each $key, $val in ($color-map) {
   .badge-#{$key} {
-    @if (#{$key} == "inverse") {
+    @if (#{$key} == "tertiary") {
       background-color: transparent;
       border: 1px solid white;
     } @else {

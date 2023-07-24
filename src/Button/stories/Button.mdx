@@ -43,15 +43,15 @@ Usage: The secondary button is used for secondary actions on each page.
 <Canvas of={ButtonStories.Secondary} />
 
 
-### inverse
+### tertiary
 
-Usage: The inverse button is used for actions on each dark background page.
+Usage: The teriary button is used for actions on each page that are less important than secondary actions.
 
 ```jsx
 
-<Button variant="inverse">Click me</Button>
+<Button variant="tertiary">Click me</Button>
 ```
-<Canvas of={ButtonStories.Inverse} />
+<Canvas of={ButtonStories.Tertiary} />
 
 
 ### danger
@@ -64,6 +64,17 @@ Usage: The danger button is used for actions that are destructive.
 ```
 
 <Canvas of={ButtonStories.Danger} />
+
+### success
+
+Usage: The success button is used for actions that are successful.
+
+```jsx
+
+<Button variant="success">Click me</Button>
+```
+
+<Canvas of={ButtonStories.Success} />
 
 ## Dropdown
 
@@ -91,17 +102,6 @@ Usage: The Button with Icon is used for actions which need an icon for clarity.
 
 <Canvas of={ButtonStories.WithIcon} />
 
-### Icon Only
-
-Usage: The icon only button is used for actions where an icon is sufficient to convey the action.
-
-```jsx
-
-<Button variant="primary" icon="<CheckIcon/>" iconOnly>Click me</Button>
-```
-
-<Canvas of={ButtonStories.IconOnly} />
-
 ## Properties
 
 ### variant
@@ -114,22 +114,23 @@ types: primary, secondary, inverse, danger
 <Button variant="primary">Click me</Button>
 ```
 
+### dark
+
+The dark variant of the button.
+
+types: true, false
+
+```jsx
+<Button variant={'primary'} dark>Click me</Button>
+```
+
+
 ### icon
 
 The icon of the button. Pass an SVG or \<i\> as a React Component.
 
 ```jsx
 <Button icon="<CheckIcon/>">Click me</Button>
-```
-
-### iconOnly
-
-The icon only variant of the button.
-
-types: true, false
-
-```jsx
-<Button iconOnly>Click me</Button>
 ```
 
 ### dropdown
@@ -149,7 +150,7 @@ The disabled state of the button.
 types: true, false
 
 ```jsx
-<Button disabled>Click me</Button>
+<Button disabled>Can't click me</Button>
 ```
 
 ### action

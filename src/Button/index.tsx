@@ -17,8 +17,9 @@ export type ButtonProps = {
     iconColor?: string | undefined,
     iconSize?: number | undefined,
     style?: object | undefined,
-    variant?: 'primary' | 'secondary' | 'tertiary' | 'icon-only' | 'inverse' | 'danger',
-    type?: "submit" | undefined
+    variant?: 'primary' | 'secondary' | 'tertiary' | 'success' | 'danger' | 'icon-only',
+    type?: "submit" | undefined,
+    dark?: boolean | undefined
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -29,28 +30,28 @@ const Button: React.FC<ButtonProps> = ({
                                            dropdown,
                                            icon,
                                            iconSize = 16,
-                                           iconColor,
+                                           iconColor = '#ccc',
                                            style,
                                            variant,
-                                           type
+                                           type,
+                                           dark
                                        }) => {
 
-    const iconColorDefault = (variant === 'primary' || variant === 'inverse') ? 'white' : '#555555'
 
     return (
         <button
             className={classNames(
                 styles.button,
-                variant && styles[`button-${variant}`],
+                variant && styles[`button${dark ? '-dark' : ''}-${variant}`],
                 classes)}
             onClick={() => action && action()}
             style={style}
             disabled={disabled}
             type={type}
         >
-            {icon && <Icon icon={icon} color={iconColor ? iconColor : iconColorDefault} size={iconSize}/>}
+            {icon && <Icon icon={icon} color={iconColor} size={iconSize}/>}
             {children}
-            {dropdown && <Icon icon={<ArrowDownSLine/>} color={iconColorDefault}/>}
+            {dropdown && <Icon icon={<ArrowDownSLine/>} color={iconColor}/>}
         </button>
     );
 };

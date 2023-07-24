@@ -9,6 +9,7 @@ export { default as Alert} from './Alert';
 export { default as Badge} from './Badge';
 export { default as Dropdown} from './Dropdown';
 export { default as Modal} from './Modal';
+export { default as Grid} from './Grid';
 
 export * from './Icon'
 export * from './Button'
@@ -19,3 +20,4 @@ export * from './Alert'
 export * from './Badge'
 export * from './Dropdown'
 export * from './Modal'
+export * from './Grid'
