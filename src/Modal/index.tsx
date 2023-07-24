@@ -28,7 +28,7 @@ const Modal = ({children, close, title, dark}: ModalProps) => {
           size={400}
         >
           <div className={styles['modal-header']}>
-            {title && <Text dark={dark} type={'h3'} color={'secondary'} text={title}/>}
+            {title && <Text dark={dark} type={'h3'} color={'default'} text={title}/>}
             <Button icon={<CloseFill/>} variant={'icon-only'} dark={dark} action={close}/>
           </div>
           <div className={styles['modal-body']}>
