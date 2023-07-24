@@ -37,7 +37,7 @@ const DarkTemplate: React.FC<ButtonProps> = (args) =>
         classes={'bb-p-400 bb-border-radius-400'}
         size={400}
         style={{
-            "backgroundColor": "#000",
+            "backgroundColor": "#1D2125",
         }}>
         <Button
             variant={'primary'}

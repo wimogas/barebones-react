@@ -161,19 +161,6 @@ $button-dark-variant-map: (
       color: $button-disabled-color;
       cursor: default;
     }
-    &:focus {
-      background-color: $focus;
-      color: $color;
-      @if ($name == "tertiary") {
-        border-color: $hover;
-        color: $hover;
-      } @else if ($name == "icon-only") {
-        border-color: $hover;
-        color: $hover;
-      } @else {
-        border-color: $button-focus-color;
-      }
-    }
   }
 }
 

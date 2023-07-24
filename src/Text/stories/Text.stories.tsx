@@ -40,7 +40,7 @@ const DarkTemplate: React.FC<TextProps> = (args) =>
         classes={'bb-p-400 bb-border-radius-400'}
         size={400}
         style={{
-            "backgroundColor": "#151515",
+            "backgroundColor": "#1D2125",
         }}>
         <Text
         type={args.type}
