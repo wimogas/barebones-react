@@ -162,7 +162,7 @@ Dropdown.args = {
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-    variant: 'primary',
+    variant: 'tertiary',
     children: 'Disabled',
     action: () => {console.log(`Button Disabled was clicked`)},
     disabled: true,

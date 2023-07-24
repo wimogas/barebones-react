@@ -152,14 +152,21 @@ $button-dark-variant-map: (
       background-color: $active;
     }
     &:disabled {
+      border-color: transparent;
+      color: $button-disabled-color;
+      cursor: default;
       @if ($name == "tertiary") {
         background-color: transparent;
-        border-color: $button-disabled-color;
+        @if ($dark == "-dark") {
+          color: $button-disabled-dark-color;
+          border-color: $button-disabled-dark-color;
+        } @else {
+          color: $button-disabled-color;
+          border-color: $button-disabled-color;
+        }
       } @else {
         background-color: $button-disabled-bg-color;
       }
-      color: $button-disabled-color;
-      cursor: default;
     }
   }
 }
