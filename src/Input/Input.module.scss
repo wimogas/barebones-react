@@ -1,6 +1,5 @@
 @use '../assets/scss/variables/theme' as *;
 
-
 label {
   display: flex;
   flex-direction: column;
@@ -13,6 +12,12 @@ input {
   padding: 8px;
   border: 1px solid $input-border;
   border-radius: 4px;
+}
+
+.input-dark {
+  background-color: transparent;
+  border-color: $input-dark-border-color;
+  color: $input-dark-color;
 }
 
 .error {

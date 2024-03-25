@@ -19,6 +19,20 @@
     gap: 8px;
 }
 
+.dropdown-menu-dark {
+    position: absolute;
+    flex-direction: column;
+    min-width: 208px;
+    background-color: #161B22;
+    border-radius: 4px;
+    padding: 12px 0 12px 0;
+    z-index: 500;
+    opacity: 0;
+    display: none;
+    gap: 8px;
+}
+
+
 .right {
     margin-top: 8px;
 }

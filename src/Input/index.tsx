@@ -14,7 +14,8 @@ export type InputProps = {
     error?: boolean | undefined,
     onChange: any,
     type?: "password" | "email" | "text" | undefined,
-    disabled?: boolean | undefined
+    disabled?: boolean | undefined,
+    dark?: boolean | undefined
 }
 
 const Input = ({
@@ -24,7 +25,8 @@ const Input = ({
                    error,
                    onChange,
                    type = "text",
-                   disabled
+                   disabled,
+                    dark
                }: InputProps) => {
 
     const labelColor: TextColorProps = error ? 'error' : disabled ? 'disabled' : ''
@@ -35,7 +37,10 @@ const Input = ({
                 text={convertToTitle(label)}
                 color={labelColor}
             />}
-            <input className={classNames(error && styles.error)}
+            <input className={classNames(
+                    dark && styles["input-dark"],
+                    error && styles.error
+            )}
                    name={name}
                    value={value}
                    type={type}

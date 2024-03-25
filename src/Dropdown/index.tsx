@@ -10,7 +10,8 @@ export type DropdownProps = {
     items: any[],
     direction: 'left' | 'right',
     icon?: any,
-    text?: string
+    text?: string,
+    dark?: boolean | undefined
 }
 
 const Dropdown = ({
@@ -18,8 +19,8 @@ const Dropdown = ({
                       direction,
                       variant,
                       icon,
-                      text
-
+                      text,
+                      dark
                   }: DropdownProps) => {
 
     const [showMenu, setShowMenu] = useState(false)
@@ -31,18 +32,21 @@ const Dropdown = ({
     const ref = useOutsideClick(handleOutsideClick)
 
     return (
-        <div className={classNames(styles.dropdown)} ref={ref}>
+        <div className={classNames(
+            styles.dropdown
+        )} ref={ref}>
             <Button
                 variant={variant}
                 dropdown
                 action={() => setShowMenu(!showMenu)}
                 icon={icon}
+                dark={dark}
             >
                 {text}
             </Button>
 
             <div className={
-                classNames(styles["dropdown-menu"],
+                classNames(styles[`dropdown-menu${dark ? '-dark' : ''}`],
                     styles[direction],
                     showMenu && styles['show-left'],
                     !showMenu && styles['hide-left'],
@@ -51,10 +55,12 @@ const Dropdown = ({
                     return <Button
                         variant={item.variant}
                         classes={classNames(styles['dropdown-item'])}
-                        key={item}
+                        key={item.text}
                         action={item.action}
-                        icon={item.icon}>
+                        icon={item.icon}
+                        dark={dark}>
                         {item.text}
+
                     </Button>
                 })}
             </div>

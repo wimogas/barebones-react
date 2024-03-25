@@ -1,5 +1,6 @@
 import React from 'react';
 import Input, {InputProps} from '../index';
+import Block from "../../Block";
 
 export default {
     title: 'COMPONENTS/Input',
@@ -10,7 +11,8 @@ export default {
         name: {control: 'text'},
         label: {control: 'text'},
         error: {control: 'boolean'},
-        type: {control: 'text'}
+        type: {control: 'text'},
+        dark: {control: 'boolean'},
     }
 };
 
@@ -30,6 +32,33 @@ const Template: React.FC<InputProps> = (args) => {
             error={args.error}
             type={args.type}
             disabled={args.disabled}/>
+    )
+}
+
+const TemplateDark: React.FC<InputProps> = (args) => {
+
+    const [value, setValue] = React.useState<string>('');
+
+    const handleChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setValue(e.target.value);
+    }
+    return (
+        <Block
+            stretch
+            classes={'bb-p-400 bb-border-radius-400'}
+            style={{
+                "backgroundColor": "#0D1117",
+            }}>
+        <Input
+            value={value}
+            name={args.name}
+            onChange={handleChangeValue}
+            label={args.label}
+            error={args.error}
+            type={args.type}
+            disabled={args.disabled}
+            dark={args.dark}/>
+        </Block>
     )
 }
 
@@ -69,5 +98,14 @@ Disabled.args = {
     error: false,
     disabled: true,
     onChange: () => {},
+};
+
+export const Dark = TemplateDark.bind({});
+Dark.args = {
+    value: '',
+    name: 'email',
+    error: false,
+    onChange: () => {},
+    dark: true,
 };
 
