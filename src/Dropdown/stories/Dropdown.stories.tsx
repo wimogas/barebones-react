@@ -20,11 +20,18 @@ export default {
 
 
 const TemplateRight: React.FC<DropdownProps> = (args) => {
-    const ITEMS = [{
-        action: () => console.log('clicked'),
-        text: 'Item 1',
-        variant: 'tertiary'
-    }];
+    const ITEMS = [
+        {
+            action: () => console.log('clicked 1'),
+            text: 'Item 1',
+            variant: 'tertiary',
+        },
+        {
+            action: () => console.log('clicked 2'),
+            text: 'Item 2',
+            variant: 'tertiary'
+        }
+    ];
 
     return (
         <Block stretch justify={'flex-start'} style={{"min-height" : "120px"}}>
