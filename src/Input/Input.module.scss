@@ -4,27 +4,22 @@ label {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  color: $input-label-color;
   font-size: 14px;
 }
 
 input {
   padding: 8px;
-  border: 1px solid $input-border;
   border-radius: 4px;
 }
 
-.input-dark {
-  background-color: transparent;
-  border-color: $input-dark-border-color;
-  color: $input-dark-color;
-}
-
-.error {
-  border-color: $input-error-border-color;
+.base {
+  border : 1px solid #000;
+  padding : 8px 12px;
+  border-radius: 4px;
+  width : 100%;
 }
 
 input[disabled] {
-  background-color: $input-disabled-bg-color;
+  border : 1px solid #ccc;
   cursor: not-allowed;
 }

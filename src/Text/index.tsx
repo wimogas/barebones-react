@@ -3,26 +3,17 @@ import classNames from "classnames";
 
 import styles from './Text.module.scss'
 
-export type TextColorProps =
-  "default" | "error" | "success" | "disabled" | "primary" | "secondary" | "" | undefined
-
 export type TextProps = {
-  text: string,
-  type?: 'span' |'p' | 'h1' | 'h2' | 'h3' | undefined,
-  style?: object,
-  color?: TextColorProps,
-  bold?: boolean,
-  size?: 's' | 'm' | 'l' | 'xl' | undefined,
-    dark?: boolean
+    text: string,
+    type?: 'span' |'p' | 'h1' | 'h2' | 'h3' | undefined,
+    style?: object,
+    classes?: any
 }
 const Text = ({
                 text,
                 type = 'span',
                 style,
-                color= 'default',
-                bold,
-                size,
-                dark
+                classes
   }: TextProps) => {
 
   const Type = type
@@ -31,9 +22,7 @@ const Text = ({
     <Type
         className={classNames(
             styles.text,
-            color && styles[`color${dark ? '-dark' : ''}-${color}`],
-            bold && styles.bold,
-            size && styles[`size-${size}`]
+            classes && classes
         )}
         style={style}
     >

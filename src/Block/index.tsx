@@ -21,12 +21,10 @@ export interface BlockProps {
     column?: boolean,
     size?: SizesType,
     style?: object,
-    variant?: "card" | undefined,
     align?: AlignType,
     justify?: JustifyType,
     flex?: FlexType | undefined,
     stretch?: boolean | undefined,
-    dark?: boolean | undefined
 }
 
 const Block = ({
@@ -35,12 +33,10 @@ const Block = ({
                    column,
                    size,
                    style,
-                   variant,
                    align,
                    justify,
                    flex,
                    stretch,
-                    dark
                }: BlockProps) => {
 
     return (
@@ -49,7 +45,6 @@ const Block = ({
                 classNames(
                     styles.block,
                     size && [styles[`gap-${size}`]],
-                    variant && [styles[`block-${dark ? 'dark-' : ''}${variant}`]],
                     column && [styles.column],
                     align && [styles[`align-${align}`]],
                     justify && [styles[`justify-${justify}`]],

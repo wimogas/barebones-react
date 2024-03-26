@@ -19,6 +19,21 @@ import { Text } from 'react-barebones-ts';
 
 ## Props
 
+### classes
+
+Your custom classes for the Text.
+
+```jsx
+<Text classes={"bb-primary-200"}>Hello world</Text>
+```
+
+### style
+
+Your custom React style object.
+
+```jsx
+<Text style={{"color": "#000"}}>Hello world</Text>
+```
 
 ### text
 
@@ -35,35 +50,6 @@ The type of text to render.
 
 ```jsx
 <Text type="span">Text</Text>
-
-```
-
-### size
-
-The size of the text.
-
-types: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
-
-```jsx
-<Text size={500}>Text</Text>
-
-```
-
-### bold
-
-Whether the text should be bold.
-
-```jsx
-<Text bold>Text</Text>
-
-```
-
-### color
-
-The color of the text.
-
-```jsx
-<Text color="primary">Text</Text>
 
 ```
 

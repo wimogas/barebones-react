@@ -12,16 +12,6 @@ export default {
             ]},
         text: {control: 'text'},
         style: {control: 'object'},
-        bold: {control: 'boolean'},
-        size: {control: 'select',
-            options: [
-                's', 'm', 'l', 'xl', undefined
-            ]},
-        color: {control: 'select',
-            options: [
-                'default', 'primary', 'secondary', 'error', 'success', 'disabled', undefined
-            ]},
-        dark: {control: 'boolean'}
     }
 };
 
@@ -29,68 +19,8 @@ const Template: React.FC<TextProps> = (args) =>
     <Text
         type={args.type}
         text={args.text}
-        color={args.color}
-        style={args.style}
-        bold={args.bold}
-        size={args.size}
-    dark={args.dark}/>;
+        style={args.style}/>;
 
-const DarkTemplate: React.FC<TextProps> = (args) =>
-    <Block
-        classes={'bb-p-400 bb-border-radius-400'}
-        size={400}
-        style={{
-            "backgroundColor": "#1D2125",
-        }}>
-        <Text
-        type={args.type}
-        text={args.text}
-        color={'primary'}
-        style={args.style}
-        bold={args.bold}
-        size={args.size}
-        dark={args.dark}/>
-        <Text
-        type={args.type}
-        text={args.text}
-        color={'secondary'}
-        style={args.style}
-        bold={args.bold}
-        size={args.size}
-        dark={args.dark}/>
-        <Text
-        type={args.type}
-        text={args.text}
-        color={'error'}
-        style={args.style}
-        bold={args.bold}
-        size={args.size}
-        dark={args.dark}/>
-        <Text
-        type={args.type}
-        text={args.text}
-        color={'success'}
-        style={args.style}
-        bold={args.bold}
-        size={args.size}
-        dark={args.dark}/>
-        <Text
-        type={args.type}
-        text={args.text}
-        color={'default'}
-        style={args.style}
-        bold={args.bold}
-        size={args.size}
-        dark={args.dark}/>
-        <Text
-        type={args.type}
-        text={args.text}
-        color={'disabled'}
-        style={args.style}
-        bold={args.bold}
-        size={args.size}
-        dark={args.dark}/>
-    </Block>;
 
 export const Span = Template.bind({});
 Span.args = {
@@ -122,16 +52,8 @@ Heading3.args = {
 
 export const CustomSpan = Template.bind({});
 CustomSpan.args = {
-    size: 's',
-    color: 'primary',
-    bold: true,
+    style: {
+        "color" : "#0E66A1"
+    },
     text: 'Hello world',
-};
-
-export const DarkMode = DarkTemplate.bind({});
-DarkMode.args = {
-    size: 's',
-    color: 'primary',
-    text: 'Hello world',
-    dark: true
 };

@@ -1,7 +1,6 @@
 @use '../assets/scss/theme' as *;
 
 .modal-overlay {
-  background-color: rgba(0,0,0,0.7);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -15,17 +14,8 @@
 
 .modal {
   max-width: 90vw;
+  background-color: white;
+  border: 1px solid black;
+  padding: 16px;
+  border-radius: 4px;
 }
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 14px 8px 24px;
-  border-bottom: 1px solid $modal-header-border-color;
-}
-
-.modal-body {
-  padding:  0 24px 24px 24px;
-}
-

@@ -4,10 +4,6 @@ export default {
     title: 'COMPONENTS/Block',
     component: Block,
     argTypes: {
-        variant: {type: {required: true}, control: 'select',
-            options: [
-                'card', undefined
-            ]},
         classes: {control: 'text'},
         align: {type: {required: true}, control: 'select',
             options: [
@@ -25,12 +21,10 @@ export default {
             ]},
         style: {control: 'object'},
         stretch: {control: 'boolean'},
-        dark: {control: 'boolean'},
     }
 };
 
 const TemplateRow: React.FC<BlockProps> = (args) => <Block
-    variant={args.variant}
     style={args.style}
     classes={args.classes}
     size={args.size}
@@ -57,7 +51,6 @@ const TemplateRow: React.FC<BlockProps> = (args) => <Block
 </Block>;
 
 const Template: React.FC<BlockProps> = (args) => <Block
-    variant={args.variant}
     style={args.style}
     classes={args.classes}
     size={args.size}
@@ -84,7 +77,6 @@ const Template: React.FC<BlockProps> = (args) => <Block
 </Block>;
 
 const TemplateCard: React.FC<BlockProps> = (args) => <Block
-    variant={args.variant}
     style={args.style}
     classes={args.classes}
     size={args.size}
@@ -93,7 +85,6 @@ const TemplateCard: React.FC<BlockProps> = (args) => <Block
     justify={args.justify}
     flex={args.flex}
     stretch={args.stretch}
-    dark={args.dark}
 >
     <Block
     >1</Block>
@@ -115,11 +106,14 @@ Column.args = {
     column: true
 };
 
-export const Card = TemplateCard.bind({});
-Card.args = {
+export const Custom = TemplateCard.bind({});
+Custom.args = {
     size: '500',
     align: 'stretch',
     column: true,
-    variant: 'card',
-    dark: true
+    style: {
+        "border" : "1px solid #000",
+        "borderRadius" : "4px",
+        "padding" : "20px"
+    }
 };
