@@ -1,34 +1,11 @@
-@use '../assets/scss/theme' as *;
-
 .alert {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--size-l);
-  background-color: white;
+  gap: 8px;
   border-radius: 4px;
   padding: 12px;
   animation: animateInAlert .3s forwards;
-}
-
-.success {
-  background-color: $alert-success-bg-color;
-  color: $alert-success-color;
-  border: 1px solid $alert-success-border-color;
-  &.banner {
-    border: none;
-    border-bottom: 1px solid $alert-success-border-color;
-  }
-}
-
-.error {
-  background-color: $alert-error-bg-color;
-  color: $alert-error-color;
-  border: 1px solid $alert-error-border-color;
-  &.banner {
-    border: none;
-    border-bottom: 1px solid $alert-error-border-color;
-  }
 }
 
 .banner {

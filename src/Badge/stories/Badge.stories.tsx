@@ -1,60 +1,34 @@
 import React from 'react';
 
-import Block from '../../Block';
 import Badge, {BadgeProps} from '../index';
+import {object} from "prop-types";
 
 export default {
     title: 'COMPONENTS/Badge',
     component: Badge,
     argTypes: {
-        variant: {type: {required: true}, control: 'select',
-            options: [
-                'primary', 'secondary', 'tertiary', 'success', 'error'
-            ]},
+        style: {control: object}
     }
 };
 
 const Template: React.FC<BadgeProps> = (args) =>
-    <Badge
-        variant={args.variant}
-    >
+    <Badge>
         {args.children}
     </Badge>
 
-const DarkTemplate: React.FC<BadgeProps> = (args) =>
-    <Block
-        classes={'bb-p-400 bb-border-radius-400'}
-    style={{"backgroundColor" : "black"}}>
-        <Badge variant={args.variant}>{args.children}</Badge>
-    </Block>;
+const CustomTemplate: React.FC<BadgeProps> = (args) =>
+    <Badge style={args.style}>{args.children}</Badge>
 
-export const Primary = Template.bind({});
-Primary.args = {
-    variant: 'primary',
-    children: 'Primary',
+export const Default = Template.bind({});
+Default.args = {
+    children: 'Default',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-    variant: 'secondary',
-    children: 'Secondary',
-};
-
-export const Tertiary = DarkTemplate.bind({});
-Tertiary.args = {
-    variant: 'tertiary',
-    children: 'Tertiary',
-};
-
-
-export const Error = Template.bind({});
-Error.args = {
-    variant: 'error',
-    children: 'Error',
-};
-
-export const Success = Template.bind({});
-Success.args = {
-    variant: 'success',
-    children: 'Success',
+export const Custom = CustomTemplate.bind({});
+Custom.args = {
+    children: 'Custom',
+    style: {
+        "backgroundColor" : "#0E66A1",
+        "color": "white"
+    }
 };

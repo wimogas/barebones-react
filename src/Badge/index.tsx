@@ -4,15 +4,21 @@ import styles from "./Badge.module.scss";
 import classNames from "classnames";
 
 export type BadgeProps = {
-  children: string,
-  variant?: "primary" | "secondary" | "tertiary" | "error" | "success" | undefined
+  children: any,
+  classes?: string,
+  style?: any
 }
 
-const Badge: FC<BadgeProps> = ({children, variant}) => {
+const Badge: FC<BadgeProps> = ({children, classes, style}) => {
   return (
     <div className={classNames(
         styles.badge,
-        variant && styles[`badge-${variant}`])}>
+      classes && classes)}
+      style={style ? style : {
+        "background": "black",
+        "color": "white"
+      }}
+    >
       {children}
     </div>
   );

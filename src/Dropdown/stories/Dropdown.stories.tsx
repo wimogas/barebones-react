@@ -1,5 +1,9 @@
 import Dropdown, {DropdownProps} from "../index";
 import Block, {BlockProps} from "../../Block";
+import React from "react";
+import Button from "../../Button";
+import Icon from "../../Icon";
+import ArrowDownSLine from '../../assets/icons/arrow-down-s-line.svg';
 
 export default {
     title: 'COMPONENTS/Dropdown',
@@ -7,122 +11,72 @@ export default {
     argTypes: {
         direction: {type: {required: true}, control: 'select',
             options: [
-                'primary', 'secondary', 'inverse'
-            ]},
-        variant: {type: {required: true}, control: 'select',
-            options: [
                 'left', 'right',
             ]},
         icon: {control: 'text'},
-        text: {control: 'text'},
-        dark: {control: 'boolean'},
+        buttonStyle: {control: 'object'},
+        menuStyle: {control: 'object'}
     }
 };
 
 
-const TemplateRight: React.FC<DropdownProps> = (args) => {
-    const ITEMS = [
-        {
-            action: () => console.log('clicked 1'),
-            text: 'Item 1',
-            variant: 'tertiary',
-        },
-        {
-            action: () => console.log('clicked 2'),
-            text: 'Item 2',
-            variant: 'tertiary'
-        }
-    ];
+const TemplateLeft: React.FC<DropdownProps> = (args) => {
+    const ITEMS = [<Button key="1" action={() => {}}>Item 1</Button>,
+        <Button key="2" action={() => {}}>Item 2</Button>];
 
     return (
         <Block stretch justify={'flex-start'} style={{"min-height" : "120px"}}>
             <Dropdown
-                variant={args.variant}
                 items={ITEMS}
                 direction={args.direction}
-                text={args.text}
+                buttonChildren={args.buttonChildren}
                 icon={args.icon}
+                buttonStyle={args.buttonStyle}
+                menuStyle={args.menuStyle}
             />
         </Block>
 
     )
 }
 
-const TemplateLeft: React.FC<DropdownProps> = (args) => {
-    const ITEMS = [{
-        action: () => console.log('clicked'),
-        text: 'Item 1',
-        variant: 'tertiary'
-    }];
+const TemplateRight: React.FC<DropdownProps> = (args) => {
+    const ITEMS = [<Button key="1" action={() => {}}>Item 1</Button>];
 
     return (
             <Block stretch justify={'flex-end'} style={{"min-height" : "120px"}}>
                 <Dropdown
-                    variant={args.variant}
                     items={ITEMS}
                     direction={args.direction}
-                    text={args.text}
+                    buttonChildren={args.buttonChildren}
                     icon={args.icon}
                 />
             </Block>
     )
 }
 
-const TemplateDark: React.FC<DropdownProps> = (args) => {
-    const ITEMS = [
-        {
-            action: () => console.log('clicked 1'),
-            text: 'Item 1',
-            variant: 'tertiary',
-        },
-        {
-            action: () => console.log('clicked 2'),
-            text: 'Item 2',
-            variant: 'tertiary'
-        }
-    ];
-
-    return (
-        <Block
-            classes={'bb-p-400 bb-border-radius-400'}
-            size={400}
-            style={{
-                "backgroundColor": "#0D1117",
-            }}>
-            <Block stretch justify={'flex-start'} style={{"min-height" : "120px"}}>
-                <Dropdown
-                    variant={args.variant}
-                    items={ITEMS}
-                    direction={args.direction}
-                    text={args.text}
-                    icon={args.icon}
-                    dark={args.dark}
-                />
-            </Block>
-        </Block>
-
-    )
-}
-
-
-export const Right = TemplateRight.bind({});
-Right.args = {
-    variant: 'secondary',
-    text: 'Dropdown Right',
-    direction: 'right',
-};
-
-export const Left = TemplateLeft.bind({});
+export const Left = TemplateRight.bind({});
 Left.args = {
-    variant: 'secondary',
-    text: 'Dropdown Left',
+    buttonChildren: <>Dropdown</>,
     direction: 'left',
 };
 
-export const DarkRight = TemplateDark.bind({});
-DarkRight.args = {
-    variant: 'tertiary',
-    text: 'Dropdown Dark',
+export const Right = TemplateLeft.bind({});
+Right.args = {
+    buttonChildren: <>Dropdown</>,
     direction: 'right',
-    dark: true,
+};
+
+export const Custom = TemplateLeft.bind({});
+Custom.args = {
+    buttonChildren: <>Dropdown<Icon icon={<ArrowDownSLine/>} color={"white"}/></>,
+    direction: 'right',
+    buttonStyle: {
+        "backgroundColor": "black",
+        "color": "white"
+    },
+    menuStyle: {
+        "backgroundColor": "black",
+        "padding": "16px",
+        "borderRadius": "4px"
+    }
 };

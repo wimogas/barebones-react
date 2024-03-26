@@ -6,21 +6,25 @@ import Button from "../Button";
 import {useOutsideClick} from "../hooks/useOutsideClick";
 
 export type DropdownProps = {
-    variant: 'primary' | 'secondary' | 'tertiary'
     items: any[],
     direction: 'left' | 'right',
     icon?: any,
-    text?: string,
-    dark?: boolean | undefined
+    buttonChildren?: any,
+    buttonClasses?: any,
+    buttonStyle?: any,
+    menuClasses?: any,
+    menuStyle?: any
 }
 
 const Dropdown = ({
                       items,
                       direction,
-                      variant,
                       icon,
-                      text,
-                      dark
+                      buttonChildren,
+                      buttonClasses,
+                      buttonStyle,
+                      menuClasses,
+                      menuStyle
                   }: DropdownProps) => {
 
     const [showMenu, setShowMenu] = useState(false)
@@ -36,32 +40,30 @@ const Dropdown = ({
             styles.dropdown
         )} ref={ref}>
             <Button
-                variant={variant}
-                dropdown
                 action={() => setShowMenu(!showMenu)}
                 icon={icon}
-                dark={dark}
+                classes={buttonClasses}
+                style={buttonStyle && buttonStyle}
             >
-                {text}
+                {buttonChildren}
             </Button>
 
             <div className={
-                classNames(styles[`dropdown-menu${dark ? '-dark' : ''}`],
+                classNames(
+                    styles["dropdown-menu"],
                     styles[direction],
                     showMenu && styles['show-left'],
                     !showMenu && styles['hide-left'],
-                )}>
+                    menuClasses && menuClasses
+                )}
+            style={menuStyle ? menuStyle : {
+                "backgroundColor": "white",
+                "borderRadius": "4px",
+                "padding": "16px",
+                "boxShadow": "0 4px 15px rgba(128, 128, 128, 0.25)"
+            }}>
                 {items && items.map(item => {
-                    return <Button
-                        variant={item.variant}
-                        classes={classNames(styles['dropdown-item'])}
-                        key={item.text}
-                        action={item.action}
-                        icon={item.icon}
-                        dark={dark}>
-                        {item.text}
-
-                    </Button>
+                    return item
                 })}
             </div>
 

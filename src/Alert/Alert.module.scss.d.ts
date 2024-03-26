@@ -4,8 +4,6 @@ declare const styles: {
   readonly "animateInAlert": string;
   readonly "toast": string;
   readonly "animateInToast": string;
-  readonly "success": string;
-  readonly "error": string;
 };
 export = styles;
 

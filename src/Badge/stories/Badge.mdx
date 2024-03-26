@@ -8,7 +8,7 @@ import * as BadgeStories from './Badge.stories';
 
 Badges are used to inform the user of an item's status or value.
 
-<Canvas of={BadgeStories.Primary} />
+<Canvas of={BadgeStories.Default} />
 
 ## Usage
 
@@ -18,53 +18,20 @@ import { Badge } from 'react-barebones-ts';
 <Badge>Badge</Badge>
 ```
 
-## Variants
+## Properties
 
-### primary
+### classes
 
-Usage: The primary badge is used to indicate the main action or status of an item.
-
-```jsx
-<Badge variant="primary">Badge</Badge>
-```
-
-<Canvas of={BadgeStories.Primary} />
-
-### secondary
-
-Usage: The secondary badge is used to indicate a less important action or status of an item.
+Your custom classes for the Badge.
 
 ```jsx
-<Badge variant="secondary">Badge</Badge>
+<Badge classes={"bb-bg-primary-500 bb-white"}>Custom badge</Badge>
 ```
 
-<Canvas of={BadgeStories.Secondary} />
+### style
 
-### tertiary
-
-Usage: The tertiary badge is used to indicate a less important action or status of an item.
-```jsx
-<Badge variant="tertiary">Badge</Badge>
-```
-
-<Canvas of={BadgeStories.Tertiary} />
-
-### error
-
-Usage: The error badge is used to indicate an error or problem with an item.
+Your custom React style object.
 
 ```jsx
-<Badge variant="error">Badge</Badge>
+<Badge style={{"backgroundColor": "#000"}}>Custom badge</Badge>
 ```
-
-<Canvas of={BadgeStories.Error} />
-
-### success
-
-Usage: The success badge is used to indicate a successful action or status of an item.
-
-```jsx
-<Badge variant="success">Badge</Badge>
-```
-
-<Canvas of={BadgeStories.Success} />

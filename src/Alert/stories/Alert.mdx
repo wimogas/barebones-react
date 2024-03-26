@@ -8,46 +8,22 @@ import * as AlertStories from './Alert.stories';
 
 The alert component is used to display a message to the user. It can be used to display a success message, an error message, in banner or toast format.
 
-<Canvas of={AlertStories.Success} />
+<Canvas of={AlertStories.Default} />
 
 ## Usage
 
 ```jsx
 import { Alert } from 'react-barebones-ts';
 
-<Alert variant="success">Success message</Alert>
+<Alert>Alert message</Alert>
 
 ```
-
-## Variants
-
-### success
-
-Usage: The alert of type success is used to display a success message to the user.
-
-```jsx
-<Alert variant="success">Success message</Alert>
-
-```
-<Canvas of={AlertStories.Success} />
-
-### error
-
-Usage: The alert of type error is used to display an error message to the user.
-
-```jsx
-<Alert variant="error">Error message</Alert>
-
-```
-
-<Canvas of={AlertStories.Error} />
 
 ## Types
 
 ### banner
 
 Usage: The alert of type banner is used to display a message to the user which has higher priority than the other alert messages.
-
 ```jsx
 <Alert type="banner">Banner message</Alert>
 
@@ -66,42 +42,6 @@ Usage: The alert of type toast is used to display a message to the user which ha
 
 <Canvas of={AlertStories.Toast} />
 
-## Dismissable
-
-Usage: The alert can be dismissed by the user using the close prop.
-
-### Banner Dismissable
-
-```jsx
-
-const [showAlert, setShowAlert] = useState(true);
-
-const handleCloseAlert = () => {
-    setShowAlert(false);
-}
-{showAlert &&
-    <Alert type="banner" close={handleCloseAlert}>Banner message</Alert>
-}
-
-```
-
-<Canvas of={AlertStories.BannerDismissable} />
-
-### Toast Dismissable
-
-```jsx
-const [showAlert, setShowAlert] = useState(true);
-
-const handleCloseAlert = () => {
-    setShowAlert(false);
-}
-{showAlert &&
-    <Alert type="toast" close={handleCloseAlert}>Toast message</Alert>
-}
-```
-
-<Canvas of={AlertStories.ToastDismissable} />
-
 ## Custom Icons
 
 Usage: The alert can be customized with custom icons using the icon and iconColor prop.
@@ -109,4 +49,22 @@ Usage: The alert can be customized with custom icons using the icon and iconColo
 ```jsx
 <Alert icon={<UserIcon />} iconColor='#CCCCCC'/>
 
+```
+
+## Properties
+
+### classes
+
+Your custom classes for the Alert.
+
+```jsx
+<Alert classes={"bb-bg-primary-500 bb-white"}>Alert alert!</Alert>
+```
+
+### style
+
+Your custom React style object.
+
+```jsx
+<Alert style={{"backgroundColor": "#000"}}>Alert alert!</Alert>
 ```

@@ -15,81 +15,72 @@ A dropdown component is used to select an item from a list of options.
 ```jsx
 import { Dropdown } from 'react-barebones-ts';
 
+const dropdownMenuItems = [
+    <Button key="1" action={() => {}}>Item 1</Button>,
+    <Button key="2" action={() => {}}>Item 2</Button>,
+];
+
 <Dropdown
-    variant="secondary"
-    text="Dropdown"
-    items={['Option 1', 'Option 2', 'Option 3']}
+    buttonChildren="Dropdown"
+    items={dropdownMenuItems}
 />
 
 ````
 
 ## Props
 
-### variant
+### buttonChildren
 
-The variant prop determines the color of the dropdown. It can be one of the following values:
-
-types: `primary` | `secondary` | `inverse`
+The Children to display inside the Button. Can be a string or a React Node.
 
 ```jsx
-<Dropdown variant="primary" />
+<Dropdown buttonChildren={"Dropdown"}/>
 ```
 
-### text
+### buttonStyle
 
-The text prop determines the text that is displayed on the dropdown button.
-
-types: string
+The Style of the Button.
 
 ```jsx
-<Dropdown text="Primary Dropdown" />
+<Dropdown buttonStyle={{"backgroundColor":"black"}}/>
+```
+
+### buttonClasses
+
+The Classes of the Button.
+
+```jsx
+<Dropdown buttonClasses={"bb-bg-primary-500"}/>
+```
+
+### menuClasses
+
+The Classes of the Dropdown Menu.
+
+```jsx
+<Dropdown menuClasses={"bb-bg-primary-500"}/>
+```
+
+### menuStyle
+
+The Style of the Dropdown Menu.
+
+```jsx
+<Dropdown menuStyle={{"backgroundColor" : "black"}}/>
 ```
 
 ### items
 
-The items prop determines the list of items that are displayed in the dropdown menu.
+Array of React Nodes
 
-Each item is an object with Button component properties:
-
-- `text` - the text that is displayed on the button
-- `variant` - the color of the button
-- `action` - the function that is called when the button is clicked
-- `icon` - the icon that is displayed on the left side of the button
-- ...
-
-
-types: `object[]`
 
 ```jsx
 const dropdownMenuItems = [
-    {
-        text: 'Option 1',
-        variant: 'primary',
-        action: () => console.log('Option 1 clicked'),
-    },
-    {
-        text: 'Option 2',
-        variant: 'secondary',
-        action: () => console.log('Option 2 clicked'),
-    },
-    {
-        text: 'Option 3',
-        variant: 'inverse',
-        action: () => console.log('Option 3 clicked')
-    }
+    <Button key="1" action={() => {}}>Item 1</Button>,
+    <Button key="2" action={() => {}}>Item 2</Button>,
 ];
 
 <Dropdown items={dropdownMenuItems} />
-```
-
-### icon
-
-The icon prop determines the icon that is displayed on the left side of Dropdown button.
-
-types: any remixicon icon
-
-```jsx
-<Dropdown icon="admin-fill" />
 ```
 
 ### direction
@@ -105,11 +96,11 @@ types: `right` | `left`
 
 ## Examples
 
-### Direction Right
+### Direction Left
 
 <Canvas of={DropdownStories.Right} />
 
-### Direction Left
+### Direction Right
 
 <Canvas of={DropdownStories.Left} />
 

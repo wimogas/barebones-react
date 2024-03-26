@@ -8,120 +8,41 @@ import * as ButtonStories from './Button.stories';
 
 The Button component is used to trigger an action or event, such as submitting a form, opening a dialog, canceling an action, or performing a delete operation.
 
-<Canvas of={ButtonStories.Primary} />
+<Canvas of={ButtonStories.Default} />
 
 ## Usage
 
 ```jsx
 import { Button } from 'react-barebones-ts';
 
-<Button variant="primary">Button Primary</Button>
+<Button>Button Default</Button>
 
 ```
-
-## Variants
-
-### primary
-
-Usage: The primary button is used for the principle call to action on a page.
-
-```jsx
-
-<Button variant="primary">Click me</Button>
-```
-<Canvas of={ButtonStories.Primary} />
-
-### secondary
-
-Usage: The secondary button is used for secondary actions on each page.
-
-```jsx
-
-<Button variant="secondary">Click me</Button>
-```
-
-<Canvas of={ButtonStories.Secondary} />
-
-
-### tertiary
-
-Usage: The teriary button is used for actions on each page that are less important than secondary actions.
-
-```jsx
-
-<Button variant="tertiary">Click me</Button>
-```
-<Canvas of={ButtonStories.Tertiary} />
-
-
-### danger
-
-Usage: The danger button is used for actions that are destructive.
-
-```jsx
-
-<Button variant="danger">Click me</Button>
-```
-
-<Canvas of={ButtonStories.Danger} />
-
-### success
-
-Usage: The success button is used for actions that are successful.
-
-```jsx
-
-<Button variant="success">Click me</Button>
-```
-
-<Canvas of={ButtonStories.Success} />
-
-## Dropdown
-
-Usage: The dropdown button is used for actions which need a dropdown.
-
-Note: This is not a Dropdown component, it is a Button with a dropdown icon.
-
-```jsx
-
-<Button variant="primary" dropdown>Click me</Button>
-```
-
-<Canvas of={ButtonStories.Dropdown} />
-
-## Icon
-
-### With Icon
-
-Usage: The Button with Icon is used for actions which need an icon for clarity.
-
-```jsx
-
-<Button variant="primary" icon="<CheckIcon/>">Click me</Button>
-```
-
-<Canvas of={ButtonStories.WithIcon} />
 
 ## Properties
 
-### variant
+### classes
 
-The variant of the button.
-
-types: primary, secondary, inverse, danger
+Your custom classes for the button.
 
 ```jsx
-<Button variant="primary">Click me</Button>
+<Button classes={"bb-bg-primary-500 bb-white"}>Click me</Button>
+```
+
+### style
+
+Your custom React style object.
+
+```jsx
+<Button style={{"backgroundColor": "#000"}}>Click me</Button>
 ```
 
 ### dark
 
 The dark variant of the button.
 
-types: true, false
-
 ```jsx
-<Button variant={'primary'} dark>Click me</Button>
+<Button dark>Click me</Button>
 ```
 
 
@@ -137,8 +58,6 @@ The icon of the button. Pass an SVG or \<i\> as a React Component.
 
 The dropdown variant of the button.
 
-types: true, false
-
 ```jsx
 <Button dropdown>Click me</Button>
 ```
@@ -146,8 +65,6 @@ types: true, false
 ### disabled
 
 The disabled state of the button.
-
-types: true, false
 
 ```jsx
 <Button disabled>Can't click me</Button>
@@ -157,8 +74,6 @@ types: true, false
 
 The click handler of the button.
 
-types: function
-
 ```jsx
 <Button action={() => alert('Clicked!')}>Click me</Button>
 ```
@@ -166,8 +81,6 @@ types: function
 ### children
 
 The content of the button.
-
-types: string
 
 ```jsx
 <Button>{children}</Button>
