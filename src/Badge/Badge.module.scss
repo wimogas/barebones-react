@@ -1,5 +1,3 @@
-@use '../assets/scss/theme' as *;
-
 .badge {
   font-size: 9px;
   padding: 0 6px;
@@ -8,15 +6,6 @@
   align-items: center;
   line-height: 16px;
   width: fit-content;
-}
-
-@each $key, $val in ($color-map) {
-  .badge-#{$key} {
-    @if (#{$key} == "tertiary") {
-      background-color: transparent;
-      border: 1px solid white;
-    } @else {
-      background-color: $val;
-    }
-  }
+  background: black;
+  color: white;
 }

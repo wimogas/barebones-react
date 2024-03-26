@@ -17,22 +17,16 @@ export type AlertProps = {
     iconColor?: string,
     classes?: any
 }
-const Alert = ({children, type, close, icon, iconColor, style, classes}: AlertProps) => {
+const Alert = ({children, type, icon, iconColor, style, classes}: AlertProps) => {
 
     return (
         <div className={classNames(
-            classes && classes,
+            classes ? classes : styles.alert,
             styles.alert,
             type && styles[type])}
-             style={style ? style : {
-                 "backgroundColor": "white",
-                 "border": "1px solid #000"
-             }}
+             style={style}
         >
-            <Block size={300}>
-                <Icon icon={icon ? icon : <CheckLine/>} color={iconColor ? iconColor : "#000"}/>
-                {children}
-            </Block>
+            {children}
         </div>
     );
 };

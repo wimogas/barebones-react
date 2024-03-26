@@ -20,15 +20,15 @@ export type ButtonProps = {
 }
 
 const Button: React.FC<ButtonProps> = ({
-                                           action,
-                                           children,
-                                           classes,
-                                           disabled,
-                                           icon,
-                                           iconSize = 16,
-                                           iconColor = '#000',
-                                           style,
-                                           type
+                               action,
+                               children,
+                               classes,
+                               disabled,
+                               icon,
+                               iconSize = 16,
+                               iconColor = '#000',
+                               style,
+                               type
                                        }) => {
 
 
@@ -38,10 +38,7 @@ const Button: React.FC<ButtonProps> = ({
                 styles.button,
                 classes)}
             onClick={() => action && action()}
-            style={style ? style : {
-                "backgroundColor" : "white",
-                "border": "1px solid #000"
-            }}
+            style={style}
             disabled={disabled}
             type={type}
         >

@@ -19,7 +19,6 @@ export interface BlockProps {
     children: any,
     classes?: string | undefined,
     column?: boolean,
-    size?: SizesType,
     style?: object,
     align?: AlignType,
     justify?: JustifyType,
@@ -31,7 +30,6 @@ const Block = ({
                    children,
                    classes,
                    column,
-                   size,
                    style,
                    align,
                    justify,
@@ -44,7 +42,6 @@ const Block = ({
             className={
                 classNames(
                     styles.block,
-                    size && [styles[`gap-${size}`]],
                     column && [styles.column],
                     align && [styles[`align-${align}`]],
                     justify && [styles[`justify-${justify}`]],

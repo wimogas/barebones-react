@@ -1,15 +1,5 @@
 declare const styles: {
   readonly "block": string;
-  readonly "gap-50": string;
-  readonly "gap-100": string;
-  readonly "gap-200": string;
-  readonly "gap-300": string;
-  readonly "gap-400": string;
-  readonly "gap-500": string;
-  readonly "gap-600": string;
-  readonly "gap-700": string;
-  readonly "gap-800": string;
-  readonly "gap-900": string;
   readonly "column": string;
   readonly "block-card": string;
   readonly "block-dark-card": string;

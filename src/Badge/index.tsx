@@ -12,12 +12,9 @@ export type BadgeProps = {
 const Badge: FC<BadgeProps> = ({children, classes, style}) => {
   return (
     <div className={classNames(
-        styles.badge,
-      classes && classes)}
-      style={style ? style : {
-        "background": "black",
-        "color": "white"
-      }}
+        classes ? classes : styles.badge,
+      )}
+      style={style}
     >
       {children}
     </div>

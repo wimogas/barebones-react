@@ -24,6 +24,7 @@ export default {
         commonjs(),
         typescript({
             typescript: require('typescript'),
+            exclude: ["**/stories/**", "**/stories/**.**" ]
         }),
         svgr(),
         postCSS({

@@ -32,7 +32,7 @@ const Input = ({
         <label>
             {label && label}
             <input className={classNames(classes ? classes : styles.base)}
-                   style={style && style}
+                   style={style}
                    name={name}
                    value={value}
                    type={type}

@@ -1,3 +1,5 @@
+import './assets/scss/theme.scss'
+
 export { default as Icon} from './Icon';
 export { default as Button} from './Button';
 export { default as Block} from './Block';

@@ -43,7 +43,7 @@ const Dropdown = ({
                 action={() => setShowMenu(!showMenu)}
                 icon={icon}
                 classes={buttonClasses}
-                style={buttonStyle && buttonStyle}
+                style={buttonStyle}
             >
                 {buttonChildren}
             </Button>
@@ -54,7 +54,7 @@ const Dropdown = ({
                     styles[direction],
                     showMenu && styles['show-left'],
                     !showMenu && styles['hide-left'],
-                    menuClasses && menuClasses
+                    menuClasses
                 )}
             style={menuStyle ? menuStyle : {
                 "backgroundColor": "white",

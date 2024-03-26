@@ -1,29 +1,5 @@
-@use '../assets/scss/theme' as *;
-
 .text {
   display: flex;
   align-items: center;
   gap: 8px;
-}
-
-@each $key, $val in ($spacing-map) {
-  .size-#{$key} {
-    font-size: $val;
-  }
-}
-
-@each $key, $val in ($color-map) {
-  .color-#{$key} {
-    color: $val;
-  }
-}
-
-@each $key, $val in ($color-dark-map) {
-  .color-dark-#{$key} {
-    color: $val;
-  }
-}
-
-.bold {
-  font-weight: bold;
 }

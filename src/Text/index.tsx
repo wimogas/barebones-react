@@ -22,7 +22,7 @@ const Text = ({
     <Type
         className={classNames(
             styles.text,
-            classes && classes
+            classes
         )}
         style={style}
     >

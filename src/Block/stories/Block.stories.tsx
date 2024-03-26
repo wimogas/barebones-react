@@ -15,10 +15,6 @@ export default {
                 'space-between', 'space-around',  'space-evenly',
             ]},
         column: {control: 'boolean'},
-        size: {type: {required: true}, control: 'select',
-            options: [
-                's', 'm',  'l', 'xl',
-            ]},
         style: {control: 'object'},
         stretch: {control: 'boolean'},
     }
@@ -27,7 +23,6 @@ export default {
 const TemplateRow: React.FC<BlockProps> = (args) => <Block
     style={args.style}
     classes={args.classes}
-    size={args.size}
     column={args.column}
     align={args.align}
     justify={args.justify}
@@ -53,7 +48,6 @@ const TemplateRow: React.FC<BlockProps> = (args) => <Block
 const Template: React.FC<BlockProps> = (args) => <Block
     style={args.style}
     classes={args.classes}
-    size={args.size}
     column={args.column}
     align={args.align}
     justify={args.justify}
@@ -79,7 +73,6 @@ const Template: React.FC<BlockProps> = (args) => <Block
 const TemplateCard: React.FC<BlockProps> = (args) => <Block
     style={args.style}
     classes={args.classes}
-    size={args.size}
     column={args.column}
     align={args.align}
     justify={args.justify}
@@ -93,7 +86,6 @@ const TemplateCard: React.FC<BlockProps> = (args) => <Block
 
 export const Row = Template.bind({});
 Row.args = {
-    size: '500',
     align: 'center',
     justify: 'space-between',
     stretch: false
@@ -101,14 +93,15 @@ Row.args = {
 
 export const Column = Template.bind({});
 Column.args = {
-    size: '500',
     align: 'stretch',
-    column: true
+    column: true,
+    style: {
+        "gap" : "14px"
+    }
 };
 
 export const Custom = TemplateCard.bind({});
 Custom.args = {
-    size: '500',
     align: 'stretch',
     column: true,
     style: {

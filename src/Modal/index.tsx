@@ -18,7 +18,7 @@ const Modal = ({children, overlayClasses, overlayStyle, classes, style}: ModalPr
   return (
     <div className={classNames(
         styles['modal-overlay'],
-        overlayClasses && overlayClasses)}
+        overlayClasses)}
     style={overlayStyle ? overlayStyle : {
       "backgroundColor" : "rgba(0,0,0,0.5)"
     }}>
