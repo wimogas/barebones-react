@@ -9,23 +9,38 @@ export default {
 const TemplateGrid: React.FC<GridProps> = (args) => <Grid>
     <Block
         justify={'center'}
-        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+        style={{
+            "background-color" : "#0D5D92",
+            "padding" : "20px"
+        }}
         >1</Block>
     <Block
         justify={'center'}
-        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+        style={{
+            "background-color" : "#0D5D92",
+            "padding" : "20px"
+        }}
         >2</Block>
     <Block
         justify={'center'}
-        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+        style={{
+            "background-color" : "#0D5D92",
+            "padding" : "20px"
+        }}
     >3</Block>
     <Block
         justify={'center'}
-        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+        style={{
+            "background-color" : "#0D5D92",
+            "padding" : "20px"
+        }}
     >4</Block>
     <Block
         justify={'center'}
-        classes={'bb-background-08 bb-p-300 bb-border-radius-500 bb-white'}
+        style={{
+            "background-color" : "#0D5D92",
+            "padding" : "20px"
+        }}
     >5</Block>
 </Grid>;
 
