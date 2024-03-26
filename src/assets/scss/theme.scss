@@ -2,73 +2,73 @@
 
 $fontOpenSans: 'Open Sans'!default;
 
-$white: #ffffff;
-$black: #000000;
+$white: #ffffff!default;
+$black: #000000!default;
 
-$primary900: #0A466E;
-$primary800: #0B4D79;
-$primary700: #0C5585;
-$primary600: #0D5D92;
-$primary500: #0E66A1;
-$primary400: #0F70B1;
-$primary300: #107BC3;
-$primary200: #1287D6;
-$primary100: #1495EB;
-$primary50: #2892D2;
+$primary900: #0A466E!default;
+$primary800: #0B4D79!default;
+$primary700: #0C5585!default;
+$primary600: #0D5D92!default;
+$primary500: #0E66A1!default;
+$primary400: #0F70B1!default;
+$primary300: #107BC3!default;
+$primary200: #1287D6!default;
+$primary100: #1495EB!default;
+$primary50: #2892D2!default;
 
-$secondary900: #404040;
-$secondary700: #464646;
-$secondary500: #555555;
-$secondary400: #808080;
-$secondary300: #AEAEAE;
-$secondary200: #c0c0c0;
-$secondary100: #D7D7D7;
+$secondary900: #404040!default;
+$secondary700: #464646!default;
+$secondary500: #555555!default;
+$secondary400: #808080!default;
+$secondary300: #AEAEAE!default;
+$secondary200: #c0c0c0!default;
+$secondary100: #D7D7D7!default;
 
-$neutral900: #0F1113;
-$neutral800: #16191C;
-$neutral700: #1D2125;
-$neutral600: #2C2F33;
-$neutral500: #56595C;
-$neutral400: #8E9092;
-$neutral300: #C7C8C9;
-$neutral200: #d8d9da;
-$neutral100: #F5F5F5;
-$neutral50: #FAFAFA;
+$neutral900: #0F1113!default;
+$neutral800: #16191C!default;
+$neutral700: #1D2125!default;
+$neutral600: #2C2F33!default;
+$neutral500: #56595C!default;
+$neutral400: #8E9092!default;
+$neutral300: #C7C8C9!default;
+$neutral200: #d8d9da!default;
+$neutral100: #F5F5F5!default;
+$neutral50: #FAFAFA!default;
 
-$error900: #7D2318;
-$error800: #8A271A;
-$error700: #982B1D;
-$error600: #A72F20;
-$error500: #B83423;
-$error300: #cc4332;
-$error200: #be695e;
-$error100: #E0978E;
-$error50: #F0CBC7;
+$error900: #7D2318!default;
+$error800: #8A271A!default;
+$error700: #982B1D!default;
+$error600: #A72F20!default;
+$error500: #B83423!default;
+$error300: #cc4332!default;
+$error200: #be695e!default;
+$error100: #E0978E!default;
+$error50: #F0CBC7!default;
 
-$success900: #0F5F2D;
-$success800: #106932;
-$success700: #127337;
-$success600: #147E3C;
-$success500: #168B42;
-$success200: #189949;
-$success100: #8CCCA4;
-$success50: #C6E6D2;
+$success900: #0F5F2D!default;
+$success800: #106932!default;
+$success700: #127337!default;
+$success600: #147E3C!default;
+$success500: #168B42!default;
+$success200: #189949!default;
+$success100: #8CCCA4!default;
+$success50: #C6E6D2!default;
 
-$warning900: #653600;
-$warning800: #814600;
-$warning700: #B96400;
-$warning600: #D57300;
-$warning500: #FFAA46;
-$warning100: #FFD9A0;
-$warning50: #FFF1DB;
+$warning900: #653600!default;
+$warning800: #814600!default;
+$warning700: #B96400!default;
+$warning600: #D57300!default;
+$warning500: #FFAA46!default;
+$warning100: #FFD9A0!default;
+$warning50: #FFF1DB!default;
 
-$info900: #1C303B;
-$info800: #0A496A;
-$info700: #005583;
-$info600: #0067AA;
-$info500: #2977D1;
-$info100: #BAEBF5;
-$info50: #E9F9FB;
+$info900: #1C303B!default;
+$info800: #0A496A!default;
+$info700: #005583!default;
+$info600: #0067AA!default;
+$info500: #2977D1!default;
+$info100: #BAEBF5!default;
+$info50: #E9F9FB!default;
 
 $border01: $primary600;
 $border02: $white;
@@ -77,60 +77,60 @@ $border04: $neutral200;
 $border05: $primary50;
 $border06: $secondary400;
 
-$borderRadius50: 0px;
-$borderRadius100: 2px;
-$borderRadius300: 4px;
-$borderRadius500: 6px;
-$borderRadius700: 8px;
-$borderRadius900: 50%;
+$borderRadius50: 0px!default;
+$borderRadius100: 2px!default;
+$borderRadius300: 4px!default;
+$borderRadius500: 6px!default;
+$borderRadius700: 8px!default;
+$borderRadius900: 50%!default;
 
-$spacing50: 2px;
-$spacing100: 4px;
-$spacing150: 6px;
-$spacing200: 8px;
-$spacing250: 10px;
-$spacing300: 12px;
-$spacing350: 14px;
-$spacing400: 16px;
-$spacing450: 18px;
-$spacing500: 20px;
-$spacing550: 22px;
-$spacing600: 24px;
-$spacing650: 28px;
-$spacing700: 32px;
-$spacing750: 36px;
-$spacing800: 40px;
-$spacing850: 48px;
-$spacing900: 56px;
-$spacing950: 64px;
+$spacing50: 2px!default;
+$spacing100: 4px!default;
+$spacing150: 6px!default;
+$spacing200: 8px!default;
+$spacing250: 10px!default;
+$spacing300: 12px!default;
+$spacing350: 14px!default;
+$spacing400: 16px!default;
+$spacing450: 18px!default;
+$spacing500: 20px!default;
+$spacing550: 22px!default;
+$spacing600: 24px!default;
+$spacing650: 28px!default;
+$spacing700: 32px!default;
+$spacing750: 36px!default;
+$spacing800: 40px!default;
+$spacing850: 48px!default;
+$spacing900: 56px!default;
+$spacing950: 64px!default;
 
 // Font size
 
-$fontSize100: 10px;
-$fontSize200: 12px;
-$fontSize300: 14px;
-$fontSize400: 16px;
-$fontSize500: 20px;
-$fontSize600: 24px;
-$fontSize700: 29px;
-$fontSize800: 35px;
-$fontSize900: 42px;
+$fontSize100: 10px!default;
+$fontSize200: 12px!default;
+$fontSize300: 14px!default;
+$fontSize400: 16px!default;
+$fontSize500: 20px!default;
+$fontSize600: 24px!default;
+$fontSize700: 29px!default;
+$fontSize800: 35px!default;
+$fontSize900: 42px!default;
 
 // Line Height
 
-$lineHeight50: 16px;
-$lineHeight100: 20px;
-$lineHeight300: 24px;
-$lineHeight500: 28px;
-$lineHeight700: 36px;
-$lineHeight900: 40px;
-$lineHeight950: 48px;
+$lineHeight50: 16px!default;
+$lineHeight100: 20px!default;
+$lineHeight300: 24px!default;
+$lineHeight500: 28px!default;
+$lineHeight700: 36px!default;
+$lineHeight900: 40px!default;
+$lineHeight950: 48px!default;
 
 // Font Weight
 
-$fontRegular: 400;
-$fontSemiBold: 600;
-$fontBold: 700;
+$fontRegular: 400!default;
+$fontSemiBold: 600!default;
+$fontBold: 700!default;
 
 $color-map: (
   "primary": $primary100,
@@ -140,7 +140,7 @@ $color-map: (
   "success": $success500,
   "default": $secondary400,
   "disabled": $secondary100,
-);
+)!default;
 
 $color-dark-map: (
   "primary": $primary50,
@@ -149,7 +149,7 @@ $color-dark-map: (
   "success": $success200,
   "default": $secondary100,
   "disabled": $secondary500,
-);
+)!default;
 
 $spacing-map: (
   "50": $spacing50,
@@ -162,142 +162,142 @@ $spacing-map: (
   "700": $spacing700,
   "800": $spacing800,
   "900": $spacing900,
-);
+)!default;
 
 
 // Button tokens
-$button-bg-color: $neutral700;
-$button-border-size: 1px;
-$button-padding: $spacing200 $spacing300;
-$button-border-radius: $borderRadius300;
-$button-gap: $spacing100;
-$button-font-size: $fontSize300;
-$button-line-height: $lineHeight100;
+$button-bg-color: $neutral700!default;
+$button-border-size: 1px!default;
+$button-padding: $spacing200 $spacing300!default;
+$button-border-radius: $borderRadius300!default;
+$button-gap: $spacing100!default;
+$button-font-size: $fontSize300!default;
+$button-line-height: $lineHeight100!default;
 
-$button-disabled-bg-color: $neutral600;
-$button-disabled-color: $neutral300;
-$button-disabled-dark-bg-color: $neutral600;
-$button-disabled-dark-color: $neutral500;
-$button-focus-color: $primary600;
+$button-disabled-bg-color: $neutral600!default;
+$button-disabled-color: $neutral300!default;
+$button-disabled-dark-bg-color: $neutral600!default;
+$button-disabled-dark-color: $neutral500!default;
+$button-focus-color: $primary600!default;
 
 // Button Primary
-$button-primary-bg-color: $primary300;
-$button-primary-color: $white;
-$button-primary-hover : $primary700;
-$button-primary-active: $primary700;
-$button-primary-focus: $primary700;
+$button-primary-bg-color: $primary300!default;
+$button-primary-color: $white!default;
+$button-primary-hover : $primary700!default;
+$button-primary-active: $primary700!default;
+$button-primary-focus: $primary700!default;
 
 // Button Secondary
-$button-secondary-bg-color: $secondary100;
-$button-secondary-color: $secondary500;
-$button-secondary-hover : $secondary300;
-$button-secondary-active: $secondary300;
-$button-secondary-focus: $secondary300;
+$button-secondary-bg-color: $secondary100!default;
+$button-secondary-color: $secondary500!default;
+$button-secondary-hover : $secondary300!default;
+$button-secondary-active: $secondary300!default;
+$button-secondary-focus: $secondary300!default;
 
 // Button Tertiary
-$button-tertiary-bg-color: transparent;
-$button-tertiary-color: $secondary400;
-$button-tertiary-hover : $secondary900;
-$button-tertiary-active: $secondary900;
-$button-tertiary-focus: transparent;
+$button-tertiary-bg-color: transparent!default;
+$button-tertiary-color: $secondary400!default;
+$button-tertiary-hover : $secondary900!default;
+$button-tertiary-active: $secondary900!default;
+$button-tertiary-focus: transparent!default;
 
 // Button Danger
-$button-danger-bg-color: $error500;
-$button-danger-color: $white;
-$button-danger-hover : $error700;
-$button-danger-active: $error700;
-$button-danger-focus: $error600;
+$button-danger-bg-color: $error500!default;
+$button-danger-color: $white!default;
+$button-danger-hover : $error700!default;
+$button-danger-active: $error700!default;
+$button-danger-focus: $error600!default;
 
 // Button Success
-$button-success-bg-color: $success500;
-$button-success-color: $white;
-$button-success-hover : $success700;
-$button-success-active: $success700;
-$button-success-focus: $success600;
+$button-success-bg-color: $success500!default;
+$button-success-color: $white!default;
+$button-success-hover : $success700!default;
+$button-success-active: $success700!default;
+$button-success-focus: $success600!default;
 
 // Button Icon Only
-$button-icon-only-bg-color: transparent;
-$button-icon-only-color: $secondary400;
-$button-icon-only-hover : $secondary900;
-$button-icon-only-active: $secondary900;
-$button-icon-only-focus: transparent;
+$button-icon-only-bg-color: transparent!default;
+$button-icon-only-color: $secondary400!default;
+$button-icon-only-hover : $secondary900!default;
+$button-icon-only-active: $secondary900!default;
+$button-icon-only-focus: transparent!default;
 
 // Button Primary Dark
-$button-primary-dark-bg-color: $primary200;
-$button-primary-dark-color: $white;
-$button-primary-dark-hover : $primary100;
-$button-primary-dark-active: $primary100;
-$button-primary-dark-focus: $primary100;
+$button-primary-dark-bg-color: $primary200!default;
+$button-primary-dark-color: $white!default;
+$button-primary-dark-hover : $primary100!default;
+$button-primary-dark-active: $primary100!default;
+$button-primary-dark-focus: $primary100!default;
 
 // Button Secondary Dark
-$button-secondary-dark-bg-color: $secondary200;
-$button-secondary-dark-color: $secondary700;
-$button-secondary-dark-hover : $secondary100;
-$button-secondary-dark-active: $secondary100;
-$button-secondary-dark-focus: $secondary100;
+$button-secondary-dark-bg-color: $secondary200!default;
+$button-secondary-dark-color: $secondary700!default;
+$button-secondary-dark-hover : $secondary100!default;
+$button-secondary-dark-active: $secondary100!default;
+$button-secondary-dark-focus: $secondary100!default;
 
 // Button Tertiary Dark
-$button-tertiary-dark-bg-color: transparent;
-$button-tertiary-dark-color: $secondary300;
-$button-tertiary-dark-hover : $secondary100;
-$button-tertiary-dark-active: $secondary100;
-$button-tertiary-dark-focus: transparent;
+$button-tertiary-dark-bg-color: transparent!default;
+$button-tertiary-dark-color: $secondary300!default;
+$button-tertiary-dark-hover : $secondary100!default;
+$button-tertiary-dark-active: $secondary100!default;
+$button-tertiary-dark-focus: transparent!default;
 
 // Button Danger Dark
-$button-danger-dark-bg-color: $error500;
-$button-danger-dark-color: $white;
-$button-danger-dark-hover : $error300;
-$button-danger-dark-active: $error300;
-$button-danger-dark-focus: $error300;
+$button-danger-dark-bg-color: $error500!default;
+$button-danger-dark-color: $white!default;
+$button-danger-dark-hover : $error300!default;
+$button-danger-dark-active: $error300!default;
+$button-danger-dark-focus: $error300!default;
 
 // Button Success Dark
-$button-success-dark-bg-color: $success500;
-$button-success-dark-color: $white;
-$button-success-dark-hover : $success200;
-$button-success-dark-active: $success200;
-$button-success-dark-focus: $success200;
+$button-success-dark-bg-color: $success500!default;
+$button-success-dark-color: $white!default;
+$button-success-dark-hover : $success200!default;
+$button-success-dark-active: $success200!default;
+$button-success-dark-focus: $success200!default;
 
 // Button Icon Only
-$button-icon-only-dark-bg-color: transparent;
-$button-icon-only-dark-color: $secondary300;
-$button-icon-only-dark-hover : $secondary100;
-$button-icon-only-dark-active: $secondary100;
-$button-icon-only-dark-focus: transparent;
+$button-icon-only-dark-bg-color: transparent!default;
+$button-icon-only-dark-color: $secondary300!default;
+$button-icon-only-dark-hover : $secondary100!default;
+$button-icon-only-dark-active: $secondary100!default;
+$button-icon-only-dark-focus: transparent!default;
 
 // Input
-$input-label-color: $secondary500;
-$input-border: $secondary300;
-$input-error-border-color: $error500;
-$input-disabled-bg-color: $secondary100;
-$input-dark-border-color: $secondary300;
-$input-dark-color: $secondary300;
+$input-label-color: $secondary500!default;
+$input-border: $secondary300!default;
+$input-error-border-color: $error500!default;
+$input-disabled-bg-color: $secondary100!default;
+$input-dark-border-color: $secondary300!default;
+$input-dark-color: $secondary300!default;
 
 // Alert
-$alert-success-color: $success500;
-$alert-success-bg-color: white;
-$alert-success-border-color: $success500;
-$alert-error-color: $error700;
-$alert-error-bg-color: white;
-$alert-error-border-color: $error700;
+$alert-success-color: $success500!default;
+$alert-success-bg-color: white!default;
+$alert-success-border-color: $success500!default;
+$alert-error-color: $error700!default;
+$alert-error-bg-color: white!default;
+$alert-error-border-color: $error700!default;
 
 // Badge
-$badge-bg-color: $neutral500;
+$badge-bg-color: $neutral500!default;
 
 // Dropdown
-$dropdown-item-color: $secondary500;
-$dropdown-item-hover-bg-color: $secondary300;
-
+$dropdown-item-color: $secondary500!default;
+$dropdown-item-hover-bg-color: $secondary300!default;
 
 // Modal
-$modal-header-border-color: $neutral400;
-$modal-title-color: $secondary700;
-
+$modal-header-border-color: $neutral400!default;
+$modal-title-color: $secondary700!default;
 
 // Block
-$block-card-border-color: $neutral400;
-$block-card-color: $neutral700;
-$block-card-dark-color: $neutral100;
-$block-card-dark-background: $neutral700;
+$block-card-border-color: $neutral400!default;
+$block-card-color: $neutral700!default;
+$block-card-dark-color: $neutral100!default;
+$block-card-dark-background: $neutral700!default;
+
+// Reset
 
 html, body {
   box-sizing: border-box;
