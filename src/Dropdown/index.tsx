@@ -54,14 +54,9 @@ const Dropdown = ({
                     styles[direction],
                     showMenu && styles['show-left'],
                     !showMenu && styles['hide-left'],
-                    menuClasses
+                    menuClasses ? menuClasses : styles["dropdown-menu-default"]
                 )}
-            style={menuStyle ? menuStyle : {
-                "backgroundColor": "white",
-                "borderRadius": "4px",
-                "padding": "16px",
-                "boxShadow": "0 4px 15px rgba(128, 128, 128, 0.25)"
-            }}>
+                style={menuStyle}>
                 {items && items.map(item => {
                     return item
                 })}
