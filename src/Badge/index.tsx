@@ -12,8 +12,9 @@ export type BadgeProps = {
 const Badge: FC<BadgeProps> = ({children, classes, style}) => {
   return (
     <div className={classNames(
-        classes ? classes : styles.badge,
-      )}
+        styles.badge,
+        classes ? classes : styles.default
+    )}
       style={style}
     >
       {children}

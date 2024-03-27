@@ -36,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({
         <button
             className={classNames(
                 styles.button,
-                classes)}
+                classes ? classes : styles.default)}
             onClick={() => action && action()}
             style={style}
             disabled={disabled}

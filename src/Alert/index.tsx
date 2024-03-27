@@ -1,12 +1,7 @@
 import React, {ReactElement} from "react";
 import classNames from "classnames";
 
-import CheckLine from '../assets/icons/check-line.svg';
-
 import styles from "./Alert.module.scss";
-import Block from "../Block";
-import Icon from "../Icon";
-
 
 export type AlertProps = {
     children: any,
@@ -21,8 +16,8 @@ const Alert = ({children, type, icon, iconColor, style, classes}: AlertProps) =>
 
     return (
         <div className={classNames(
-            classes ? classes : styles.alert,
             styles.alert,
+            classes ? classes : styles.default,
             type && styles[type])}
              style={style}
         >

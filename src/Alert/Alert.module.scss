@@ -1,13 +1,16 @@
 .alert {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  animation: animateInAlert .3s forwards;
+}
+
+.default {
+  background-color: white;
+  border: 1px solid #000;
   gap: 8px;
   border-radius: 4px;
   padding: 12px;
-  animation: animateInAlert .3s forwards;
-  background-color: white;
-  border: 1px solid #000;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .banner {

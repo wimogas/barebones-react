@@ -1,11 +1,14 @@
 .badge {
-  font-size: 9px;
-  padding: 0 6px;
-  border-radius: 8px;
   display: flex;
   align-items: center;
-  line-height: 16px;
   width: fit-content;
+}
+
+.default {
+  border-radius: 8px;
+  font-size: 9px;
+  padding: 0 6px;
+  line-height: 16px;
   background: black;
   color: white;
 }

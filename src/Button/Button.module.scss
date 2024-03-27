@@ -1,12 +1,15 @@
 .button {
   cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 4px;
   transition: all .3s;
   display: flex;
   flex-direction: row;
-  gap: 4px;
+}
+
+.default {
   align-items: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  gap: 4px;
   font-size: 14px;
   line-height: 20px;
   background-color: white;

@@ -18,13 +18,14 @@ const Modal = ({children, overlayClasses, overlayStyle, classes, style}: ModalPr
   return (
     <div className={classNames(
         styles['modal-overlay'],
-        overlayClasses)}
-    style={overlayStyle ? overlayStyle : {
-      "backgroundColor" : "rgba(0,0,0,0.5)"
-    }}>
+        overlayClasses ? overlayClasses : styles["overlay-default"])}
+    style={overlayStyle}>
         <Block
             stretch
-            classes={classes ? classes : classNames(styles.modal)}
+            classes={classNames(
+                styles.modal,
+                classes ? classes : styles.default
+            )}
             style={style ? style : {'minWidth':'50vw'}}
         >
           {children}
